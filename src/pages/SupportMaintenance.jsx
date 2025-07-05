@@ -1,11 +1,11 @@
 import React from 'react';
 import ServiceTabs from '../components/ServiceTabs';
-import supportMaintenanceData from '../data/supportMaintenanceData';
+import supportMaintenance from '../data/supportMaintenance';
 
 const SupportMaintenance = () => {
   return (
     <ServiceTabs
-      servicesData={supportMaintenanceData}
+      servicesData={supportMaintenance}
       mainTitle="Support and Maintenance Service"
       description={
         <ul>

@@ -1,11 +1,11 @@
 import React from 'react';
 import ServiceTabs from '../components/ServiceTabs';
-import itConsultingData from '../data/itConsultingData';
+import itConsulting from '../data/itConsulting';
 
 const ITConsulting = () => {
   return (
     <ServiceTabs
-      servicesData={itConsultingData}
+      servicesData={itConsulting}
       mainTitle="IT Consulting Services"
       description={
         <ul>
