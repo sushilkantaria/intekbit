@@ -22,31 +22,36 @@ import GraphicDesigning from './pages/GraphicDesigning';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <div className="min-h-screen">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/web-development" element={<WebDevelopment />} />
-          <Route path="/uiux-design" element={<UIUXDesign />} />
-          <Route path="/terms" element={<TermsAndConditions />} />
-          <Route path="/support-maintenance" element={<SupportMaintenance />} />
-          <Route
-            path="/software-development"
-            element={<SoftwareDevelopment />}
-          />
-          <Route path="/services" element={<Services />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/it-consulting" element={<ITConsulting />} />
-          <Route path="/cloud-services" element={<CloudServices />} />
-          <Route path="/data-services" element={<DataServices />} />
-          <Route path="/aiml-solutions" element={<AIMLSolutions />} />
-          <Route path="/app-development" element={<AppDevelopment />} />
-          <Route path="/graphic-designing" element={<GraphicDesigning />} />
-        </Routes>
+      <div className="bg-gray-900 min-h-screen w-full flex flex-col">
+        <Navbar />
+        <div className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/web-development" element={<WebDevelopment />} />
+            <Route path="/uiux-design" element={<UIUXDesign />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
+            <Route
+              path="/support-maintenance"
+              element={<SupportMaintenance />}
+            />
+            <Route
+              path="/software-development"
+              element={<SoftwareDevelopment />}
+            />
+            <Route path="/services" element={<Services />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/it-consulting" element={<ITConsulting />} />
+            <Route path="/cloud-services" element={<CloudServices />} />
+            <Route path="/data-services" element={<DataServices />} />
+            <Route path="/aiml-solutions" element={<AIMLSolutions />} />
+            <Route path="/app-development" element={<AppDevelopment />} />
+            <Route path="/graphic-designing" element={<GraphicDesigning />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }

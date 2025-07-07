@@ -8,7 +8,7 @@ const cardImg =
 const cardTitle = 'text-center mt-2 text-blue-500 font-semibold';
 
 const ServicesSection = ({ services, currentService, showService }) => (
-  <section className="py-16 bg-gray-900" id="services">
+  <section className="py-16" id="services">
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 px-4">
       {/* Left Section */}
       <div className="flex-1">

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const LetsConnectSection = () => (
-  <section className="py-16 bg-blue-50" id="lets-connect">
+  <section className="py-16" id="lets-connect">
     <div className="max-w-2xl mx-auto text-center">
       <h2 className="text-2xl font-bold mb-2 text-blue-700">
         Let's Create Big Stories Together!

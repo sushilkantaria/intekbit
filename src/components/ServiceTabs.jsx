@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 
-const ServiceTabs = ({ servicesData, mainTitle, description, image, className = '' }) => {
+const ServiceTabs = ({ servicesData, mainTitle, description, image }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeService = servicesData[activeIndex];
 
   return (
-    <div
-      className={`bg-white min-h-screen text-gray-900 dark:text-gray-100 ${className}`}
-    >
+    <div className=" min-h-screen text-gray-900 dark:text-gray-100">
       <section className="flex flex-col md:flex-row items-center justify-between px-4 py-8 bg-white shadow rounded-lg max-w-5xl mx-auto mb-8">
         <div className="md:w-2/3 space-y-4">
           {mainTitle && (

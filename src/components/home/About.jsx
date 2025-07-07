@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AboutSection = ({ activeTab, switchContent }) => (
-  <section className="py-16 bg-gray-50" id="about">
+  <section className="py-16 text-white" id="about">
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 px-4">
       {/* Left Section */}
       <div className="flex-1">
@@ -40,7 +40,7 @@ const AboutSection = ({ activeTab, switchContent }) => (
             Values
           </button>
         </div>
-        <div className="text-gray-700">
+        <div>
           {activeTab === 'mission' && (
             <p>
               At Intekbit Solutions Pvt. Ltd., we simplify challenges with
@@ -68,7 +68,7 @@ const AboutSection = ({ activeTab, switchContent }) => (
         </div>
       </div>
       {/* Right Section */}
-      <div className="flex-1 space-y-4 text-gray-700">
+      <div className="flex-1 space-y-4">
         <p>
           At Intekbit Solutions Pvt. Ltd., we transform problem statements into
           cutting-edge AI-powered solutions that simplify processes, save time,

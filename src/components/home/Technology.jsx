@@ -3,7 +3,7 @@ const TechnologySection = ({ technologies, activeTechnology, switchTechnology })
   const containerKey = `${activeTechnology}-${technologies[activeTechnology]?.length}`;
 
   return (
-    <section className="py-16 bg-gray-50" id="technology">
+    <section className="py-16" id="technology">
       <h2 className="text-2xl font-bold text-center mb-8 text-blue-700">
         Our Technology
       </h2>

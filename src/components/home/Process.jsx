@@ -5,7 +5,7 @@ const ProcessSection = ({
   processSteps,
   handleProcessStepHover,
 }) => (
-  <section className="py-16 bg-gray-900" id="process">
+  <section className="py-16" id="process">
     <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
       <div className="flex-1 flex flex-col items-center md:items-start">
         <img
