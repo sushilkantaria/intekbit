@@ -1,126 +1,79 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import services from '../data/services';
 
-const services = [
-    {
-        title: 'Web Development',
-        image: '/Assets/internal-assets/services-webdev.webp',
-        desc: 'Build fast, responsive websites tailored to your business needs. We create secure, user-friendly, and modern web solutions.',
-        route: '/web-development'
-    },
-    {
-        title: 'App Development',
-        image: '/Assets/internal-assets/services-appdev.webp',
-        desc: 'Design and develop mobile apps for Android and iOS platforms. Engage your audience with smooth, high-performance apps.',
-        route: '/app-development'
-    },
-    {
-        title: 'AI & ML Solutions',
-        image: '/Assets/internal-assets/services-AIML.webp',
-        desc: 'Unlock business insights with powerful AI and machine learning tools. Automate processes and make data-driven decisions.',
-        route: '/aiml-solutions'
-    },
-    {
-        title: 'Cloud Services',
-        image: '/Assets/internal-assets/services-cloud.webp',
-        desc: 'Leverage the power of the cloud for better scalability and flexibility. Secure cloud storage and infrastructure services.',
-        route: '/cloud-services'
-    },
-    {
-        title: 'UI & UX',
-        image: '/Assets/internal-assets/services-uiux.webp',
-        desc: 'Design intuitive user experiences with clean, interactive interfaces. Focused on usability and aesthetic appeal.',
-        route: '/uiux-design'
-    },
-    {
-        title: 'Software Development',
-        image: '/Assets/internal-assets/services-software.webp',
-        desc: 'Custom software solutions tailored to your business goals. Scalable, efficient, and designed for optimal performance.',
-        route: '/software-development'
-    },
-    {
-        title: 'IT Consulting',
-        image: '/Assets/internal-assets/services-consulting.webp',
-        desc: 'Expert IT consulting to streamline your tech strategy. Get guidance on infrastructure, security, and digital growth.',
-        route: '/it-consulting'
-    },
-    {
-        title: 'Graphic Design',
-        image: '/Assets/internal-assets/services-graphics.webp',
-        desc: 'Bring your ideas to life with stunning visuals. We create logos, banners, and designs that capture attention and inspire.',
-        route: '/graphic-designing'
-    },
-    {
-        title: 'Support & Maintenance',
-        image: '/Assets/internal-assets/services-support.webp',
-        desc: 'Keep your systems running smoothly with regular updates and technical support. Quick fixes to minimize downtime.',
-        route: '/support-maintenance'
-    },
-    {
-        title: 'Data Services',
-        image: '/Assets/internal-assets/services-data-services.webp',
-        desc: 'Manage, process, and analyze data effectively. Get actionable insights with our secure and reliable data solutions.',
-        route: '/data-services'
-    }
-];
+const cardBase = 'flex flex-col items-center group relative';
+const cardImg =
+  'relative w-full h-40 md:h-44 lg:h-48 bg-cover bg-center rounded-lg shadow-lg flex items-end border-b-4 border-blue-700';
+const cardOverlay =
+  'absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg';
+const cardTitle = 'mt-4 text-lg font-semibold text-blue-700 text-center';
 
 const Services = () => (
-    <div className="bg-white min-h-screen text-gray-900">
-        <section className="bg-gradient-to-r from-blue-100 to-blue-50 py-12 mb-8">
-            <div className="max-w-4xl mx-auto text-center">
-                <h1 className="text-4xl font-bold text-blue-700 mb-2">Our Services</h1>
-                <p className="text-lg text-gray-600 mb-4">Explore the wide range of services we offer to help your business grow.</p>
-                <Link className="inline-block px-6 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition" to="/contact">Know More</Link>
+  <div className="min-h-screen mt-14">
+    <section className="py-12 mb-8">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-4xl font-bold text-blue-700 mb-2">Our Services</h1>
+        <p className="text-lg text-white mb-4">
+          Explore the wide range of services we offer to help your business
+          grow.
+        </p>
+        <Link
+          className="inline-block px-6 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition"
+          to="/contact"
+        >
+          Know More
+        </Link>
+      </div>
+    </section>
+    <section className="max-w-6xl mx-auto px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {services.map((service) => (
+          <div
+            className={cardBase}
+            key={service.title}
+            style={{ minWidth: '220px', minHeight: '270px' }}
+          >
+            <div className="relative w-full flex items-end">
+              {/* Glow effect around image only */}
+              <div
+                className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0"
+                style={{
+                  boxShadow:
+                    '0 0 24px 8px rgba(236,72,153,0.28), 0 0 32px 12px rgba(59,130,246,0.28), 0 0 40px 16px rgba(139,92,246,0.28)',
+                }}
+              />
+              <div
+                className={
+                  cardImg +
+                  ' transition-transform duration-300 group-hover:scale-105 z-10'
+                }
+                style={{
+                  backgroundImage: `url('${service.image}')`,
+                  width: '100%',
+                  minHeight: '160px',
+                  maxHeight: '192px',
+                }}
+              >
+                <Link
+                  to={service.route}
+                  className="w-full h-full flex items-end relative"
+                  style={{ minHeight: '160px', maxHeight: '192px' }}
+                >
+                  <div className={cardOverlay}>
+                    <p className="text-white text-center px-4 text-sm animate-fade-in">
+                      {service.desc}
+                    </p>
+                  </div>
+                </Link>
+              </div>
             </div>
-        </section>
-        <section className="max-w-6xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                {services.slice(0, 3).map((service) => (
-                    <div className="flex flex-col items-center" key={service.title}>
-                        <Link
-                            to={service.route}
-                            className="w-64 h-40 bg-cover bg-center rounded-lg shadow-lg flex items-end relative group"
-                            style={{ backgroundImage: `url('${service.image}')` }}
-                            data-desc={service.desc}
-                        >
-                            <span className="absolute top-2 right-2 w-8 h-8 bg-blue-600 rounded-full opacity-70 group-hover:scale-110 transition-transform"></span>
-                        </Link>
-                        <div className="mt-4 text-lg font-semibold text-blue-700 text-center">{service.title}</div>
-                    </div>
-                ))}
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                {services.slice(3, 7).map((service) => (
-                    <div className="flex flex-col items-center" key={service.title}>
-                        <Link
-                            to={service.route}
-                            className="w-56 h-36 bg-cover bg-center rounded-lg shadow-lg flex items-end relative group"
-                            style={{ backgroundImage: `url('${service.image}')` }}
-                            data-desc={service.desc}
-                        >
-                            <span className="absolute top-2 right-2 w-8 h-8 bg-blue-600 rounded-full opacity-70 group-hover:scale-110 transition-transform"></span>
-                        </Link>
-                        <div className="mt-4 text-lg font-semibold text-blue-700 dark:text-blue-400 text-center">{service.title}</div>
-                    </div>
-                ))}
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {services.slice(7).map((service) => (
-                    <div className="flex flex-col items-center" key={service.title}>
-                        <Link
-                            to={service.route}
-                            className="w-56 h-36 bg-cover bg-center rounded-lg shadow-lg flex items-end relative group"
-                            style={{ backgroundImage: `url('${service.image}')` }}
-                            data-desc={service.desc}
-                        >
-                            <span className="absolute top-2 right-2 w-8 h-8 bg-blue-600 rounded-full opacity-70 group-hover:scale-110 transition-transform"></span>
-                        </Link>
-                        <div className="mt-4 text-lg font-semibold text-blue-700 text-center">{service.title}</div>
-                    </div>
-                ))}
-            </div>
-        </section>
-    </div>
+            <div className={cardTitle}>{service.title}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
 );
 
 export default Services;

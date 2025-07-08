@@ -12,10 +12,10 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="bg-white min-h-screen text-gray-900">
+        <div className="min-h-screen text-gray-900">
             {/* Hero Section */}
-            <div className="relative h-64 flex items-center justify-center bg-blue-700">
-                <div className="absolute inset-0 bg-blue-700 opacity-80"></div>
+            <div className="relative h-64 flex items-center justify-center">
+                <div className="absolute inset-0 opacity-80"></div>
                 <h1 className="relative z-10 text-4xl font-bold text-white">Contact Us</h1>
             </div>
             {/* Contact Section */}
