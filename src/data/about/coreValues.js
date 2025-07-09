@@ -1,7 +1,7 @@
 // Core Values data
 const coreValues = [
   {
-    icon: '★',
+    icon: '⭐',
     title: 'Excellence',
     description: 'We aim for the highest quality in everything we do.',
   },

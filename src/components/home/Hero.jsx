@@ -1,17 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Spline from '@splinetool/react-spline';
 
 const HeroSection = () => (
   <section
-    className="relative flex items-center justify-center h-[calc(100vh-40px)] bg-cover bg-center bg-no-repeat text-white text-center p-5"
-    style={{ backgroundImage: "url('/Assets/home-bg.webp')" }}
+    className="relative flex items-center justify-start h-screen max-w-6xl mx-auto text-white px-6"
     id="home"
   >
-    <div className="flex flex-col items-center justify-center bg-black/60 rounded-lg p-8 animate-fadeUp">
-      <h1 className="text-4xl md:text-5xl font-bold mb-2 animate-fadeUp delay-300 drop-shadow-lg">
+    {/* Content */}
+    <div
+      className="z-10 max-w-xl space-y-6 animate-fadeUp"
+      data-aos="fade-zoom-in"
+      data-aos-easing="ease-in-back"
+      data-aos-delay="1000"
+      data-aos-offset="0"
+    >
+      <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
         Welcome to INTEKBIT SOLUTIONS PVT LTD
       </h1>
-      <p className="text-lg md:text-xl mb-4 animate-fadeUp delay-500 drop-shadow">
+      <p className="text-lg md:text-xl drop-shadow">
         Driven by Technology, Powered by Trust.
       </p>
       <Link
@@ -21,6 +28,13 @@ const HeroSection = () => (
         Learn More
       </Link>
     </div>
+
+    {/* Spline on the Right */}
+    <div className="absolute right-0 top-0 h-full w-full md:w-1/2 pointer-events-none">
+      <Spline scene="https://prod.spline.design/TBsKJ22sOonPR-1i/scene.splinecode" />
+    </div>
+
+    <img className="absolute right-0 bottom-0 z-999 h-14 w-40" src="./Assets/black.png" />
   </section>
 );
 

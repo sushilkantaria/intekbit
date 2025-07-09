@@ -4,7 +4,6 @@ const MissionVisionCard = ({ image, alt, title, children }) => (
   <div
     className="flex-1 rounded-2xl p-6 shadow relative group"
     style={{
-      background: 'rgba(17,24,39,0.85)',
       border: '1.5px solid rgba(255,255,255,0.35)',
       boxShadow:
         '0 2px 12px 0 rgba(30,58,138,0.13), 0 1px 8px 0 rgba(136,19,55,0.10), 0 1px 6px 0 rgba(202,138,4,0.08), 0 1px 4px 0 rgba(6,78,59,0.08), inset 0 2px 16px 0 rgba(255,255,255,0.10), inset 0 0 12px 2px rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.05)',
