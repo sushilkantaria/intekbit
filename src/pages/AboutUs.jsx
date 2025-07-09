@@ -82,16 +82,14 @@ const AboutUs = () => {
         <h2 className="text-2xl font-bold text-center mb-8 text-blue-700">
           Our Core Values
         </h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8">
           {coreValues.map((value) => (
             <CoreValueCard
               key={value.title}
               icon={value.icon}
-              iconColor={value.iconColor}
               title={value.title}
-            >
-              {value.description}
-            </CoreValueCard>
+              description={value.description}
+            />
           ))}
         </div>
       </section>

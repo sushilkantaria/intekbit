@@ -1,92 +1,192 @@
 import React, { useRef } from 'react';
 
 const ContactUs = () => {
-    const formRef = useRef(null);
+  const formRef = useRef(null);
 
-    // You can add email sending logic here if needed
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add your email sending logic here
-        alert('Message sent! (Form submission logic to be implemented)');
-        formRef.current.reset();
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Message sent! (Form submission logic to be implemented)');
+    formRef.current.reset();
+  };
 
-    return (
-        <div className="min-h-screen text-gray-900">
-            {/* Hero Section */}
-            <div className="relative h-64 flex items-center justify-center">
-                <div className="absolute inset-0 opacity-80"></div>
-                <h1 className="relative z-10 text-4xl font-bold text-white">Contact Us</h1>
-            </div>
-            {/* Contact Section */}
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 py-12 px-4">
-                <div className="flex-1 space-y-6">
-                    <h2 className="text-2xl font-bold mb-4">Get In Touch With Us</h2>
-                    {/* Contact Information Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div className="bg-blue-50 rounded-lg p-4 flex flex-col items-center shadow">
-                            <div className="flex items-center gap-2 mb-1">
-                                <img src="/Assets/contact-phone.webp" alt="Phone" className="h-8 w-8" />
-                                <h3 className="font-semibold">Phone</h3>
-                            </div>
-                            <p className="text-gray-700">+91 88498 36407</p>
-                        </div>
-                        <div className="bg-blue-50 rounded-lg p-4 flex flex-col items-center shadow">
-                            <div className="flex items-center gap-2 mb-1">
-                                <img src="/Assets/contact-email.webp" alt="Email" className="h-8 w-8" />
-                                <h3 className="font-semibold">Email</h3>
-                            </div>
-                            <p className="text-gray-700">support@intekbit.com</p>
-                        </div>
-                        <div className="bg-blue-50 rounded-lg p-4 flex flex-col items-center shadow col-span-1 sm:col-span-2">
-                            <div className="flex items-center gap-2 mb-1">
-                                <img src="/Assets/contact-location.webp" alt="Shop" className="h-8 w-8" />
-                                <h3 className="font-semibold">Address</h3>
-                            </div>
-                            <p className="text-gray-700">S-18/19, Laxmi Darshan Complex, Dabholi Road, Surat-395004</p>
-                        </div>
-                    </div>
-                    {/* Map Section */}
-                    <div className="rounded-lg overflow-hidden shadow mt-6">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3832.6114691385887!2d72.8170905778006!3d21.229744291847084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDEzQ2LjMiTiA3MsKwNDknMTcuNiJF!5e0!3m2!1sen!2sin!4v1738761749782!5m2!1sen!2sin"
-                            width="100%"
-                            height="250"
-                            style={{ border: 0 }}
-                            allowFullScreen=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title="Intekbit Solutions Location"
-                        ></iframe>
-                    </div>
+  const glowStyle = {
+    boxShadow:
+      '0 2px 12px 0 rgba(30,58,138,0.18), 0 1px 8px 0 rgba(136,19,55,0.13), 0 1px 6px 0 rgba(202,138,4,0.10), 0 1px 4px 0 rgba(6,78,59,0.10), inset 0 2px 16px 0 rgba(255,255,255,0.13), inset 0 0 12px 2px rgba(255,255,255,0.10), inset 0 0 0 1px rgba(255,255,255,0.07)',
+    background: 'rgba(17,24,39,0.85)',
+    border: '1.5px solid rgba(255,255,255,0.35)',
+    backdropFilter: 'blur(24px) saturate(180%)',
+    WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+    boxSizing: 'border-box',
+  };
+
+  const glowLayer = (
+    <div
+      className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0"
+      style={{
+        boxShadow:
+          '0 0 24px 8px rgba(236,72,153,0.28), 0 0 32px 12px rgba(59,130,246,0.28), 0 0 40px 16px rgba(139,92,246,0.28)',
+      }}
+    />
+  );
+
+  return (
+    <div className="min-h-screen text-gray-900">
+      <div className="relative h-64 flex items-center justify-center">
+        <h1 className="relative z-10 text-4xl font-bold text-white">
+          Contact Us
+        </h1>
+      </div>
+
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 py-12 px-4">
+        <div className="flex-1 space-y-6">
+          <h2 className="text-2xl font-bold mb-4 text-white">
+            Get In Touch With Us
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {['Phone', 'Email', 'Address'].map((label) => (
+              <div
+                key={label}
+                className={`group rounded-lg p-4 flex flex-col items-center shadow relative ${
+                  label === 'Address' ? 'col-span-1 sm:col-span-2' : ''
+                }`}
+                style={glowStyle}
+              >
+                {glowLayer}
+                <div className="relative z-10 flex items-center gap-2 mb-1">
+                  <img
+                    src={
+                      label === 'Phone'
+                        ? '/Assets/contact-phone.webp'
+                        : label === 'Email'
+                        ? '/Assets/contact-email.webp'
+                        : '/Assets/contact-location.webp'
+                    }
+                    alt={label}
+                    className="h-8 w-8 invert"
+                  />
+                  <h3 className="font-semibold text-white">{label}</h3>
                 </div>
-                {/* Right Section - Contact Form */}
-                <div className="flex-1 bg-white rounded-lg shadow p-8">
-                    <h2 className="text-2xl font-bold mb-2">Send Us Your Requirements</h2>
-                    <p className="mb-4 text-gray-700">Have a question? We're here to help! Reach out to us, and we'll respond as soon as possible. Whether it's a project inquiry, a collaboration idea, or general assistance, we'd love to hear from you. Our team is dedicated to providing timely and helpful responses.</p>
-                    <form id="contact-form" ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                        <div>
-                            <label htmlFor="name" className="block font-medium mb-1">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-                        </div>
-                        <div>
-                            <label htmlFor="email" className="block font-medium mb-1">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email" required className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-                        </div>
-                        <div>
-                            <label htmlFor="subject" className="block font-medium mb-1">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-                        </div>
-                        <div>
-                            <label htmlFor="message" className="block font-medium mb-1">Your Message</label>
-                            <textarea id="message" name="message" placeholder="Your Message" required className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
-                        </div>
-                        <button type="submit" className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition">Send Message</button>
-                    </form>
-                </div>
-            </div>
+                <p className="text-gray-200">
+                  {label === 'Phone'
+                    ? '+91 88498 36407'
+                    : label === 'Email'
+                    ? 'support@intekbit.com'
+                    : 'S-18/19, Laxmi Darshan Complex, Dabholi Road, Surat-395004'}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="rounded-lg overflow-hidden shadow mt-6">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3832.6114691385887!2d72.8170905778006!3d21.229744291847084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDEzQ2LjMiTiA3MsKwNDknMTcuNiJF!5e0!3m2!1sen!2sin!4v1738761749782!5m2!1sen!2sin"
+              width="100%"
+              height="250"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Intekbit Solutions Location"
+            ></iframe>
+          </div>
         </div>
-    );
+
+        <div
+          className="flex-1 rounded-lg shadow p-8 relative group"
+          style={glowStyle}
+        >
+          {glowLayer}
+          <div className="relative z-10">
+            <h2 className="text-2xl font-bold mb-2 text-white">
+              Send Us Your Requirements
+            </h2>
+            <p className="mb-4 text-gray-200">
+              Have a question? We're here to help! Reach out to us, and we'll
+              respond as soon as possible. Whether it's a project inquiry, a
+              collaboration idea, or general assistance, we'd love to hear from
+              you.
+            </p>
+            <form
+              id="contact-form"
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-4"
+            >
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block font-medium mb-1 text-white"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  className="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block font-medium mb-1 text-white"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                  className="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="subject"
+                  className="block font-medium mb-1 text-white"
+                >
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                  className="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block font-medium mb-1 text-white"
+                >
+                  Your Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                  className="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white font-semibold py-2 rounded-xl hover:bg-blue-700 transition"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default ContactUs;

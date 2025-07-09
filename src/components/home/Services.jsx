@@ -11,7 +11,7 @@ const ServicesSection = ({ services, currentService, showService }) => (
   <section className="py-16" id="services">
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 px-4">
       {/* Left Section */}
-      <div className="flex-1">
+      <div className="flex-1" data-aos-duration="1000" data-aos="zoom-in-right">
         <h2 className="text-2xl font-bold mb-4 text-blue-500">
           {services[currentService]?.title || 'Our Services'}
         </h2>
@@ -39,7 +39,11 @@ const ServicesSection = ({ services, currentService, showService }) => (
         </Link>
       </div>
       {/* Right Section - Slider */}
-      <div className="flex-1 flex flex-col items-center">
+      <div
+        className="flex-1 flex flex-col items-center"
+        data-aos-duration="1000"
+        data-aos="zoom-in-left"
+      >
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {Object.keys(services).map((key) => (
             <div

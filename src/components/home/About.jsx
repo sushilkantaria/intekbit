@@ -4,7 +4,13 @@ const AboutSection = ({ activeTab, switchContent }) => (
   <section className="py-16 text-white" id="about">
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 px-4">
       {/* Left Section */}
-      <div className="flex-1">
+      <div
+        className="flex-1"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         <h2 className="text-2xl font-bold mb-4">
           Everything You Need to Know About Intekbit Solutions
         </h2>
@@ -68,7 +74,13 @@ const AboutSection = ({ activeTab, switchContent }) => (
         </div>
       </div>
       {/* Right Section */}
-      <div className="flex-1 space-y-4">
+      <div
+        className="flex-1 space-y-4"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         <p>
           At Intekbit Solutions Pvt. Ltd., we transform problem statements into
           cutting-edge AI-powered solutions that simplify processes, save time,
