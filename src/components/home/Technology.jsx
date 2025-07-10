@@ -26,7 +26,7 @@ const TechnologySection = ({
     <section
       className="py-16"
       id="technology"
-      data-aos="fade-right"
+      data-aos="fade-left"
       data-aos-offset="300"
       data-aos-easing="ease-in-sine"
       data-aos-duration="1000"
