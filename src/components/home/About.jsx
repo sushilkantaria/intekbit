@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutData from '../../data/home/about';
 
 const AboutSection = ({ activeTab, switchContent }) => (
   <section className="py-16 text-white" id="about">
@@ -14,61 +15,35 @@ const AboutSection = ({ activeTab, switchContent }) => (
         <h2 className="text-2xl font-bold mb-4">
           Everything You Need to Know About Intekbit Solutions
         </h2>
-        <div className="flex gap-2 mb-4">
-          <button
-            className={`px-4 py-2 rounded ${
-              activeTab === 'mission'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-blue-600 border border-blue-600'
-            }`}
-            onClick={() => switchContent('mission')}
-          >
-            Mission
-          </button>
-          <button
-            className={`px-4 py-2 rounded ${
-              activeTab === 'vision'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-blue-600 border border-blue-600'
-            }`}
-            onClick={() => switchContent('vision')}
-          >
-            Vision
-          </button>
-          <button
-            className={`px-4 py-2 rounded ${
-              activeTab === 'values'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-blue-600 border border-blue-600'
-            }`}
-            onClick={() => switchContent('values')}
-          >
-            Values
-          </button>
+        <div className="flex gap-4 mb-4">
+          {['mission', 'vision', 'values'].map((tab) => (
+            <div key={tab} className="relative group">
+              <button
+                onClick={() => switchContent(tab)}
+                className={`px-4 py-2 rounded-2xl transition-all duration-300 cursor-pointer w-full relative z-10 text-white
+                  ${
+                    tab === activeTab
+                      ? 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07),-4px_0_8px_2px_rgba(255, 0, 128, 0.452),4px_0_8px_2px_rgb(0,98,255)]'
+                      : 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]'
+                  }
+                `}
+              >
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </button>
+              {tab === activeTab && (
+                <div className="absolute inset-0 rounded-2xl opacity-100 transition duration-800 pointer-events-none z-0 shadow-[-4px_0_8px_2px_rgb(255,0,128),4px_0_8px_2px_rgb(0,98,255)]" />
+              )}
+            </div>
+          ))}
         </div>
         <div>
-          {activeTab === 'mission' && (
-            <p>
-              At Intekbit Solutions Pvt. Ltd., we simplify challenges with
-              smart, AI-powered solutions while staying by your side every step
-              of the way. Our goal is to deeply understand your needs, deliver
-              meaningful results, and create lasting partnerships.
-            </p>
-          )}
-          {activeTab === 'vision' && (
-            <p>
-              We envision a world where innovation meets trust, and challenges
-              become stepping stones to success. At Intekbit, we aim to inspire
-              confidence and empower growth with solutions that truly make a
-              difference.
-            </p>
-          )}
+          {activeTab === 'mission' && <p>{aboutData.mission}</p>}
+          {activeTab === 'vision' && <p>{aboutData.vision}</p>}
           {activeTab === 'values' && (
             <ul className="list-disc pl-5">
-              <li>Trust</li>
-              <li>Excellence</li>
-              <li>Collaboration</li>
-              <li>Reliability</li>
+              {aboutData.values.map((val) => (
+                <li key={val}>{val}</li>
+              ))}
             </ul>
           )}
         </div>
@@ -81,28 +56,9 @@ const AboutSection = ({ activeTab, switchContent }) => (
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        <p>
-          At Intekbit Solutions Pvt. Ltd., we transform problem statements into
-          cutting-edge AI-powered solutions that simplify processes, save time,
-          and embrace the future. We thrive on challenges and focus on
-          delivering solutions that go beyond expectations. By blending
-          creativity with a deep understanding of technology, we craft
-          efficient, tailored systems that redefine modern problem-solving.
-        </p>
-        <p>
-          What sets us apart is our unwavering commitment to collaboration. At
-          Intekbit Solutions, we don't work for clients – we work with clients.
-          Shoulder to shoulder, hand in hand, we stand by them through every
-          challenge, ensuring their journey is as seamless as the solutions we
-          deliver.
-        </p>
-        <p>
-          With trust and innovation as our core principles, we don't just solve
-          problems – we create opportunities for growth, efficiency, and staying
-          ahead in a constantly evolving world. Let Intekbit Solutions pave the
-          way to your success with solutions that matter today and excel
-          tomorrow.
-        </p>
+        {aboutData.aboutParagraphs.map((para, idx) => (
+          <p key={idx}>{para}</p>
+        ))}
       </div>
     </div>
   </section>

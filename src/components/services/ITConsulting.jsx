@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiceTabs from '../components/ServiceTabs';
-import itConsulting from '../data/itConsulting';
+import ServiceTabs from '../ServiceTabs';
+import itConsulting from '../../data/services/itConsulting';
 
 const ITConsulting = () => {
   return (

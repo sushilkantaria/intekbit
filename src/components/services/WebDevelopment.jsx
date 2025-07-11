@@ -1,16 +1,16 @@
-import ServiceTabs from '../components/ServiceTabs';
-import aimlSolutions from '../data/aimlSolutions';
+import React from 'react';
+import ServiceTabs from '../ServiceTabs';
+import webDevelopment from '../../data/services/webDevelopment';
 
-const AIMLSolutions = () => {
+const WebDevelopment = () => {
   return (
     <ServiceTabs
-      servicesData={aimlSolutions}
-      mainTitle="Artificial Intelligence (AI)"
+      servicesData={webDevelopment}
+      mainTitle="Web Development"
       description="We offer high-performance, secure, and visually stunning websites tailored to your brand's needs. Using cutting-edge technologies like React, Next.js, Node.js, and MongoDB, we ensure fast, scalable, and mobile-friendly solutions that enhance user experience and drive business growth."
       image="/Assets/internal-webdevelopment.webp"
-      frameworks={aimlSolutions}
     />
   );
 };
 
-export default AIMLSolutions;
+export default WebDevelopment;

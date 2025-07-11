@@ -7,15 +7,13 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Close menu on route change
   useState(() => {
     setIsMenuOpen(false);
   }, [location]);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50">
+    <nav className="w-full fixed top-0 left-0 z-999">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-2 md:py-3 relative">
-        {/* Logo */}
         <div
           className="flex items-center min-w-[120px]"
           data-aos="fade-down"
@@ -29,44 +27,43 @@ const Navbar = () => {
             />
           </Link>
         </div>
-
-        {/* Middle Nav */}
         <div
           className="hidden md:flex flex-1 justify-center"
           data-aos="fade-down"
           data-aos-duration="1500"
         >
-          <ul
-            className="flex gap-8 items-center px-8 py-2 rounded-full shadow-lg backdrop-blur-md max-w-xl w-full justify-center"
-            style={{
-              border: '1.5px solid rgba(255,255,255,0.35)',
-              boxShadow:
-                '0 2px 12px 0 rgba(30,58,138,0.13), 0 1px 8px 0 rgba(136,19,55,0.10), 0 1px 6px 0 rgba(202,138,4,0.08), 0 1px 4px 0 rgba(6,78,59,0.08), inset 0 2px 16px 0 rgba(255,255,255,0.10), inset 0 0 12px 2px rgba(255,255,255,0.07), inset 0 0 0 1px rgba(255,255,255,0.05)',
-              backdropFilter: 'blur(18px) saturate(180%)',
-              WebkitBackdropFilter: 'blur(18px) saturate(180%)',
-            }}
-          >
-            {[
+          <ul className="flex gap-8 items-center px-8 py-2 rounded-full max-w-xl w-full justify-center shadow-[0_2px_12px_0_rgba(30,58,138,0.13),0_1px_8px_0_rgba(136,19,55,0.10),0_1px_6px_0_rgba(202,138,4,0.08),0_1px_4px_0_rgba(6,78,59,0.08),inset_0_2px_16px_0_rgba(255,255,255,0.10),inset_0_0_12px_2px_rgba(255,255,255,0.07),inset_0_0_0_1px_rgba(255,255,255,0.05)] backdrop-blur-lg backdrop-saturate-150">
+            {/*
               { path: '/', label: 'Home' },
               { path: '/services', label: 'Services' },
               { path: '/blog', label: 'Blog' },
               { path: '/career', label: 'Career' },
               { path: '/about', label: 'About Us' },
-            ].map(({ path, label }) => (
-              <li key={label}>
-                <Link
-                  to={path}
-                  className="text-white font-semibold text-base md:text-lg hover:text-gray-600 transition-colors"
-                  data-aos="fade-down"
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
+            */}
+            {['/', '/services', '/blog', '/career', '/about'].map(
+              (path, index) => {
+                let label;
+                if (path === '/') {
+                  label = 'Home';
+                } else {
+                  const str = path.slice(1).replace('-', ' ');
+                  label = str.charAt(0).toUpperCase() + str.slice(1);
+                }
+                return (
+                  <li key={index}>
+                    <Link
+                      to={path}
+                      className="text-white font-semibold text-base md:text-lg hover:text-gray-600 transition-colors"
+                      data-aos="fade-down"
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              }
+            )}
           </ul>
         </div>
-
-        {/* Contact Us Button */}
         <div
           className="hidden md:flex min-w-[120px] justify-end items-center"
           data-aos="fade-down"
@@ -79,40 +76,46 @@ const Navbar = () => {
             Contact Us <span className="ml-1">&rarr;</span>
           </Link>
         </div>
-
-        {/* Mobile Hamburger */}
         <button
-          className="md:hidden ml-4 text-3xl"
+          className="md:hidden ml-4 text-3xl text-white"
           onClick={toggleMenu}
           aria-label="Open menu"
+          data-aos="fade-down"
+          data-aos-duration="1500"
         >
           <span className="sr-only">Open menu</span> &#9776;
         </button>
       </div>
-
-      {/* Mobile Menu */}
       {isMenuOpen && (
-        <ul className="md:hidden w-full shadow-lg flex flex-col gap-2 p-4 z-50 rounded-b-xl animate-fadeIn bg-white">
-          {[
-            { path: '/', label: 'Home' },
-            { path: '/services', label: 'Services' },
-            { path: '/about', label: 'About Us' },
-            { path: '/contact', label: 'Contact Us' },
-          ].map(({ path, label }) => (
-            <li key={label}>
-              <Link
-                to={path}
-                className={`${
-                  label === 'Contact Us'
-                    ? 'bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 text-white px-4 py-2 rounded-full shadow-md font-semibold'
-                    : 'text-gray-800 hover:text-blue-600 font-semibold'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {label}
-              </Link>
-            </li>
-          ))}
+        <ul
+          className="md:hidden w-full flex flex-col gap-4 p-4 z-999 rounded-2xl animate-fadeIn text-white backdrop-blur-lg backdrop-saturate-150 items-center shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] relative group"
+          data-aos="fade-down"
+          data-aos-duration="1500"
+        >
+          {['/', '/services', '/about', '/contact'].map((path, index) => {
+            let label;
+            if (path === '/') {
+              label = 'Home';
+            } else {
+              const str = path.slice(1).replace('-', ' ');
+              label = str.charAt(0).toUpperCase() + str.slice(1);
+            }
+            return (
+              <li key={index}>
+                <Link
+                  to={path}
+                  className={`$${
+                    path === '/contact'
+                      ? 'bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 text-white px-4 py-2 rounded-full font-semibold shadow-[inset_0_0_16px_4px_rgba(59,130,246,0.5),inset_0_0_32px_8px_rgba(99,102,241,0.3)]'
+                      : 'text-gray-800 hover:text-blue-600 font-semibold'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       )}
     </nav>

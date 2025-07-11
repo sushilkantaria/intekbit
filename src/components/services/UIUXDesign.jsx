@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiceTabs from '../components/ServiceTabs';
-import uiuxDesign from '../data/uiuxDesign';
+import ServiceTabs from '../ServiceTabs';
+import uiuxDesign from '../../data/services/uiuxDesign';
 
 const UIUXDesign = () => {
   return (

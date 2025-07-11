@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiceTabs from '../components/ServiceTabs';
-import supportMaintenance from '../data/supportMaintenance';
+import ServiceTabs from '../ServiceTabs';
+import supportMaintenance from '../../data/services/supportMaintenance';
 
 const SupportMaintenance = () => {
   return (

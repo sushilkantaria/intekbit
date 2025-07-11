@@ -26,7 +26,7 @@ const TechnologySection = ({
     <section
       className="py-16"
       id="technology"
-      data-aos="fade-left"
+      data-aos="fade-right"
       data-aos-offset="300"
       data-aos-easing="ease-in-sine"
       data-aos-duration="1000"
@@ -38,17 +38,20 @@ const TechnologySection = ({
       {/* Buttons */}
       <div className="flex justify-center gap-4 mb-8 flex-wrap">
         {buttons.map(({ key, label }) => (
-          <button
-            key={key}
-            onClick={() => switchTechnology(key)}
-            className={`px-4 py-2 rounded transition-all duration-300 ${
-              activeTechnology === key
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white'
-            }`}
-          >
-            {label}
-          </button>
+          <div key={key} className="relative group">
+            <button
+              onMouseEnter={() => switchTechnology(key)}
+              className={`px-4 py-2 rounded-2xl transition-all duration-300 cursor-pointer w-full relative z-10 text-white
+                ${
+                  key === activeTechnology
+                    ? 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07),-4px_0_8px_2px_rgb(255,0,128),4px_0_8px_2px_rgb(0,98,255)]'
+                    : 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]'
+                }
+              `}
+            >
+              {label}
+            </button>
+          </div>
         ))}
       </div>
 
