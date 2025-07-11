@@ -5,30 +5,33 @@ import {
   Route,
   useLocation,
 } from 'react-router-dom';
+
 import Navbar from './pages/Navbar';
 import Footer from './pages/Footer';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
-import WebDevelopment from './pages/WebDevelopment';
-import UIUXDesign from './pages/UIUXDesign';
+import WebDevelopment from './components/services/WebDevelopment';
+import UIUXDesign from './components/services/UIUXDesign';
 import TermsAndConditions from './pages/TermsAndConditions';
-import SupportMaintenance from './pages/SupportMaintenance';
-import SoftwareDevelopment from './pages/SoftwareDevelopment';
+import SupportMaintenance from './components/services/SupportMaintenance';
+import SoftwareDevelopment from './components/services/SoftwareDevelopment';
 import Services from './pages/Services';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import ITConsulting from './pages/ITConsulting';
-import CloudServices from './pages/CloudServices';
-import DataServices from './pages/DataServices';
-import AIMLSolutions from './pages/AIMLSolutions';
-import AppDevelopment from './pages/AppDevelopment';
-import GraphicDesigning from './pages/GraphicDesigning';
+import ITConsulting from './components/services/ITConsulting';
+import CloudServices from './components/services/CloudServices';
+import DataServices from './components/services/DataServices';
+import AIMLSolutions from './components/services/AIMLSolutions';
+import AppDevelopment from './components/services/AppDevelopment';
+import GraphicDesigning from './components/services/GraphicDesigning';
 import Blog from './pages/Blog';
 import Career from './pages/Career';
+import ScrollToTop from './components/ui/ScrollToTop';
 
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+
 
 function AppWrapper() {
   const location = useLocation();
@@ -47,6 +50,7 @@ function AppWrapper() {
       style={{ backgroundColor: '#000000' }}
     >
       <Navbar />
+      <ScrollToTop />
       <div className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />

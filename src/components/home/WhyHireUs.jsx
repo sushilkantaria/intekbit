@@ -1,4 +1,5 @@
 import React from 'react';
+import whyHireUsData from '../../data/home/whyHireUs';
 
 function WhyHireUsSection() {
   return (
@@ -8,26 +9,9 @@ function WhyHireUsSection() {
           Why Hire Us
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <WhyHireUsCard
-            icon="🌟"
-            title="Expert Team"
-            description="Skilled professionals with diverse expertise to address challenges."
-          />
-          <WhyHireUsCard
-            icon="🚀"
-            title="Innovative Solutions"
-            description="Cutting-edge approaches that keep you ahead of the competition."
-          />
-          <WhyHireUsCard
-            icon="🤝"
-            title="Client Partnership"
-            description="We work WITH you, not FOR you, creating lasting relationships."
-          />
-          <WhyHireUsCard
-            icon="⚙️"
-            title="Technical Excellence"
-            description="Superior development practices for high-quality deliverables."
-          />
+          {whyHireUsData.map((item) => (
+            <WhyHireUsCard key={item.title} {...item} />
+          ))}
         </div>
       </div>
     </section>
@@ -36,21 +20,9 @@ function WhyHireUsSection() {
 
 function WhyHireUsCard({ icon, title, description }) {
   return (
-    <div
-      className="flex flex-col items-center rounded-2xl shadow-2xl p-6 w-full transition-transform duration-300 transform hover:-translate-y-3 hover:scale-105 relative group"
-      style={{
-        boxShadow:
-          '0 2px 12px 0 rgba(30,58,138,0.18), 0 1px 8px 0 rgba(136,19,55,0.13), 0 1px 6px 0 rgba(202,138,4,0.10), 0 1px 4px 0 rgba(6,78,59,0.10), inset 0 2px 16px 0 rgba(255,255,255,0.13), inset 0 0 12px 2px rgba(255,255,255,0.10), inset 0 0 0 1px rgba(255,255,255,0.07)',
-      }}
-    >
-      {/* Glow effect */}
-      <div
-        className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-800 pointer-events-none z-0"
-        style={{
-          boxShadow:
-            '0 0 12px 4px rgb(255, 0, 128), 0 0 16px 6px rgb(0, 98, 255), 0 0 20px 8px rgb(76, 0, 255)',
-        }}
-      />
+    <div className="flex flex-col items-center rounded-2xl p-6 w-full transition-transform duration-300 transform hover:-translate-y-3 hover:scale-105 relative group shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]">
+      {/* Dual color vertical box-shadow on hover */}
+      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-800 pointer-events-none z-0 shadow-[-8px_0_16px_4px_rgb(255,0,128),8px_0_16px_4px_rgb(0,98,255)]" />
       <div className="text-4xl mb-2 z-10">{icon}</div>
       <h3 className="text-lg font-semibold text-blue-400 mb-2 z-10">{title}</h3>
       <p className="text-gray-200 text-center z-10">{description}</p>

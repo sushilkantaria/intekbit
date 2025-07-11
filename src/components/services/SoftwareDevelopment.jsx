@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiceTabs from '../components/ServiceTabs';
-import softwareDevelopment from '../data/softwareDevelopment';
+import ServiceTabs from '../ServiceTabs';
+import softwareDevelopment from '../../data/services/softwareDevelopment';
 
 const SoftwareDevelopment = () => {
   return (

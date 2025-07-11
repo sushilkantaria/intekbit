@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiceTabs from '../components/ServiceTabs';
-import dataServices from '../data/dataServices';
+import ServiceTabs from '../ServiceTabs';
+import dataServices from '../../data/services/dataServices';
 
 const DataServices = () => {
   return (

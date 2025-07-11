@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiceTabs from '../components/ServiceTabs';
-import graphicDesigning from '../data/graphicDesigning';
+import ServiceTabs from '../ServiceTabs';
+import graphicDesigning from '../../data/services/graphicDesigning';
 
 const GraphicDesigning = () => {
   return (

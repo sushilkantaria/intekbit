@@ -12,11 +12,11 @@ const ContactUs = () => {
   const glowStyle = {
     boxShadow:
       '0 2px 12px 0 rgba(30,58,138,0.18), 0 1px 8px 0 rgba(136,19,55,0.13), 0 1px 6px 0 rgba(202,138,4,0.10), 0 1px 4px 0 rgba(6,78,59,0.10), inset 0 2px 16px 0 rgba(255,255,255,0.13), inset 0 0 12px 2px rgba(255,255,255,0.10), inset 0 0 0 1px rgba(255,255,255,0.07)',
-    background: 'rgba(17,24,39,0.85)',
-    border: '1.5px solid rgba(255,255,255,0.35)',
-    backdropFilter: 'blur(24px) saturate(180%)',
-    WebkitBackdropFilter: 'blur(24px) saturate(180%)',
-    boxSizing: 'border-box',
+    // background: 'rgba(17,24,39,0.85)',
+    // border: '1.5px solid rgba(255,255,255,0.35)',
+    // backdropFilter: 'blur(24px) saturate(180%)',
+    // WebkitBackdropFilter: 'blur(24px) saturate(180%)',
+    // boxSizing: 'border-box',
   };
 
   const glowLayer = (
@@ -113,74 +113,53 @@ const ContactUs = () => {
               className="space-y-4"
             >
               <div>
-                <label
-                  htmlFor="name"
-                  className="block font-medium mb-1 text-white"
-                >
-                  Name
-                </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Your Name"
+                  placeholder="Name"
                   required
-                  className="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full text-white border border-gray-600 rounded-3xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
               <div>
-                <label
-                  htmlFor="email"
-                  className="block font-medium mb-1 text-white"
-                >
-                  Email
-                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder="Your Email"
                   required
-                  className="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full text-white border border-gray-600 rounded-3xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
               <div>
-                <label
-                  htmlFor="subject"
-                  className="block font-medium mb-1 text-white"
-                >
-                  Subject
-                </label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
                   placeholder="Subject"
                   required
-                  className="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full text-white border border-gray-600 rounded-3xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
               </div>
               <div>
-                <label
-                  htmlFor="message"
-                  className="block font-medium mb-1 text-white"
-                >
-                  Your Message
-                </label>
                 <textarea
                   id="message"
                   name="message"
                   placeholder="Your Message"
                   required
-                  className="w-full border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="w-full text-white border border-gray-600 rounded-3xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white font-semibold py-2 rounded-xl hover:bg-blue-700 transition"
-              >
-                Send Message
-              </button>
+              <div className="relative">
+                <button
+                  type="submit"
+                  className="w-full cursor-pointer text-white font-semibold py-2 rounded-3xl transition relative z-10 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] peer"
+                >
+                  Send Message
+                </button>
+                <div className="absolute inset-0 rounded-3xl opacity-0 peer-hover:opacity-100 transition duration-800 pointer-events-none z-0 shadow-[-4px_0_8px_2px_rgb(255,0,128),4px_0_8px_2px_rgb(0,98,255)]" />
+              </div>
             </form>
           </div>
         </div>
