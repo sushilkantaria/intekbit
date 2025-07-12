@@ -3,20 +3,12 @@ import founders from '../../data/home/founders';
 
 const FounderCard = ({ founder }) => (
   <div
-    className="flex flex-col items-center rounded-2xl shadow-2xl p-6 w-64 transition-transform duration-300 transform relative group"
-    style={{
-      boxShadow:
-        '0 2px 12px 0 rgba(30,58,138,0.18), 0 1px 8px 0 rgba(136,19,55,0.13), 0 1px 6px 0 rgba(202,138,4,0.10), 0 1px 4px 0 rgba(6,78,59,0.10), inset 0 2px 16px 0 rgba(255,255,255,0.13), inset 0 0 12px 2px rgba(255,255,255,0.10), inset 0 0 0 1px rgba(255,255,255,0.07)',
-    }}
+    className={
+      'flex flex-col items-center rounded-2xl p-6 w-64 transition-transform duration-300 transform relative group shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]'
+    }
   >
     {/* Glow effect */}
-    <div
-      className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-800 pointer-events-none z-0"
-      style={{
-        boxShadow:
-          '0 0 12px 4px rgb(255, 0, 128), 0 0 16px 6px rgb(0, 98, 255), 0 0 20px 8px rgb(76, 0, 255)',
-      }}
-    />
+    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-800 pointer-events-none z-0 shadow-[0_0_12px_4px_rgb(255,0,128),0_0_16px_6px_rgb(0,98,255),0_0_20px_8px_rgb(76,0,255)]" />
     <img
       src={founder.image}
       alt={founder.name}

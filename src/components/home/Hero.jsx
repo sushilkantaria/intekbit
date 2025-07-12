@@ -35,11 +35,11 @@ const HeroSection = () => (
       <div className="relative w-fit">
         <Link
           to="/services"
-          className="peer w-[180px] h-[48px] flex items-center justify-center px-6 py-2 rounded-2xl transition-all duration-300 cursor-pointer relative z-10 text-white font-semibold text-center shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]"
+          className="peer flex items-center justify-center px-6 py-2 rounded-2xl transition-all duration-300 cursor-pointer relative z-10 text-white font-semibold text-center shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]"
         >
           Learn More
         </Link>
-        <div className="absolute inset-0 rounded-2xl opacity-0 peer-hover:opacity-100 shadow-[-4px_0_8px_2px_rgb(255,0,128,0.7),4px_0_8px_2px_rgb(0,98,255,0.7)]" />
+        <div className="absolute inset-0 rounded-2xl opacity-0 peer-hover:opacity-100 shadow-[-4px_0_8px_2px_rgba(255,0,128,0.7),4px_0_8px_2px_rgba(0,98,255,0.7)]" />
       </div>
     </div>
 

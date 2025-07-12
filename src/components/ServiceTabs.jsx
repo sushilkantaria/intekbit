@@ -6,80 +6,49 @@ const ServiceTabs = ({ servicesData, mainTitle, description, image }) => {
 
   return (
     <div className="min-h-screen mt-20">
-      {/* Header Section */}
-      <section
-        className="group relative flex flex-col md:flex-row items-center justify-between px-4 py-8 rounded-2xl max-w-5xl mx-auto mb-8"
-        style={{
-          boxShadow:
-            '0 2px 12px 0 rgba(30,58,138,0.18), 0 1px 8px 0 rgba(136,19,55,0.13), 0 1px 6px 0 rgba(202,138,4,0.10), 0 1px 4px 0 rgba(6,78,59,0.10), inset 0 2px 16px 0 rgba(255,255,255,0.13), inset 0 0 12px 2px rgba(255,255,255,0.10), inset 0 0 0 1px rgba(255,255,255,0.07)',
-          border: '1.5px solid rgba(255,255,255,0.35)',
-          backdropFilter: 'blur(24px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(24px) saturate(180%)',
-          boxSizing: 'border-box',
-        }}
-      >
+      <section className="group relative max-w-5xl mx-auto rounded-2xl p-6 border shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]">
         {/* Glow Layer */}
-        <div
-          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0"
-          style={{
-            boxShadow:
-              '0 0 24px 8px rgba(236,72,153,0.28), 0 0 32px 12px rgba(59,130,246,0.28), 0 0 40px 16px rgba(139,92,246,0.28)',
-          }}
-        />
-
-        {/* Actual Content */}
-        <div className="relative z-10 md:w-2/3 space-y-4">
-          {mainTitle && (
-            <h2 className="text-2xl font-bold text-blue-700 mb-2">
-              {mainTitle}
-            </h2>
-          )}
-          {description && <p className="text-white">{description}</p>}
-        </div>
-        {image && (
-          <div className="relative z-10 md:w-1/3 flex justify-center mt-6 md:mt-0">
-            <img src={image} alt={mainTitle} />
+        {/* <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0 shadow-[-8px_0_16px_4px_rgb(255,0,128),8px_0_16px_4px_rgb(0,98,255)]" /> */}
+        {/* Header Section (on top) */}
+        <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between mb-8">
+          <div className="md:w-2/3 space-y-4">
+            {mainTitle && (
+              <h2 className="text-2xl font-bold text-blue-700 mb-2">
+                {mainTitle}
+              </h2>
+            )}
+            {description && <p className="text-white">{description}</p>}
           </div>
-        )}
-      </section>
+          {image && (
+            <div className="md:w-1/3 flex justify-center mt-6 md:mt-0">
+              <img src={image} alt={mainTitle} />
+            </div>
+          )}
+        </div>
 
-      {/* Tab Section */}
-      <section
-        className="group relative max-w-5xl mx-auto rounded-2xl p-6 border mb-4"
-        style={{
-          boxShadow:
-            '0 2px 12px 0 rgba(30,58,138,0.18), 0 1px 8px 0 rgba(136,19,55,0.13), 0 1px 6px 0 rgba(202,138,4,0.10), 0 1px 4px 0 rgba(6,78,59,0.10), inset 0 2px 16px 0 rgba(255,255,255,0.13), inset 0 0 12px 2px rgba(255,255,255,0.10), inset 0 0 0 1px rgba(255,255,255,0.07)',
-          border: '1.5px solid rgba(255,255,255,0.35)',
-          backdropFilter: 'blur(24px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(24px) saturate(180%)',
-          boxSizing: 'border-box',
-        }}
-      >
-        {/* Glow Layer */}
-        <div
-          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0"
-          style={{
-            boxShadow:
-              '0 0 24px 8px rgba(236,72,153,0.28), 0 0 32px 12px rgba(59,130,246,0.28), 0 0 40px 16px rgba(139,92,246,0.28)',
-          }}
-        />
+        {/* Actual Content (tabs and details) below header */}
 
-        {/* Actual Content */}
         <div className="relative z-10">
           {/* Tabs */}
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
             {servicesData.map((service, idx) => (
-              <button
-                key={service.title}
-                className={`px-4 py-2 rounded font-semibold border transition-colors ${
-                  idx === activeIndex
-                    ? 'bg-blue-700 text-white border-blue-700'
-                    : 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-blue-100'
-                }`}
-                onClick={() => setActiveIndex(idx)}
-              >
-                {service.title}
-              </button>
+              <div key={service.title} className="relative w-fit flex">
+                <button
+                  onClick={() => setActiveIndex(idx)}
+                  className={`px-4 py-2 rounded-2xl transition-all duration-300 cursor-pointer w-full relative z-10 text-white
+                    ${
+                      idx === activeIndex
+                        ? 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07),-4px_0_8px_2px_rgba(255, 0, 128, 0.452),4px_0_8px_2px_rgba(0, 98, 255, 0.488)]'
+                        : 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] hover:shadow-[-4px_0px_8px_4px_rgba(255,0,128,0.45),4px_0px_8px_4px_rgba(0,98,255,0.35)]'
+                    }
+                  `}
+                >
+                  {service.title}
+                </button>
+                {idx === activeIndex && (
+                  <div className="absolute inset-0 rounded-2xl opacity-100 transition duration-800 pointer-events-none z-0 shadow-[0_4px_4px_0_rgb(0,98,255),0_4px_4px_0_rgb(255,0,128)]" />
+                )}
+              </div>
             ))}
           </div>
 

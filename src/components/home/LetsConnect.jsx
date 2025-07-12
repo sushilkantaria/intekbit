@@ -1,4 +1,5 @@
 import React from 'react';
+import { HiArrowLongRight } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 
 const LetsConnectSection = () => (
@@ -10,25 +11,16 @@ const LetsConnectSection = () => (
       <p className="mb-6 text-gray-600">
         Share your project details to build your path toward success.
       </p>
-      <Link
-        to="/contact"
-        className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition"
-      >
-        <span>Get A Quote</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-          className="ml-2"
+      <div className="relative w-fit mx-auto">
+        <Link
+          to="/contact"
+          className="inline-flex items-center peer relative px-6 py-2 text-white rounded-3xl transition shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] font-semibold text-center z-10 gap-2"
         >
-          <path
-            fillRule="evenodd"
-            d="M12.146 8.354a.5.5 0 0 1 0-.708L14.793 5H1.5a.5.5 0 0 1 0-1h13.293l-2.646-2.646a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708 0z"
-          />
-        </svg>
-      </Link>
+          <span>Get A Quote</span>
+          <HiArrowLongRight />
+        </Link>
+        <div className="absolute inset-0 opacity-0 peer-hover:opacity-100 rounded-3xl z-0 pointer-events-none shadow-[-4px_0_8px_4px_rgb(255,0,128),4px_0_8px_4px_rgb(0,98,255)]" />
+      </div>
     </div>
   </section>
 );

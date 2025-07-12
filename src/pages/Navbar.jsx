@@ -69,12 +69,15 @@ const Navbar = () => {
           data-aos="fade-down"
           data-aos-duration="2000"
         >
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 text-white px-6 py-2 rounded-full shadow-md font-semibold hover:from-blue-600 hover:to-indigo-600 transition-all"
-          >
-            Contact Us <span className="ml-1">&rarr;</span>
-          </Link>
+          <div className="relative w-fit">
+            <Link
+              to="/contact"
+              className="peer inline-flex items-center relative px-6 py-2 text-white rounded-3xl transition shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] font-semibold text-center z-10 gap-2"
+            >
+              <span>Contact Us</span> <span className="ml-1">&rarr;</span>
+            </Link>
+            <div className="absolute inset-0 opacity-0 peer-hover:opacity-100 rounded-3xl z-0 pointer-events-none shadow-[-4px_0_8px_4px_rgb(255,0,128),4px_0_8px_4px_rgb(0,98,255)] transition duration-800" />
+          </div>
         </div>
         <button
           className="md:hidden ml-4 text-3xl text-white"
