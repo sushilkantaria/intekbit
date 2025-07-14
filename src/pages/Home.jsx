@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import About from '../components/home/About';
 import Founders from '../components/home/Founders';
 import Hero from '../components/home/Hero';
@@ -13,7 +13,6 @@ import technologies from '../data/home/technologies';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('mission');
-  const [currentService, setCurrentService] = useState('web');
   const [activeTechnology, setActiveTechnology] = useState('webdevelopment');
   const [processInfo, setProcessInfo] = useState({
     title: 'Our Process',
@@ -22,12 +21,7 @@ const Home = () => {
     icon: '/Assets/home-process-process.gif',
   });
 
-  useEffect(() => {
-    setCurrentService('web');
-  }, []);
-
   const switchContent = (tab) => setActiveTab(tab);
-  const showService = (service) => setCurrentService(service);
   const switchTechnology = (category) => setActiveTechnology(category);
   const handleProcessStepHover = (step) => setProcessInfo(step);
 
@@ -35,11 +29,7 @@ const Home = () => {
     <div>
       <Hero />
       <About activeTab={activeTab} switchContent={switchContent} />
-      <Services
-        services={services}
-        currentService={currentService}
-        showService={showService}
-      />
+      <Services services={services} />
       <Technology
         technologies={technologies}
         activeTechnology={activeTechnology}

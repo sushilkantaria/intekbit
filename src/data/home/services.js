@@ -4,7 +4,7 @@ const services = {
     description:
       'Our web development services are designed to help businesses establish a strong online presence. We specialize in creating responsive, visually appealing, and performance-optimized websites tailored to your unique needs. Whether you need a sleek corporate website, a content-rich blog, or a complex e-commerce platform.',
     technologies: ['React', 'Node.js', 'JavaScript', 'MongoDB', 'SQL', 'HTML'],
-    buttonLink: 'Web-Development.html',
+    buttonLink: 'Web-Development',
   },
   ai: {
     title: 'AI & ML Solutions',
@@ -18,7 +18,7 @@ const services = {
       'NLP Libraries',
       'OpenCV',
     ],
-    buttonLink: 'aiml-solutions.html',
+    buttonLink: 'aiml-solutions',
   },
   mobile: {
     title: 'Mobile App Development',
@@ -32,7 +32,7 @@ const services = {
       'Firebase',
       'Java',
     ],
-    buttonLink: 'App-Development.html',
+    buttonLink: 'App-Development',
   },
   it_consulting: {
     title: 'IT Consulting',
@@ -46,7 +46,7 @@ const services = {
       'CRM & ERP Solutions',
       'Software Development',
     ],
-    buttonLink: 'IT-Consulting.html',
+    buttonLink: 'IT-Consulting',
   },
   data: {
     title: 'Data Services',
@@ -60,14 +60,14 @@ const services = {
       'Power BI',
       'Tableau',
     ],
-    buttonLink: 'Data-Services.html',
+    buttonLink: 'Data-Services',
   },
   software: {
     title: 'Software Development',
     description:
       "We deliver custom software development solutions that address your unique business challenges. Our experienced team builds scalable, reliable, and user-friendly software tailored to your specific needs, whether it's a desktop application, a SaaS platform, or enterprise software. With a focus on quality, innovation, and efficiency.",
     technologies: ['Java', 'C#', 'Python', '.NET', 'Spring Boot', 'Git'],
-    buttonLink: 'Software-Development.html',
+    buttonLink: 'Software-Development',
   },
 };
 

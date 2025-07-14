@@ -6,7 +6,7 @@ const cardBase = 'flex flex-col items-center group relative';
 const cardImg =
   'relative w-full h-40 md:h-44 lg:h-48 bg-cover bg-center rounded-lg shadow-lg flex items-end border-b-4 border-blue-700';
 const cardOverlay =
-  'absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg';
+  'absolute inset-0 bg-black/80 backdrop-blur-[6px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-lg';
 const cardTitle = 'mt-4 text-lg font-semibold text-blue-700 text-center';
 
 const Services = () => (
@@ -18,12 +18,17 @@ const Services = () => (
           Explore the wide range of services we offer to help your business
           grow.
         </p>
-        <Link
-          className="inline-block px-6 py-2 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition"
-          to="/contact"
-        >
-          Know More
-        </Link>
+        <div className="flex justify-center">
+          <div className="relative w-fit flex">
+            <Link
+              className="peer relative px-6 py-2 text-white rounded-3xl transition shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] font-semibold text-center z-10"
+              to="/contact"
+            >
+              Know More
+            </Link>
+            <div className="absolute inset-0 opacity-0 peer-hover:opacity-100 rounded-3xl z-0 pointer-events-none shadow-[-4px_0_8px_4px_rgb(255,0,128),4px_0_8px_4px_rgb(0,98,255)]" />
+          </div>
+        </div>
       </div>
     </section>
     <section className="max-w-6xl mx-auto px-4">
@@ -36,13 +41,7 @@ const Services = () => (
           >
             <div className="relative w-full flex items-end">
               {/* Glow effect around image only */}
-              <div
-                className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0"
-                style={{
-                  boxShadow:
-                    '0 0 24px 8px rgba(236,72,153,0.28), 0 0 32px 12px rgba(59,130,246,0.28), 0 0 40px 16px rgba(139,92,246,0.28)',
-                }}
-              />
+              <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0 shadow-[-8px_0_20px_8px_rgb(255,0,128),8px_0_20px_8px_rgb(0,98,255)]" />
               <div
                 className={
                   cardImg +
