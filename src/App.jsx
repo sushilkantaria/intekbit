@@ -37,8 +37,6 @@ function AppWrapper() {
 
   useEffect(() => {
     Aos.init();
-    // Ensure page starts at top on initial load
-    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
