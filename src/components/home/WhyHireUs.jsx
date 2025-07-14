@@ -5,12 +5,31 @@ function WhyHireUsSection() {
   return (
     <section className="py-16" id="why-hire-us">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-14 text-blue-700">
+        <h2 
+          className="text-2xl font-bold text-center mb-14 text-blue-700"
+          data-aos="slide-up"
+          data-aos-duration="800"
+          data-aos-offset="200"
+        >
           Why Hire Us
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {whyHireUsData.map((item) => (
-            <WhyHireUsCard key={item.title} {...item} />
+        <div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-offset="200"
+          data-aos-delay="300"
+        >
+          {whyHireUsData.map((item, index) => (
+            <div
+              key={item.title}
+              data-aos="flip-right"
+              data-aos-duration="800"
+              data-aos-offset="200"
+              data-aos-delay={400 + index * 150}
+            >
+              <WhyHireUsCard {...item} />
+            </div>
           ))}
         </div>
       </div>
