@@ -34,41 +34,16 @@ const FounderCard = ({ founder }) => (
 );
 
 const FoundersSection = () => (
-  <section className="py-16 overflow-hidden" id="founders">
-    <h2 
-      className="text-2xl font-bold text-center mb-2 text-blue-500"
-      data-aos="fade-up"
-      data-aos-duration="800"
-      data-aos-offset="200"
-    >
+  <section className="py-16" id="founders">
+    <h2 className="text-2xl font-bold text-center mb-2 text-blue-500">
       Meet the Founders
     </h2>
-    <p 
-      className="text-center mb-8 text-white"
-      data-aos="fade-up"
-      data-aos-duration="800"
-      data-aos-offset="200"
-      data-aos-delay="200"
-    >
+    <p className="text-center mb-8 text-white">
       Driven by Technology, Powered by Trust.
     </p>
-    <div 
-      className="flex flex-wrap justify-center gap-8"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-offset="200"
-      data-aos-delay="400"
-    >
-      {founders.map((founder, index) => (
-        <div
-          key={founder.name}
-          data-aos="zoom-in"
-          data-aos-duration="800"
-          data-aos-offset="200"
-          data-aos-delay={600 + index * 150}
-        >
-          <FounderCard founder={founder} />
-        </div>
+    <div className="flex flex-wrap justify-center gap-8">
+      {founders.map((founder) => (
+        <FounderCard founder={founder} key={founder.name} />
       ))}
     </div>
   </section>
