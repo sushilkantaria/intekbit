@@ -7,6 +7,14 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  // Handle home link click to scroll to top when already on home page
+  const handleHomeClick = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   useState(() => {
     setIsMenuOpen(false);
   }, [location]);
@@ -15,11 +23,11 @@ const Navbar = () => {
     <nav className="w-full fixed top-0 left-0 z-999">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-2 md:py-3 relative">
         <div
-          className="flex items-center min-w-[120px]"
+          className="flex items-center min-w-[120px] backdrop-blur-lg backdrop-saturate-150"
           data-aos="fade-down"
           data-aos-duration="1000"
         >
-          <Link to="/">
+          <Link to="/" onClick={handleHomeClick}>
             <img
               src="/Assets/footer-logo.webp"
               alt="Intekbitlogo"
@@ -55,6 +63,7 @@ const Navbar = () => {
                       to={path}
                       className="text-white font-semibold text-base md:text-lg hover:text-gray-600 transition-colors"
                       data-aos="fade-down"
+                      onClick={path === '/' ? handleHomeClick : undefined}
                     >
                       {label}
                     </Link>
@@ -72,7 +81,7 @@ const Navbar = () => {
           <div className="relative w-fit">
             <Link
               to="/contact"
-              className="peer inline-flex items-center relative px-6 py-2 text-white rounded-3xl transition shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] font-semibold text-center z-10 gap-2"
+              className="peer inline-flex items-center relative px-6 py-2 text-white rounded-3xl transition shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] font-semibold text-center z-10 gap-2 backdrop-blur-lg backdrop-saturate-150"
             >
               <span>Contact Us</span> <span className="ml-1">&rarr;</span>
             </Link>
@@ -112,7 +121,12 @@ const Navbar = () => {
                       ? 'bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 text-white px-4 py-2 rounded-full font-semibold shadow-[inset_0_0_16px_4px_rgba(59,130,246,0.5),inset_0_0_32px_8px_rgba(99,102,241,0.3)]'
                       : 'text-gray-800 hover:text-blue-600 font-semibold'
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    setIsMenuOpen(false);
+                    if (path === '/') {
+                      handleHomeClick(e);
+                    }
+                  }}
                 >
                   {label}
                 </Link>
