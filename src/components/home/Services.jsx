@@ -140,7 +140,7 @@ const ServicesSection = ({ services }) => {
     <section className="pt-16 overflow-visible mx-8" id="services">
       <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
-        <div 
+        <div
           className="text-center"
           data-aos="fade-up"
           data-aos-duration="800"
@@ -152,10 +152,7 @@ const ServicesSection = ({ services }) => {
           </p>
         </div>
 
-        <div 
-          className="flex flex-col lg:flex-row gap-20 items-start relative"
-
-        >
+        <div className="flex flex-col lg:flex-row gap-20 items-start relative">
           {/* Left side - Scrolling content with connected line */}
           <div className="relative flex-1">
             {/* Continuous vertical line */}
@@ -172,10 +169,7 @@ const ServicesSection = ({ services }) => {
           </div>
 
           {/* Right side - Static image container */}
-          <div 
-            className="flex-1 lg:sticky lg:top-20 lg:h-screen flex items-center justify-center"
-
-          >
+          <div className="flex-1 lg:sticky lg:top-20 lg:h-screen flex items-center justify-center">
             <div className="w-full max-w-md">
               {/* Main image container */}
               <div className="p-4">
