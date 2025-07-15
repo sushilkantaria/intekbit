@@ -29,7 +29,7 @@ const TechnologySection = ({
       data-aos="fade-right"
       data-aos-offset="300"
       data-aos-easing="ease-in-sine"
-      data-aos-duration="1000"
+      data-aos-duration="500"
     >
       <h2 className="text-2xl font-bold text-center mb-8 text-blue-700">
         Our Technology
