@@ -94,7 +94,7 @@ const ServicesSection = ({ services }) => {
     return (
       <div
         ref={ref}
-        className={`min-h-screen flex items-center py-16 transition-opacity duration-500 ${
+        className={`min-h-screen flex items-center transition-opacity duration-500 ${
           inView ? 'opacity-100' : 'opacity-30'
         }`}
       >
@@ -113,7 +113,7 @@ const ServicesSection = ({ services }) => {
               {services[serviceKey]?.title}
             </h3>
 
-            <p className="text-gray-300 font-medium mb-8 leading-relaxed">
+            <p className="text-gray-300 text-xl mb-8 leading-relaxed">
               {services[serviceKey]?.description}
             </p>
 
@@ -127,7 +127,7 @@ const ServicesSection = ({ services }) => {
                 >
                   Know More
                 </Link>
-                <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-all shadow-[-4px_0_8px_2px_rgba(255,0,128,0.7),4px_0_8px_2px_rgba(0,98,255,0.7)] pointer-events-none" />
+                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-all shadow-[-4px_0_8px_2px_rgba(255,0,128,0.7),4px_0_8px_2px_rgba(0,98,255,0.7)] pointer-events-none" />
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@ const ServicesSection = ({ services }) => {
           {/* Left side - Scrolling content with connected line */}
           <div className="relative flex-1">
             {/* Continuous vertical line */}
-            <div className="absolute left-0 top-56 bottom-130 w-[3px] bg-gray-600"></div>
+            <div className="absolute left-0 top-48 bottom-142 w-[3px] bg-gray-600"></div>
 
             {serviceKeys.map((serviceKey, index) => (
               <ServiceCard
@@ -205,7 +205,7 @@ const ServicesSection = ({ services }) => {
               </div>
 
               {/* Tech stack pills */}
-              <div className="flex flex-wrap gap-2 mt-6 justify-center">
+              <div className="flex flex-wrap gap-2 mt-6 justify-center cursor-default">
                 {services[serviceKeys[activeServiceIndex]]?.technologies &&
                 services[serviceKeys[activeServiceIndex]]?.technologies.length >
                   0
