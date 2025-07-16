@@ -8,14 +8,13 @@ const AboutSection = ({ activeTab, switchContent }) => (
       <div
         className="flex-1"
         data-aos="fade-right"
-        data-aos-duration="1000"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        <h2 className="text-2xl font-bold mb-4">
+        <h2 className="text-2xl font-bold mb-8">
           Everything You Need to Know About Intekbit Solutions
         </h2>
-        <div className="flex gap-4 mb-4">
+        <div className="flex gap-4 mb-8">
           {['mission', 'vision', 'values'].map((tab) => (
             <div key={tab} className="relative group">
               <button
@@ -37,10 +36,14 @@ const AboutSection = ({ activeTab, switchContent }) => (
           ))}
         </div>
         <div>
-          {activeTab === 'mission' && <p>{aboutData.mission}</p>}
-          {activeTab === 'vision' && <p>{aboutData.vision}</p>}
+          {activeTab === 'mission' && (
+            <p data-aos="zoom-in">{aboutData.mission}</p>
+          )}
+          {activeTab === 'vision' && (
+            <p data-aos="zoom-in">{aboutData.vision}</p>
+          )}
           {activeTab === 'values' && (
-            <ul className="list-disc pl-5">
+            <ul className="list-disc pl-5" data-aos="zoom-in">
               {aboutData.values.map((val) => (
                 <li key={val}>{val}</li>
               ))}
@@ -48,6 +51,16 @@ const AboutSection = ({ activeTab, switchContent }) => (
           )}
         </div>
       </div>
+      {/* Divider for desktop with fade-in and zoom-in animation */}
+      <div
+        className="hidden md:flex w-px bg-gray-300 mx-4"
+        style={{ minHeight: '300px' }}
+        aria-hidden="true"
+        data-aos="zoom-in"
+        data-aos-duration="900"
+        data-aos-delay="200"
+        data-aos-easing="ease-in-out"
+      ></div>
       {/* Right Section */}
       <div
         className="flex-1 space-y-4"
