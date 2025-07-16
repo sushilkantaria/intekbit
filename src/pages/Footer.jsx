@@ -9,86 +9,86 @@ const Footer = () => {
           <Link to="/">
             <img
               src="/Assets/footer-logo.webp"
-              alt="Logo"
-              className="h-12 w-auto mb-2"
+// ...existing code...
+              className="h-10 sm:h-12 w-auto mb-2"
             />
           </Link>
-          <p className="text-gray-300">
+          <p className="text-gray-300 text-sm sm:text-base">
             Driven by Technology, Powered by Trust.
           </p>
         </div>
-        <div className="flex-1">
-          <h3 className="font-semibold mb-2">Quick Links</h3>
+        <div className="flex-1 min-w-[150px]">
+          <h3 className="font-semibold mb-2 text-base sm:text-lg">Quick Links</h3>
           <ul className="space-y-1">
             <li>
-              <Link to="/" className="hover:text-blue-400">
+              <Link to="/" className="hover:text-blue-400 text-sm sm:text-base">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-blue-400">
+              <Link to="/about" className="hover:text-blue-400 text-sm sm:text-base">
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-blue-400">
+              <Link to="/services" className="hover:text-blue-400 text-sm sm:text-base">
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-blue-400">
+              <Link to="/contact" className="hover:text-blue-400 text-sm sm:text-base">
                 Contact
               </Link>
             </li>
           </ul>
         </div>
-        <div className="flex-1">
-          <h3 className="font-semibold mb-2">Contact Us</h3>
-          <p className="text-gray-300">Phone: +91 88498 36407</p>
-          <p className="text-gray-300">Email: support@intekbit.com</p>
-          <p className="text-gray-300">
+        <div className="flex-1 min-w-[180px]">
+          <h3 className="font-semibold mb-2 text-base sm:text-lg">Contact Us</h3>
+          <p className="text-gray-300 text-sm sm:text-base">Phone: +91 88498 36407</p>
+          <p className="text-gray-300 text-sm sm:text-base">Email: support@intekbit.com</p>
+          <p className="text-gray-300 text-sm sm:text-base">
             S-18/19, Laxmi Darshan Complex, Dabholi Road, Surat-395004
           </p>
         </div>
-        <div className="flex-1">
-          <h3 className="font-semibold mb-2">Follow Us</h3>
-          <div className="flex gap-3 items-center">
+        <div className="flex-1 min-w-[150px]">
+          <h3 className="font-semibold mb-2 text-base sm:text-lg">Follow Us</h3>
+          <div className="flex gap-2 sm:gap-3 items-center flex-wrap">
             <a href="http://linkedin.com/company/intekbit-solutions">
               <img
                 src="/Assets/footer-LinkedIn.webp"
                 alt="LinkedIn"
-                className="h-7 w-7"
+                className="h-6 sm:h-7 w-6 sm:w-7"
               />
             </a>
             <a href="https://www.instagram.com/intekbit__solutions/">
               <img
                 src="/Assets/footer-instagram.webp"
                 alt="Instagram"
-                className="h-7 w-7"
+                className="h-6 sm:h-7 w-6 sm:w-7"
               />
             </a>
             <a href="https://www.facebook.com/profile.php?id=61573434722653">
               <img
                 src="/Assets/footer-facebook.webp"
                 alt="Facebook"
-                className="h-7 w-7"
+                className="h-6 sm:h-7 w-6 sm:w-7"
               />
             </a>
             <a href="https://x.com/Intekbit">
               <img
                 src="/Assets/footer-twitter.webp"
                 alt="Twitter"
-                className="h-7 w-7"
+                className="h-6 sm:h-7 w-6 sm:w-7"
               />
             </a>
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center gap-2 mt-6 text-gray-400 text-sm">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mt-6 text-gray-400 text-xs sm:text-sm">
         <Link to="/privacy-policy" className="hover:text-blue-400">
           Privacy Policy
         </Link>
-        <span>|</span>
+        <span className="hidden sm:inline">|</span>
         <Link to="/terms" className="hover:text-blue-400">
           Terms & Conditions
         </Link>
@@ -98,6 +98,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

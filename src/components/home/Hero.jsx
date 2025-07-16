@@ -5,18 +5,18 @@ import Spline from '@splinetool/react-spline';
 
 const HeroSection = () => (
   <section
-    className="relative flex items-center justify-start h-screen max-w-6xl mx-auto text-white px-6"
+    className="relative flex flex-col md:flex-row items-center justify-center md:justify-between min-h-[80vh] md:h-screen max-w-6xl mx-auto text-white px-4 sm:px-6 lg:px-8 pt-16 md:pt-0"
     id="home"
   >
     {/* Content */}
     <div
-      className="z-10 max-w-xl space-y-6 animate-fadeUp"
+      className="z-10 max-w-xl w-full space-y-6 animate-fadeUp flex flex-col items-center md:items-start text-center md:text-left"
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
       data-aos-delay="1000"
       data-aos-offset="0"
     >
-      <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg">
         <Typewriter
           words={['Welcome to INTEKBIT SOLUTIONS PVT LTD']}
           loop={1}
@@ -24,7 +24,7 @@ const HeroSection = () => (
           typeSpeed={70}
         />
       </h1>
-      <p className="text-lg md:text-xl drop-shadow">
+      <p className="text-base sm:text-lg md:text-xl drop-shadow">
         <Typewriter
           words={['Driven by Technology, Powered by Trust.']}
           loop={1}
@@ -43,14 +43,16 @@ const HeroSection = () => (
       </div>
     </div>
 
-    {/* Spline on the Right */}
-    <div className="absolute right-0 top-0 h-full w-full md:w-1/2 pointer-events-none">
+    {/* Spline on the Right (hidden on mobile) */}
+    <div className="hidden md:block absolute right-0 top-0 h-full w-full md:w-1/2 pointer-events-none">
       <Spline scene="https://prod.spline.design/TBsKJ22sOonPR-1i/scene.splinecode" />
     </div>
 
+    {/* Black image always visible, but responsive size/position */}
     <img
-      className="absolute right-0 bottom-0 z-99 h-14 w-40"
+      className="absolute right-0 bottom-0 z-10 h-10 w-24 sm:h-14 sm:w-40 md:h-14 md:w-40"
       src="./Assets/black.png"
+      alt=""
     />
   </section>
 );

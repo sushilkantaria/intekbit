@@ -56,18 +56,18 @@ const TechnologySection = ({
       </div>
 
       {/* Tech Cards */}
-      <div key={containerKey} className="flex flex-wrap justify-center gap-6">
+      <div key={containerKey} className="flex flex-wrap justify-center gap-4 sm:gap-6">
         {technologies[activeTechnology]?.map((tech, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 w-32"
+            className="flex flex-col items-center p-2 sm:p-4 w-24 sm:w-32"
             data-aos="fade-left"
             data-aos-delay={index * 150}
             data-aos-duration="600"
             data-aos-once="false"
           >
-            <img src={tech.icon} alt={tech.name} className="w-12 h-12 mb-2" />
-            <p className="text-blue-700 font-medium text-center">{tech.name}</p>
+            <img src={tech.icon} alt={tech.name} className="w-16 h-16 sm:w-12 sm:h-12 mb-2" />
+            <p className="text-blue-700 font-medium text-center text-xs sm:text-base">{tech.name}</p>
           </div>
         ))}
       </div>

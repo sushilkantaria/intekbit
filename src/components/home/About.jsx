@@ -51,19 +51,18 @@ const AboutSection = ({ activeTab, switchContent }) => (
           )}
         </div>
       </div>
-      {/* Divider for desktop with fade-in and zoom-in animation */}
+      {/* Divider: vertical on desktop, horizontal on mobile (hidden on mobile) */}
       <div
-        className="hidden md:flex w-px bg-gray-300 mx-4"
-        style={{ minHeight: '300px' }}
+        className="hidden md:block my-8 md:my-0 md:mx-4 bg-gray-300 w-full h-px md:w-px md:h-100"
         aria-hidden="true"
         data-aos="zoom-in"
         data-aos-duration="900"
         data-aos-delay="200"
         data-aos-easing="ease-in-out"
       ></div>
-      {/* Right Section */}
+      {/* Right Section (hidden on mobile) */}
       <div
-        className="flex-1 space-y-4"
+        className="hidden md:block flex-1 space-y-4"
         data-aos="fade-left"
         data-aos-duration="1000"
         data-aos-offset="300"
