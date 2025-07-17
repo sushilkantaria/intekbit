@@ -3,9 +3,9 @@ import whyHireUsData from '../../data/home/whyHireUs';
 
 function WhyHireUsSection() {
   return (
-    <section className="py-16" id="why-hire-us">
+    <section className="py-16 bg-[#151515]" id="why-hire-us">
       <div className="max-w-6xl mx-auto">
-        <h2 
+        <h2
           className="text-2xl font-bold text-center mb-14 text-blue-700"
           data-aos="slide-up"
           data-aos-duration="800"
@@ -13,7 +13,7 @@ function WhyHireUsSection() {
         >
           Why Hire Us
         </h2>
-        <div 
+        <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           data-aos="zoom-in"
           data-aos-duration="1000"

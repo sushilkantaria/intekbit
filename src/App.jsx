@@ -1,36 +1,36 @@
-import './App.css';
 import {
+  Route,
   BrowserRouter as Router,
   Routes,
-  Route,
   useLocation,
 } from 'react-router-dom';
+import './App.css';
 
-import Navbar from './pages/Navbar';
-import Footer from './pages/Footer';
-import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import ContactUs from './pages/ContactUs';
-import WebDevelopment from './components/services/WebDevelopment';
-import UIUXDesign from './components/services/UIUXDesign';
-import TermsAndConditions from './pages/TermsAndConditions';
-import SupportMaintenance from './components/services/SupportMaintenance';
-import SoftwareDevelopment from './components/services/SoftwareDevelopment';
-import Services from './pages/Services';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import ITConsulting from './components/services/ITConsulting';
-import CloudServices from './components/services/CloudServices';
-import DataServices from './components/services/DataServices';
 import AIMLSolutions from './components/services/AIMLSolutions';
 import AppDevelopment from './components/services/AppDevelopment';
+import CloudServices from './components/services/CloudServices';
+import DataServices from './components/services/DataServices';
 import GraphicDesigning from './components/services/GraphicDesigning';
+import ITConsulting from './components/services/ITConsulting';
+import SoftwareDevelopment from './components/services/SoftwareDevelopment';
+import SupportMaintenance from './components/services/SupportMaintenance';
+import UIUXDesign from './components/services/UIUXDesign';
+import WebDevelopment from './components/services/WebDevelopment';
+import ScrollToTop from './components/ui/ScrollToTop';
+import AboutUs from './pages/AboutUs';
 import Blog from './pages/Blog';
 import Career from './pages/Career';
-import ScrollToTop from './components/ui/ScrollToTop';
+import ContactUs from './pages/ContactUs';
+import Footer from './pages/Footer';
+import Home from './pages/Home';
+import Navbar from './pages/Navbar';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Services from './pages/Services';
+import TermsAndConditions from './pages/TermsAndConditions';
 
-import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function AppWrapper() {
   const location = useLocation();
@@ -46,10 +46,27 @@ function AppWrapper() {
   }, [location]);
 
   return (
-    <div
-      className="min-h-screen w-full flex flex-col"
-      style={{ backgroundColor: '#000000' }}
-    >
+    // <div className="min-h-screen w-full flex flex-col relative overflow-x-hidden">
+    //   {/* Animated gradient background */}
+    //   <div
+    //     className="fixed inset-0 -z-10 animate-gradient-move"
+    //     style={{
+    //       background: 'linear-gradient(120deg, #0f172a 0%, #1e293b 40%, #2563eb 70%, #a21caf 100%)',
+    //       backgroundSize: '200% 200%',
+    //       opacity: 0.9,
+    //     }}
+    //   />
+    //   <style>{`
+    //     @keyframes gradient-move {
+    //       0% { background-position: 0% 50%; }
+    //       50% { background-position: 100% 50%; }
+    //       100% { background-position: 0% 50%; }
+    //     }
+    //     .animate-gradient-move {
+    //       animation: gradient-move 16s ease-in-out infinite;
+    //     }
+    //   `}</style>
+      <div className="min-h-screen w-full flex flex-col bg-black">
       <Navbar />
       <ScrollToTop />
       <div className="flex-1">
