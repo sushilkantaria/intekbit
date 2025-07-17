@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 // Service images mapping
 const serviceImages = {
-  web: '/Assets/home-webdevelopment.webp',
+  web: '/Assets/web-devlopment.png',
   ai: '/Assets/home-aiml.webp',
   mobile: '/Assets/home-appdevelopment.webp',
   it_consulting: '/Assets/home-itconsulting.webp',
@@ -106,12 +106,12 @@ const ServicesSection = ({ services }) => {
           </div>
 
           {/* Service content */}
-          <div className="max-w-lg ml-0 lg:ml-12 px-2 sm:px-4 pt-4 sm:pt-4 pb-0 sm:pb-4 lg:py-0">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mt-0 sm:mt-0 mb-2 sm:mb-6 leading-tight">
+          <div className="max-w-lg ml-0 lg:ml-12 pt-4 sm:pt-4 pb-0 sm:pb-4 lg:py-0">
+            <h3 className="text-xl sm:text-3xl font-bold text-white mt-0 sm:mt-0 mb-2 sm:mb-8 leading-tight">
               {services[serviceKey]?.title}
             </h3>
 
-            <p className="text-gray-300 text-base sm:text-lg mb-4 sm:mb-8 leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-xl mb-6 sm:mb-12 leading-relaxed">
               {services[serviceKey]?.description}
             </p>
 
@@ -135,7 +135,7 @@ const ServicesSection = ({ services }) => {
   };
 
   return (
-    <section className="pt-16 overflow-visible" id="services">
+    <section className="pt-16 overflow-visible bg-black" id="services">
       <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
         <div
@@ -155,7 +155,7 @@ const ServicesSection = ({ services }) => {
           {/* Left side - Scrolling content with connected line */}
           <div className="relative flex-1">
             {/* Continuous vertical line */}
-            <div className="absolute left-0 top-50 bottom-135 w-[3px] bg-gray-600"></div>
+            <div className="absolute left-0 top-44 bottom-146 w-[3px] bg-gray-600"></div>
             {serviceKeys.map((serviceKey, index) => (
               <ServiceCard
                 key={serviceKey}
@@ -177,7 +177,7 @@ const ServicesSection = ({ services }) => {
                   <img
                     src={
                       serviceImages[serviceKeys[activeServiceIndex]] ||
-                      '/Assets/home-webdevelopment.webp'
+                      '/Assets/web-devlopment.png'
                     }
                     alt={
                       services[serviceKeys[activeServiceIndex]]?.title ||
@@ -189,7 +189,7 @@ const ServicesSection = ({ services }) => {
                         'Image failed to load:',
                         serviceImages[serviceKeys[activeServiceIndex]]
                       );
-                      e.target.src = '/Assets/home-webdevelopment.webp';
+                      e.target.src = '/Assets/web-devlopment.png';
                     }}
                   />
                 </div>
@@ -245,15 +245,16 @@ const ServicesSection = ({ services }) => {
               />
               <div className="w-full max-w-md mx-auto mt-8">
                 <div className="p-4">
-                  <div
-                    className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container"
-                  >
+                  <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container">
                     <img
-                      src={serviceImages[serviceKey] || '/Assets/home-webdevelopment.webp'}
+                      src={
+                        serviceImages[serviceKey] ||
+                        '/Assets/web-devlopment.png'
+                      }
                       alt={services[serviceKey]?.title || 'Service'}
                       className="w-full h-full object-cover image-fade"
                       onError={(e) => {
-                        e.target.src = '/Assets/home-webdevelopment.webp';
+                        e.target.src = '/Assets/web-devlopment.png';
                       }}
                     />
                   </div>
@@ -276,19 +277,26 @@ const ServicesSection = ({ services }) => {
                         const fallbackTech = {
                           web: ['React', 'Node.js', 'JavaScript', 'HTML/CSS'],
                           ai: ['Python', 'TensorFlow', 'PyTorch', 'OpenCV'],
-                          mobile: ['React Native', 'Flutter', 'Swift', 'Kotlin'],
+                          mobile: [
+                            'React Native',
+                            'Flutter',
+                            'Swift',
+                            'Kotlin',
+                          ],
                           it_consulting: ['AWS', 'Azure', 'DevOps', 'Cloud'],
                           data: ['Python', 'SQL', 'Pandas', 'Analytics'],
                           software: ['Java', 'C++', 'Python', 'Git'],
                         };
-                        return fallbackTech[serviceKey]?.map((tech, techIndex) => (
-                          <span
-                            key={`${serviceKey}-${techIndex}`}
-                            className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm border border-blue-500/30 tech-pill"
-                          >
-                            {tech}
-                          </span>
-                        ));
+                        return fallbackTech[serviceKey]?.map(
+                          (tech, techIndex) => (
+                            <span
+                              key={`${serviceKey}-${techIndex}`}
+                              className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm border border-blue-500/30 tech-pill"
+                            >
+                              {tech}
+                            </span>
+                          )
+                        );
                       })()}
                 </div>
               </div>

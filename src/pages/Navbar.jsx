@@ -20,7 +20,7 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-transparent">
+    <nav className="w-full fixed top-0 left-0 z-40 bg-transparent">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-2 sm:px-4 md:px-8 py-2 md:py-3 relative">
         <div
           className="flex items-center min-w-[100px] sm:min-w-[120px] backdrop-blur-lg backdrop-saturate-150"
