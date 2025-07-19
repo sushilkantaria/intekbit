@@ -3,7 +3,7 @@ import whyHireUsData from '../../data/home/whyHireUs';
 
 function WhyHireUsSection() {
   return (
-    <section className="py-16 bg-[#151515]" id="why-hire-us">
+    <section className="py-16" id="why-hire-us">
       <div className="max-w-6xl mx-auto">
         <h2
           className="text-2xl font-bold text-center mb-14 text-blue-700"

@@ -3,7 +3,7 @@ import { HiArrowLongRight } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 
 const LetsConnectSection = () => (
-  <section className="py-16 overflow-hidden bg-[#151515]" id="lets-connect">
+  <section className="py-16 overflow-hidden" id="lets-connect">
     <div
       className="max-w-2xl mx-auto text-center"
       data-aos="slide-up"

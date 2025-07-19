@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 
 const HeroSection = () => (
-  <div className="bg-black">
     <section
       className="relative flex flex-col md:flex-row items-center justify-center md:justify-between min-h-[80vh] md:h-screen max-w-6xl mx-auto text-white px-4 sm:px-6 lg:px-8 pt-16 md:pt-0"
       id="home"
@@ -56,7 +55,6 @@ const HeroSection = () => (
         alt=""
       />
     </section>
-  </div>
 );
 
 export default HeroSection;

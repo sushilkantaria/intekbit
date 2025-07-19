@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 // Service images mapping
 const serviceImages = {
-  web: '/Assets/web-devlopment.png',
+  web: '/Assets/web.gif',
   ai: '/Assets/home-aiml.webp',
   mobile: '/Assets/home-appdevelopment.webp',
   it_consulting: '/Assets/home-itconsulting.webp',
@@ -135,7 +135,7 @@ const ServicesSection = ({ services }) => {
   };
 
   return (
-    <section className="pt-16 overflow-visible bg-black" id="services">
+    <section className="pt-16 overflow-visible" id="services">
       <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
         <div
@@ -177,7 +177,7 @@ const ServicesSection = ({ services }) => {
                   <img
                     src={
                       serviceImages[serviceKeys[activeServiceIndex]] ||
-                      '/Assets/web-devlopment.png'
+                      '/Assets/web.gif'
                     }
                     alt={
                       services[serviceKeys[activeServiceIndex]]?.title ||
@@ -189,7 +189,7 @@ const ServicesSection = ({ services }) => {
                         'Image failed to load:',
                         serviceImages[serviceKeys[activeServiceIndex]]
                       );
-                      e.target.src = '/Assets/web-devlopment.png';
+                      e.target.src = '/Assets/web.gif';
                     }}
                   />
                 </div>
@@ -249,12 +249,12 @@ const ServicesSection = ({ services }) => {
                     <img
                       src={
                         serviceImages[serviceKey] ||
-                        '/Assets/web-devlopment.png'
+                        '/Assets/web.gif'
                       }
                       alt={services[serviceKey]?.title || 'Service'}
                       className="w-full h-full object-cover image-fade"
                       onError={(e) => {
-                        e.target.src = '/Assets/web-devlopment.png';
+                        e.target.src = '/Assets/web.gif';
                       }}
                     />
                   </div>
