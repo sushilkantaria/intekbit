@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-  // Service dropdown grid as a separate JSX componen
+  // Service dropdown grid as a separate JSX component
   const ServicesDropdownGrid = () => (
     <div className="grid grid-cols-4 gap-x-12 gap-y-8 px-8 py-7 min-w-[1000px] max-w-[1100px] rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.45),0_1.5px_8px_0_rgba(59,130,246,0.18),0_0_0_8px_rgba(255,255,255,0.28),0_0_0_16px_rgba(255,255,255,0.18)] border border-white text-left absolute left-1/2 -translate-x-1/2 bg-black">
       {servicesList.map((service, idx) => (
