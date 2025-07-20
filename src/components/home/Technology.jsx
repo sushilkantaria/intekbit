@@ -31,12 +31,12 @@ const TechnologySection = ({
         data-aos-easing="ease-in-sine"
         data-aos-duration="500"
       >
-        <h2 className="text-2xl font-bold text-center mb-8 text-blue-700">
+        <h2 className="text-3xl font-bold text-center mb-8 text-blue-700">
           Our Technology
         </h2>
 
         {/* Buttons */}
-        <div className="flex justify-center gap-4 mb-8 flex-wrap">
+        <div className="flex justify-center space-x-14 gap-4 mb-8 flex-wrap">
           {buttons.map(({ key, label }) => (
             <div key={key} className="relative group">
               <button

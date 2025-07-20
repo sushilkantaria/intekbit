@@ -4,18 +4,18 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   // Service dropdown grid as a separate JSX component
   const ServicesDropdownGrid = () => (
-    <div className="grid grid-cols-4 gap-x-12 gap-y-8 px-8 py-7 min-w-[1000px] max-w-[1100px] rounded-2xl shadow-2xl backdrop-blur-xl backdrop-saturate-200 border border-white/20 text-left absolute -left-32 bg-black/70">
+    <div className="grid grid-cols-4 gap-x-12 gap-y-8 px-8 py-7 min-w-[1000px] max-w-[1100px] rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.45),0_1.5px_8px_0_rgba(59,130,246,0.18),0_0_0_8px_rgba(255,255,255,0.28),0_0_0_16px_rgba(255,255,255,0.18)] border border-white text-left absolute left-1/2 -translate-x-1/2 bg-black">
       {servicesList.map((service, idx) => (
         <div key={idx} className="col-span-1 w-full">
           <Link
             to={service.path}
-            className="w-full flex items-center gap-3 px-4 py-4 rounded-xl"
+            className="w-full flex items-center gap-3 px-4 py-4 rounded-xl hover:bg-gray-700 hover:border border-white transition-colors duration-200"
           >
             <span className="flex items-center justify-center w-10 h-10 rounded-lg text-2xl">
               {service.icon}
             </span>
             <span className="flex flex-col items-start">
-              <span className="font-bold text-white text-base leading-tight whitespace-nowrap">
+              <span className="font-bold text-white text-base leading-tight whitespace-wrap">
                 {service.label}
               </span>
               <span className="text-xs text-gray-300 mt-1 leading-tight">
@@ -159,7 +159,7 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
-              <ul className="absolute left-0 top-full mt-2 min-w-[180px] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50">
+              <ul className="absolute left-0  top-full mt-2 min-w-[180px] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50 ">
                 <ServicesDropdownGrid />
               </ul>
             </li>
