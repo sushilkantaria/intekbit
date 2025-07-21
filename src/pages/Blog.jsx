@@ -3,7 +3,7 @@ import blogPosts from '../data/blogPosts';
 
 function BlogCard({ post }) {
   return (
-    <div className="rounded-2xl backdrop-blur-lg backdrop-saturate-150 border border-white/30 shadow-[0_4px_32px_0_rgba(30,58,138,0.10),inset_0_1px_16px_0_rgba(255,255,255,0.18)] overflow-hidden flex flex-col hover:scale-[1.03] transition-transform duration-300 min-h-[420px] max-h-[420px]">
+    <div className="rounded-2xl backdrop-blur-lg backdrop-saturate-150 shadow-[0_4px_32px_0_rgba(30,58,138,0.10),inset_0_1px_16px_0_rgba(255,255,255,0.18)] overflow-hidden flex flex-col hover:scale-[1.03] transition-transform duration-300 min-h-[420px] max-h-[420px]">
       <img
         src={post.image}
         alt={post.title}
