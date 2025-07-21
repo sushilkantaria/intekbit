@@ -30,6 +30,7 @@ import TermsAndConditions from './pages/TermsAndConditions';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import ParticleBackground from './components/ui/ParticleBackground';
 
 function AppWrapper() {
   const location = useLocation();
@@ -45,27 +46,9 @@ function AppWrapper() {
   }, [location]);
 
   return (
-    // <div className="min-h-screen w-full flex flex-col relative overflow-x-hidden">
-    //   {/* Animated gradient background */}
-    //   <div
-    //     className="fixed inset-0 -z-10 animate-gradient-move"
-    //     style={{
-    //       background: 'linear-gradient(120deg, #0f172a 0%, #1e293b 40%, #2563eb 70%, #a21caf 100%)',
-    //       backgroundSize: '200% 200%',
-    //       opacity: 0.9,
-    //     }}
-    //   />
-    //   <style>{`
-    //     @keyframes gradient-move {
-    //       0% { background-position: 0% 50%; }
-    //       50% { background-position: 100% 50%; }
-    //       100% { background-position: 0% 50%; }
-    //     }
-    //     .animate-gradient-move {
-    //       animation: gradient-move 16s ease-in-out infinite;
-    //     }
-    //   `}</style>
-    <div className="min-h-screen w-full flex flex-col bg-black">
+    <div className="min-h-screen w-full flex flex-col">
+      <ParticleBackground />
+
       <Navbar />
       <ScrollToTop />
       <div className="flex-1">

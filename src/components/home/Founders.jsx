@@ -4,7 +4,7 @@ import founders from '../../data/home/founders';
 const FounderCard = ({ founder }) => (
   <div
     className={
-      'flex flex-col items-center rounded-2xl p-6 w-64 transition-transform duration-300 transform relative group shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]'
+      'flex flex-col items-center backdrop-blur-lg backdrop-saturate-150 rounded-2xl p-6 w-64 transition-transform duration-300 transform relative group shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]'
     }
   >
     {/* Glow effect */}
