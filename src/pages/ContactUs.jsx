@@ -1,7 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 const ContactUs = () => {
   const formRef = useRef(null);
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setAnimate(true), 100); // slight delay for effect
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +24,11 @@ const ContactUs = () => {
   );
 
   return (
-    <div className="min-h-screen text-gray-900">
+    <div
+      className={`min-h-screen text-gray-900 transition-all duration-1000 ease-out ${
+        animate ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+      }`}
+    >
       <div className="relative h-64 flex items-center justify-center">
         <h1 className="relative z-10 text-4xl font-bold text-white">
           Contact Us
@@ -35,7 +44,7 @@ const ContactUs = () => {
             {['Phone', 'Email', 'Address'].map((label) => (
               <div
                 key={label}
-                className={`group rounded-lg p-4 flex flex-col items-center shadow relative ${
+                className={`group rounded-lg p-4 flex flex-col items-center shadow relative backdrop-blur-lg backdrop-saturate-150 ${
                   label === 'Address' ? 'col-span-1 sm:col-span-2' : ''
                 }`}
                 style={glowStyle}
@@ -81,7 +90,7 @@ const ContactUs = () => {
         </div>
 
         <div
-          className="flex-1 rounded-lg shadow p-8 relative group"
+          className="flex-1 rounded-lg shadow p-8 relative group backdrop-blur-lg backdrop-saturate-150"
           style={glowStyle}
         >
           {glowLayer}

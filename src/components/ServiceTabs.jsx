@@ -5,12 +5,12 @@ const ServiceTabs = ({ servicesData, mainTitle, description, image }) => {
   const activeService = servicesData[activeIndex];
 
   return (
-    <div className="min-h-screen mt-20">
-      <section className="group relative max-w-5xl backdrop-blur-lg backdrop-saturate-150 mx-auto rounded-2xl p-6 border shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)]">
+    <div className="min-h-screen mt-20 w-[80%] mx-auto">
+      {/* <section className="group relative w-[80%] backdrop-blur-lg backdrop-saturate-150 mx-auto rounded-2xl p-6 border "> */}
         {/* Glow Layer */}
         {/* <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0 shadow-[-8px_0_16px_4px_rgb(255,0,128),8px_0_16px_4px_rgb(0,98,255)]" /> */}
         {/* Header Section (on top) */}
-        <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between mb-8">
+        <div className="m mx-au px-4 py-8 flex flex-col md:flex-row items-center justify-between mb-8">
           <div className="md:w-2/3 space-y-4">
             {mainTitle && (
               <h2 className="text-2xl font-bold text-blue-700 mb-2">
@@ -101,7 +101,7 @@ const ServiceTabs = ({ servicesData, mainTitle, description, image }) => {
             )}
           </div>
         </div>
-      </section>
+      {/* </section> */}
     </div>
   );
 };
