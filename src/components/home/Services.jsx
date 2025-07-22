@@ -7,8 +7,8 @@ const serviceImages = {
   web: '/Assets/web.gif',
   ai: '/Assets/home-aiml.webp',
   mobile: '/Assets/home-appdevelopment.webp',
-  it_consulting: '/Assets/home-itconsulting.webp',
-  data: '/Assets/home-dataservices.webp',
+  cloud_services: '/Assets/internal-cloud-services.webp',
+  uiux_design: '/Assets/home-dataservices.webp',
   software: '/Assets/home-softwaredevelopment.webp',
 };
 
@@ -215,8 +215,13 @@ const ServicesSection = ({ services }) => {
                         web: ['React', 'Node.js', 'JavaScript', 'HTML/CSS'],
                         ai: ['Python', 'TensorFlow', 'PyTorch', 'OpenCV'],
                         mobile: ['React Native', 'Flutter', 'Swift', 'Kotlin'],
-                        it_consulting: ['AWS', 'Azure', 'DevOps', 'Cloud'],
-                        data: ['Python', 'SQL', 'Pandas', 'Analytics'],
+                        cloud_services: ['AWS', 'Azure', 'DevOps', 'Cloud'],
+                        uiux_design: [
+                          'Figma',
+                          'Adobe XD',
+                          'Sketch',
+                          'InVision',
+                        ],
                         software: ['Java', 'C++', 'Python', 'Git'],
                       };
                       return fallbackTech[serviceKeys[activeServiceIndex]]?.map(
@@ -247,10 +252,7 @@ const ServicesSection = ({ services }) => {
                 <div className="p-4">
                   <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container">
                     <img
-                      src={
-                        serviceImages[serviceKey] ||
-                        '/Assets/web.gif'
-                      }
+                      src={serviceImages[serviceKey] || '/Assets/web.gif'}
                       alt={services[serviceKey]?.title || 'Service'}
                       className="w-full h-full object-cover image-fade"
                       onError={(e) => {
@@ -283,8 +285,13 @@ const ServicesSection = ({ services }) => {
                             'Swift',
                             'Kotlin',
                           ],
-                          it_consulting: ['AWS', 'Azure', 'DevOps', 'Cloud'],
-                          data: ['Python', 'SQL', 'Pandas', 'Analytics'],
+                          cloud_services: ['AWS', 'Azure', 'DevOps', 'Cloud'],
+                          uiux_design: [
+                            'Figma',
+                            'Adobe XD',
+                            'Sketch',
+                            'InVision',
+                          ],
                           software: ['Java', 'C++', 'Python', 'Git'],
                         };
                         return fallbackTech[serviceKey]?.map(

@@ -34,33 +34,33 @@ const services = {
     ],
     buttonLink: 'App-Development',
   },
-  it_consulting: {
-    title: 'IT Consulting',
+  cloud_services: {
+    title: 'Cloud Services',
     description:
-      'Our IT consulting services provide expert guidance to help businesses optimize their IT infrastructure and strategies. Whether you are looking to adopt cloud technologies, enhance cybersecurity measures, or implement new software systems, our team provides tailored solutions to meet your unique needs.',
+      'Our cloud services empower businesses to scale, secure, and optimize their operations using leading cloud platforms. We offer cloud migration, infrastructure setup, management, and cost optimization to ensure reliability and flexibility for your business.',
     technologies: [
-      'Cybersecurity',
-      'Cloud Management',
-      'Business Intelligence',
-      'Infrastructure Management',
-      'CRM & ERP Solutions',
-      'Software Development',
+      'AWS',
+      'Azure',
+      'Google Cloud',
+      'Docker',
+      'Kubernetes',
+      'Cloud Security',
     ],
-    buttonLink: 'IT-Consulting',
+    buttonLink: 'Cloud-Services',
   },
-  data: {
-    title: 'Data Services',
+  uiux_design: {
+    title: 'UI/UX Design',
     description:
-      'Our comprehensive data services help businesses unlock the full potential of their data. From database design and management to advanced analytics and visualization, we provide solutions that drive informed decision-making. Our expertise spans big data platforms, business intelligence tools, and data integration technique.',
+      'Our UI/UX design services focus on creating intuitive, engaging, and visually stunning digital experiences. We combine user research, wireframing, prototyping, and usability testing to deliver interfaces that delight users and drive business results.',
     technologies: [
-      'MySQL',
-      'PostgreSQL',
-      'MongoDB',
-      'Hadoop',
-      'Power BI',
-      'Tableau',
+      'Figma',
+      'Adobe XD',
+      'Sketch',
+      'InVision',
+      'Miro',
+      'User Testing',
     ],
-    buttonLink: 'Data-Services',
+    buttonLink: 'UIUX-Design',
   },
   software: {
     title: 'Software Development',
