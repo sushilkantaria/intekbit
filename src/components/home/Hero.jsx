@@ -50,7 +50,7 @@ const HeroSection = () => (
 
     {/* Black image always visible, but responsive size/position */}
     <img
-      className="absolute hidden md:block right-0 bottom-1 z-10 h-10 w-24"
+      className="absolute hidden md:block right-4 bottom-4 z-10 h-11 w-36"
       src="./Assets/black.png"
       alt=""
     />
