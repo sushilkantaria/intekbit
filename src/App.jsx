@@ -19,6 +19,7 @@ import WebDevelopment from './components/services/WebDevelopment';
 import ScrollToTop from './components/ui/ScrollToTop';
 import AboutUs from './pages/AboutUs';
 import Blog from './pages/Blog';
+import BlogDetails from "./pages/BlogDetails";
 import ContactUs from './pages/ContactUs';
 import Footer from './pages/Footer';
 import Home from './pages/Home';
@@ -55,6 +56,7 @@ function AppWrapper() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/web-development" element={<WebDevelopment />} />
