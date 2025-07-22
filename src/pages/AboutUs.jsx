@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import MissionVisionCard from '../components/about/MissionVisionCard';
 import AgileStepCard from '../components/about/AgileStepCard';
@@ -8,8 +8,16 @@ import agileSteps from '../data/about/agileSteps';
 import coreValues from '../data/about/coreValues';
 
 const AboutUs = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setAnimate(true), 100);
+  }, []);
+
   return (
-    <div className=" min-h-screen mt-14">
+    <div
+      className={`min-h-screen mt-14 transition-all duration-1000 ease-out ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+    >
       {/* First Section: Heading, Description, and Image */}
       <section className="py-16 ">
         <div className="max-w-4xl mx-auto text-center">
