@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import UiUx from '../UiUx';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 
@@ -170,28 +171,20 @@ const ServicesSection = ({ services }) => {
             <div className="w-full max-w-md">
               {/* Main image container */}
               <div className="p-4">
-                <div
-                  className="w-100 h-100 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container"
-                  key={activeServiceIndex}
-                >
-                  <img
-                    src={
-                      serviceImages[serviceKeys[activeServiceIndex]] ||
-                      '/Assets/web.gif'
-                    }
-                    alt={
-                      services[serviceKeys[activeServiceIndex]]?.title ||
-                      'Service'
-                    }
-                    className="w-full h-full object-cover image-fade"
-                    onError={(e) => {
-                      console.log(
-                        'Image failed to load:',
-                        serviceImages[serviceKeys[activeServiceIndex]]
-                      );
-                      e.target.src = '/Assets/web.gif';
-                    }}
-                  />
+                <div className="w-100 h-100 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container" key={activeServiceIndex}>
+                  {serviceKeys[activeServiceIndex] === 'uiux_design' ? (
+                    <UiUx />
+                  ) : (
+                    <img
+                      src={serviceImages[serviceKeys[activeServiceIndex]] || '/Assets/web.gif'}
+                      alt={services[serviceKeys[activeServiceIndex]]?.title || 'Service'}
+                      className="w-full h-full object-cover image-fade"
+                      onError={(e) => {
+                        console.log('Image failed to load:', serviceImages[serviceKeys[activeServiceIndex]]);
+                        e.target.src = '/Assets/web.gif';
+                      }}
+                    />
+                  )}
                 </div>
               </div>
               {/* Tech stack pills */}
@@ -251,14 +244,18 @@ const ServicesSection = ({ services }) => {
               <div className="w-full max-w-md mx-auto mt-8">
                 <div className="p-4">
                   <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container">
-                    <img
-                      src={serviceImages[serviceKey] || '/Assets/web.gif'}
-                      alt={services[serviceKey]?.title || 'Service'}
-                      className="w-full h-full object-cover image-fade"
-                      onError={(e) => {
-                        e.target.src = '/Assets/web.gif';
-                      }}
-                    />
+                    {serviceKey === 'uiux_design' ? (
+                      <UiUx />
+                    ) : (
+                      <img
+                        src={serviceImages[serviceKey] || '/Assets/web.gif'}
+                        alt={services[serviceKey]?.title || 'Service'}
+                        className="w-full h-full object-cover image-fade"
+                        onError={(e) => {
+                          e.target.src = '/Assets/web.gif';
+                        }}
+                      />
+                    )}
                   </div>
                 </div>
                 {/* Tech stack pills */}

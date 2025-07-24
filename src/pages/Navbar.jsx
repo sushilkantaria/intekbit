@@ -117,7 +117,7 @@ const Navbar = () => {
         >
           <Link to="/" onClick={handleHomeClick}>
             <img
-              src="/Assets/footer-logo.webp"
+              src="/Assets/white-logo.png"
               alt="Intekbitlogo"
               className="h-8 sm:h-10 w-auto"
             />
