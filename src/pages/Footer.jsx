@@ -1,4 +1,5 @@
 import React from 'react';
+import { HiEnvelope, HiMapPin, HiPhone } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
           <Link to="/">
             <img
               src="/Assets/footer-logo.webp"
-// ...existing code...
+              // ...existing code...
               className="h-10 sm:h-12 w-auto mb-2"
             />
           </Link>
@@ -18,7 +19,9 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex-1 min-w-[150px]">
-          <h3 className="font-semibold mb-2 text-base sm:text-lg">Quick Links</h3>
+          <h3 className="font-semibold mb-2 text-base sm:text-lg">
+            Quick Links
+          </h3>
           <ul className="space-y-1">
             <li>
               <Link to="/" className="hover:text-blue-400 text-sm sm:text-base">
@@ -26,27 +29,45 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-blue-400 text-sm sm:text-base">
+              <Link
+                to="/about"
+                className="hover:text-blue-400 text-sm sm:text-base"
+              >
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-blue-400 text-sm sm:text-base">
+              <Link
+                to="/services"
+                className="hover:text-blue-400 text-sm sm:text-base"
+              >
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-blue-400 text-sm sm:text-base">
+              <Link
+                to="/contact"
+                className="hover:text-blue-400 text-sm sm:text-base"
+              >
                 Contact
               </Link>
             </li>
           </ul>
         </div>
         <div className="flex-1 min-w-[180px]">
-          <h3 className="font-semibold mb-2 text-base sm:text-lg">Contact Us</h3>
-          <p className="text-gray-300 text-sm sm:text-base">Phone: +91 88498 36407</p>
-          <p className="text-gray-300 text-sm sm:text-base">Email: support@intekbit.com</p>
-          <p className="text-gray-300 text-sm sm:text-base">
+          <h3 className="font-semibold mb-2 text-base sm:text-lg">
+            Contact Us
+          </h3>
+          <p className="flex items-center text-gray-300 text-sm sm:text-base mb-1">
+            <HiPhone className="inline-block mr-3 h-5 w-5 text-white align-middle" />
+            Phone: +91 88498 36407
+          </p>
+          <p className="flex items-center text-gray-300 text-sm sm:text-base mb-1">
+            <HiEnvelope className="inline-block mr-3 h-5 w-5 text-white align-middle" />
+            Email: support@intekbit.com
+          </p>
+          <p className="flex items-center text-gray-300 text-sm sm:text-base">
+            <HiMapPin className="mr-3 h-10 w-10 text-white" />
             S-18/19, Laxmi Darshan Complex, Dabholi Road, Surat-395004
           </p>
         </div>
@@ -98,6 +119,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

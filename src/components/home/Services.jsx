@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 // Service images mapping
 const serviceImages = {
   web: '/Assets/web.gif',
-  ai: '/Assets/home-aiml.webp',
+  ai: '/Assets/Asset.gif',
   mobile: '/Assets/home-appdevelopment.webp',
   cloud_services: '/Assets/internal-cloud-services.webp',
   uiux_design: '/Assets/home-dataservices.webp',
@@ -171,16 +171,28 @@ const ServicesSection = ({ services }) => {
             <div className="w-full max-w-md">
               {/* Main image container */}
               <div className="p-4">
-                <div className="w-100 h-100 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container" key={activeServiceIndex}>
+                <div
+                  className="w-100 h-100 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container"
+                  key={activeServiceIndex}
+                >
                   {serviceKeys[activeServiceIndex] === 'uiux_design' ? (
                     <UiUx />
                   ) : (
                     <img
-                      src={serviceImages[serviceKeys[activeServiceIndex]] || '/Assets/web.gif'}
-                      alt={services[serviceKeys[activeServiceIndex]]?.title || 'Service'}
+                      src={
+                        serviceImages[serviceKeys[activeServiceIndex]] ||
+                        '/Assets/web.gif'
+                      }
+                      alt={
+                        services[serviceKeys[activeServiceIndex]]?.title ||
+                        'Service'
+                      }
                       className="w-full h-full object-cover image-fade"
                       onError={(e) => {
-                        console.log('Image failed to load:', serviceImages[serviceKeys[activeServiceIndex]]);
+                        console.log(
+                          'Image failed to load:',
+                          serviceImages[serviceKeys[activeServiceIndex]]
+                        );
                         e.target.src = '/Assets/web.gif';
                       }}
                     />
