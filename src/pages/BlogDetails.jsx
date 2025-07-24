@@ -10,7 +10,7 @@ useEffect(() => {
   console.log("Fetching blog with ID:", id); // ⬅️ Check if this runs
 
   axios
-    .get(`http://localhost:5000/api/blog/${id}`)
+    .get(`https://intekbit-backend.onrender.com/api/blog/${id}`)
     .then((res) => {
       console.log("Fetched blog:", res.data); // ⬅️ Check this too
       if (res.data.success) {
