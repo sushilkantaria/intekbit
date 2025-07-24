@@ -1,27 +1,26 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 function BlogDetails() {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
-useEffect(() => {
-  console.log("Fetching blog with ID:", id); // ⬅️ Check if this runs
+  useEffect(() => {
+    console.log('Fetching blog with ID:', id); // ⬅️ Check if this runs
 
-  axios
-    .get(`https://intekbit-backend.onrender.com/api/blog/${id}`)
-    .then((res) => {
-      console.log("Fetched blog:", res.data); // ⬅️ Check this too
-      if (res.data.success) {
-        setBlog(res.data.blog);
-      }
-    })
-    .catch((err) => {
-      console.error("Failed to load blog:", err);
-    });
-}, [id]);
-
+    axios
+      .get(`https://intekbit-backend.onrender.com/api/blog/${id}`)
+      .then((res) => {
+        console.log('Fetched blog:', res.data); // ⬅️ Check this too
+        if (res.data.success) {
+          setBlog(res.data.blog);
+        }
+      })
+      .catch((err) => {
+        console.error('Failed to load blog:', err);
+      });
+  }, [id]);
 
   if (!blog) {
     return <div className="p-10 text-white text-center">Loading blog...</div>;
