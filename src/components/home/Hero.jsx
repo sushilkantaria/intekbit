@@ -44,13 +44,13 @@ const HeroSection = () => (
     </div>
 
     {/* Spline on the Right (hidden on mobile) */}
-    <div className="hidden md:block absolute right-0 top-0 h-full w-full md:w-1/2 pointer-events-none">
-      <Spline scene="https://prod.spline.design/TBsKJ22sOonPR-1i/scene.splinecode" />
+    <div className="hidden md:block absolute -right-40 top-0 h-full w-full md:w-[50vw] lg:w-[750px] xl:w-[950px] pointer-events-none">
+      <Spline scene="https://prod.spline.design/TBsKJ22sOonPR-1i/scene.splinecode" style={{ width: '100%', height: '100%' }} />
     </div>
 
     {/* Black image always visible, but responsive size/position */}
     <img
-      className="absolute hidden md:block right-4 bottom-4 z-10 h-11 w-36"
+      className="absolute hidden md:block -right-36 bottom-4 z-10 h-11 w-36"
       src="./Assets/black.png"
       alt=""
     />
