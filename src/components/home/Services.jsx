@@ -112,12 +112,12 @@ const ServicesSection = ({ services }) => {
               {services[serviceKey]?.title}
             </h3>
 
-            <p className="text-gray-300 text-base sm:text-xl mb-6 sm:mb-12 leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-2xl mb-6 sm:mb-12 leading-relaxed">
               {services[serviceKey]?.description}
             </p>
 
             <div>
-              <div className="relative w-fit group mb-1 sm:mb-0">
+              <div className="relative w-fit group">
                 <Link
                   className="inline-block text-white font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-full transition-all duration-300 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] hover:cursor-pointer"
                   to={`/${services[serviceKey]?.buttonLink
@@ -156,7 +156,7 @@ const ServicesSection = ({ services }) => {
           {/* Left side - Scrolling content with connected line */}
           <div className="relative flex-1">
             {/* Continuous vertical line */}
-            <div className="absolute left-0 top-44 bottom-146 w-[3px] bg-gray-600"></div>
+            <div className="absolute left-0 top-39 bottom-167 w-[4px] bg-gray-600"></div>
             {serviceKeys.map((serviceKey, index) => (
               <ServiceCard
                 key={serviceKey}

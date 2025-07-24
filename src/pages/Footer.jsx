@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="text-white pt-10 pb-4">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 px-4">
+    <footer className="text-white pt-5">
+      <hr className="pt-16" />
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         <div className="flex-1 flex flex-col items-start mb-6 md:mb-0">
           <Link to="/">
             <img
               src="/Assets/footer-logo.webp"
-              // ...existing code...
               className="h-10 sm:h-12 w-auto mb-2"
             />
           </Link>
@@ -105,7 +105,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mt-6 text-gray-400 text-xs sm:text-sm">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 my-6 text-white text-xs sm:text-sm">
         <Link to="/privacy-policy" className="hover:text-blue-400">
           Privacy Policy
         </Link>
@@ -114,7 +114,8 @@ const Footer = () => {
           Terms & Conditions
         </Link>
       </div>
-      <div className="text-center text-gray-500 text-xs mt-2">
+      <hr />
+      <div className="text-center text-white text-xs my-4">
         <p>&copy; 2025 Intekbit Solutions Pvt. Ltd. All rights reserved.</p>
       </div>
     </footer>

@@ -19,7 +19,6 @@ import WebDevelopment from './components/services/WebDevelopment';
 import ScrollToTop from './components/ui/ScrollToTop';
 import AboutUs from './pages/AboutUs';
 import Blog from './pages/Blog';
-import BlogDetails from "./pages/BlogDetails";
 import ContactUs from './pages/ContactUs';
 import Footer from './pages/Footer';
 import Home from './pages/Home';
@@ -31,6 +30,7 @@ import TermsAndConditions from './pages/TermsAndConditions';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import BlogDetails from './components/blog/BlogDetails';
 import ParticleBackground from './components/ui/ParticleBackground';
 
 function AppWrapper() {

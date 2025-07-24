@@ -23,7 +23,7 @@ const TechnologySection = ({
   const containerKey = `${activeTechnology}-${technologies[activeTechnology]?.length}`;
 
   return (
-    <div className="py-16">
+    <div className="pb-16">
       <section
         id="technology"
         data-aos="fade-right"
@@ -31,17 +31,17 @@ const TechnologySection = ({
         data-aos-easing="ease-in-sine"
         data-aos-duration="500"
       >
-        <h2 className="text-3xl font-bold text-center mb-8 text-blue-700">
+        <h2 className="text-3xl font-bold text-center mb-14 text-blue-700">
           Our Technology
         </h2>
 
         {/* Buttons */}
-        <div className="flex justify-center space-x-14 gap-4 mb-8 flex-wrap">
+        <div className="flex justify-center space-x-12 gap-4 mb-8 flex-wrap max-w-7xl mx-auto">
           {buttons.map(({ key, label }) => (
             <div key={key} className="relative group">
               <button
                 onMouseEnter={() => switchTechnology(key)}
-                className={`px-4 py-2 rounded-2xl transition-all duration-300 cursor-pointer w-full relative z-10 text-white
+                className={`px-6 py-3 rounded-full transition-all duration-300 cursor-pointer relative z-10 text-white
                 ${
                   key === activeTechnology
                     ? 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07),-4px_0_8px_2px_rgb(255,0,128),4px_0_8px_2px_rgb(0,98,255)]'
@@ -63,7 +63,7 @@ const TechnologySection = ({
           {technologies[activeTechnology]?.map((tech, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-2 sm:p-4 w-24 sm:w-32"
+              className="flex flex-col items-center p-2 sm:p-4 w-24 sm:w-38"
               data-aos="fade-left"
               data-aos-delay={index * 150}
               data-aos-duration="600"
@@ -72,9 +72,9 @@ const TechnologySection = ({
               <img
                 src={tech.icon}
                 alt={tech.name}
-                className="w-16 h-16 sm:w-12 sm:h-12 mb-2"
+                className="w-18 h-18 sm:w-14 sm:h-14 mb-2"
               />
-              <p className="text-blue-700 font-medium text-center text-xs sm:text-base">
+              <p className="text-blue-700 font-medium text-center text-xs sm:text-lg">
                 {tech.name}
               </p>
             </div>

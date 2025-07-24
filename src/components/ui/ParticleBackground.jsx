@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import './particle-bg.css';
 
 const ParticleBackground = () => {
   const canvasRef = useRef(null);
@@ -94,7 +93,12 @@ const ParticleBackground = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="particle-bg-canvas" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="fixed top-[-1vw] left-[-1vw] w-[102vw] h-[103vh] -z-20 pointer-events-none blur-[1.5px] bg-black"
+    />
+  );
 };
 
 export default ParticleBackground;

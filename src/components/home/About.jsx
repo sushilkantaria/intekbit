@@ -3,7 +3,7 @@ import aboutData from '../../data/home/about';
 
 const AboutSection = ({ activeTab, switchContent }) => (
   <section className="py-16 text-white" id="about">
-    <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 px-4">
+    <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 px-4">
       {/* Left Section */}
       <div
         className="flex-1"
