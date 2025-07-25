@@ -3,11 +3,11 @@ import React from 'react';
 const TermsAndConditions = () => (
   <div className="min-h-screen flex flex-col text-white">
     <header className="mt-20">
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-center py-8 text-blue-400 drop-shadow-lg tracking-tight">
+      <h1 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
         Terms & Conditions
       </h1>
     </header>
-    <main className="flex justify-center flex-1 ">
+    <main className="flex justify-center flex-1 mb-6">
       <div className="max-w-6xl mx-auto rounded-3xl shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] p-8 space-y-10  backdrop-blur-xl">
         <section className="space-y-2">
           <h2 className="text-2xl font-bold mb-2">Welcome</h2>

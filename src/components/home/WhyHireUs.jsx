@@ -6,7 +6,7 @@ function WhyHireUsSection() {
     <section className="py-16" id="why-hire-us">
       <div className="max-w-6xl mx-auto">
         <h2
-          className="text-2xl font-bold text-center mb-14 text-blue-700"
+          className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg"
           data-aos="slide-up"
           data-aos-duration="800"
           data-aos-offset="200"

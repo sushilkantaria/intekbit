@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function BlogCard({ post }) {
   return (
-    <div className="rounded-2xl backdrop-blur-lg backdrop-saturate-150 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] overflow-hidden flex flex-col hover:scale-[1.03] transition-transform duration-300">
+    <div className="rounded-2xl backdrop-blur-lg backdrop-saturate-150 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] overflow-hidden flex flex-col hover:scale-[1.03] transition-transform duration-300 min-h-[420px] max-h-[420px]">
       <img
         src={post.image}
         alt={post.title}
@@ -16,7 +16,7 @@ function BlogCard({ post }) {
         <h2 className="text-xl font-bold text-white mb-2 leading-tight">
           {post.title}
         </h2>
-        <p className="text-gray-300 mb-4 flex-1">
+        <p className="text-gray-300 mb-4 flex-1 overflow-hidden text-ellipsis">
           {post.description?.replace(/(<([^>]+)>)/gi, '').slice(0, 100)}...
         </p>
         <div className="relative w-fit mt-auto">

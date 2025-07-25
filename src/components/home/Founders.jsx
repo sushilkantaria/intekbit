@@ -35,15 +35,15 @@ const FounderCard = ({ founder }) => (
 
 const FoundersSection = () => (
   <section className="py-16 overflow-hidden" id="founders">
-    <h2 
-      className="text-2xl font-bold text-center mb-2 text-blue-500"
+    <h2
+      className="text-5xl font-black text-center mb-4 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg"
       data-aos="fade-up"
       data-aos-duration="800"
       data-aos-offset="200"
     >
       Meet the Founders
     </h2>
-    <p 
+    <p
       className="text-center mb-8 text-white"
       data-aos="fade-up"
       data-aos-duration="800"
@@ -52,7 +52,7 @@ const FoundersSection = () => (
     >
       Driven by Technology, Powered by Trust.
     </p>
-    <div 
+    <div
       className="flex flex-wrap justify-center gap-8"
       data-aos="fade-up"
       data-aos-duration="1000"

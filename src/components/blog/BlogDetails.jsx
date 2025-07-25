@@ -27,20 +27,24 @@ function BlogDetails() {
   }
 
   return (
-    <div className="min-h-screen py-12 px-6 max-w-4xl mx-auto text-white">
-      <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
-      <p className="text-sm text-blue-300 mb-6">
-        {new Date(blog.createdAt).toLocaleDateString()}
-      </p>
-      <img
-        src={blog.image}
-        alt={blog.title}
-        className="w-full h-64 object-cover rounded mb-6"
-      />
-      <div
-        className="prose prose-invert max-w-none text-lg"
-        dangerouslySetInnerHTML={{ __html: blog.description }}
-      ></div>
+    <div className="min-h-screen py-16 px-4 flex items-center justify-center">
+      <div className="max-w-7xl w-full mx-auto rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.25)] p-8 space-y-8 bg-[rgba(30,41,59,0.85)] backdrop-blur-xl ">
+        <h1 className="text-4xl sm:text-5xl font-black mb-4 leading-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
+          {blog.title}
+        </h1>
+        <p className="text-sm text-cyan-400 mb-6">
+          {new Date(blog.createdAt).toLocaleDateString()}
+        </p>
+        <img
+          src={blog.image}
+          alt={blog.title}
+          className="w-100 h-100 object-cover mb-6"
+        />
+        <div
+          className="prose prose-invert max-w-none text-lg text-gray-200"
+          dangerouslySetInnerHTML={{ __html: blog.description }}
+        ></div>
+      </div>
     </div>
   );
 }

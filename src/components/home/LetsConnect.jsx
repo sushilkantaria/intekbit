@@ -4,14 +4,11 @@ import { Link } from 'react-router-dom';
 
 const LetsConnectSection = () => (
   <section
-    className="py-16 overflow-hidden shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] max-w-7xl mx-auto rounded-3xl backdrop-blur-md"
+    className="my-16 py-10 overflow-hidden shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] max-w-7xl mx-auto rounded-3xl backdrop-blur-md"
     id="lets-connect"
-    data-aos="slide-up"
-    data-aos-duration="800"
-    data-aos-offset="200"
   >
     <div className="max-w-2xl mx-auto text-center">
-      <h2 className="text-2xl font-bold mb-2 text-blue-700">
+      <h2 className="text-4xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
         Let's Create Big Stories Together!
       </h2>
       <p className="mb-6 text-white">

@@ -4,13 +4,12 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="text-white pt-5">
-      <hr className="pt-16" />
+    <footer className="text-white pt-16 bg-gradient-to-r from-[#0f2027] via-[#2c5364] to-[#1a2980] rounded-tr-[100px] rounded-tl-[100px]">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8">
         <div className="flex-1 flex flex-col items-start mb-6 md:mb-0">
           <Link to="/">
             <img
-              src="/Assets/footer-logo.webp"
+              src="/Assets/white-logo.png"
               className="h-10 sm:h-12 w-auto mb-2"
             />
           </Link>
@@ -114,7 +113,6 @@ const Footer = () => {
           Terms & Conditions
         </Link>
       </div>
-      <hr />
       <div className="text-center text-white text-xs my-4">
         <p>&copy; 2025 Intekbit Solutions Pvt. Ltd. All rights reserved.</p>
       </div>

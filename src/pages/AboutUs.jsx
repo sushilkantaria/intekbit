@@ -16,12 +16,14 @@ const AboutUs = () => {
 
   return (
     <div
-      className={`min-h-screen mt-14 transition-all duration-1000 ease-out ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+      className={`min-h-screen mt-14 transition-all duration-1000 ease-out ${
+        animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
     >
       {/* First Section: Heading, Description, and Image */}
       <section className="py-16 ">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-blue-700">
+          <h1 className="text-4xl font-black mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
             Innovating with Impact, Delivering with Care
           </h1>
           <p className="text-white text-lg">
@@ -53,7 +55,7 @@ const AboutUs = () => {
       <div className="py-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center px-4">
           <div className="flex-1">
-            <h2 className="text-2xl font-bold mb-2 text-blue-700">
+            <h2 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
               We Follow Agile Methodology
             </h2>
             <p className="mb-4 text-white">
@@ -63,7 +65,7 @@ const AboutUs = () => {
               innovation, and enhance productivity throughout the project
               lifecycle.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="flex flex-col justify-center items-center">
               {agileSteps.map((step) => (
                 <AgileStepCard
                   key={step.number}
@@ -87,7 +89,7 @@ const AboutUs = () => {
 
       {/* Core Values Section */}
       <section className="py-12">
-        <h2 className="text-2xl font-bold text-center mb-8 text-blue-700">
+        <h2 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
           Our Core Values
         </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8">

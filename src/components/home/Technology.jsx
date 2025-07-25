@@ -31,7 +31,7 @@ const TechnologySection = ({
         data-aos-easing="ease-in-sine"
         data-aos-duration="500"
       >
-        <h2 className="text-3xl font-bold text-center mb-14 text-blue-700">
+        <h2 className="text-5xl font-black mb-8 text-center leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
           Our Technology
         </h2>
 
