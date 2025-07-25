@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
+import { TypingAnimation } from '../magicui/typing-animation';
 import { Link } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 
@@ -16,22 +16,18 @@ const HeroSection = () => (
       data-aos-delay="1000"
       data-aos-offset="0"
     >
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg">
-        <Typewriter
-          words={['Welcome to INTEKBIT SOLUTIONS PVT LTD']}
-          loop={1}
-          cursor={false}
-          typeSpeed={70}
-        />
-      </h1>
-      <p className="text-base sm:text-lg md:text-xl drop-shadow">
-        <Typewriter
-          words={['Driven by Technology, Powered by Trust.']}
-          loop={1}
-          cursor={false}
-          typeSpeed={70}
-        />
-      </p>
+        <TypingAnimation
+          duration={70}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg"
+        >
+          WELCOME TO INTEKBIT SOLUTIONS PVT LTD
+        </TypingAnimation>
+      <TypingAnimation
+        duration={70}
+        className="text-base sm:text-lg md:text-md drop-shadow"
+      >
+        Driven by Technology, Powered by Trust.
+      </TypingAnimation>
       <div className="relative w-fit">
         <Link
           to="/services"
@@ -44,13 +40,16 @@ const HeroSection = () => (
     </div>
 
     {/* Spline on the Right (hidden on mobile) */}
-    <div className="hidden md:block absolute -right-40 top-0 h-full w-full md:w-[50vw] lg:w-[750px] xl:w-[950px] pointer-events-none">
-      <Spline scene="https://prod.spline.design/TBsKJ22sOonPR-1i/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+    <div className="hidden md:block absolute -right-30 top-0 h-full w-full md:w-[50vw] lg:w-[750px] xl:w-[950px] pointer-events-none">
+      <Spline
+        scene="https://prod.spline.design/TBsKJ22sOonPR-1i/scene.splinecode"
+        style={{ width: '100%', height: '100%' }}
+      />
     </div>
 
     {/* Black image always visible, but responsive size/position */}
     <img
-      className="absolute hidden md:block -right-36 bottom-4 z-10 h-11 w-36"
+      className="absolute hidden -right-26 md:block  bottom-4 z-10 h-11 w-36"
       src="./Assets/black.png"
       alt=""
     />

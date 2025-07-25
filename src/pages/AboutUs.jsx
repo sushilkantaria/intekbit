@@ -9,6 +9,7 @@ import coreValues from '../data/about/coreValues';
 
 const AboutUs = () => {
   const [animate, setAnimate] = useState(false);
+  const [activeStep, setActiveStep] = useState(null); // ✅ For one open at a time
 
   useEffect(() => {
     setTimeout(() => setAnimate(true), 100);
@@ -20,25 +21,21 @@ const AboutUs = () => {
         animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
     >
-      {/* First Section: Heading, Description, and Image */}
-      <section className="py-16 ">
+      {/* First Section */}
+      <section className="py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-black mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
             Innovating with Impact, Delivering with Care
           </h1>
           <p className="text-white text-lg">
             We are Intekbit Solutions Pvt. Ltd., a passionate team of
-            visionaries dedicated to redefining how businesses embrace
-            technology. From tailored web development to powerful AI-driven
-            solutions, we transform ideas into reality. Since our founding,
-            we've been committed to delivering innovative, future-ready
-            solutions that drive success.
+            visionaries...
           </p>
         </div>
       </section>
 
-      {/* Mission and Vision Section */}
-      <section className="py-12  flex flex-col md:flex-row gap-8 max-w-6xl mx-auto px-4">
+      {/* Mission and Vision */}
+      <section className="py-12 flex flex-col md:flex-row gap-8 max-w-6xl mx-auto px-4">
         {missionVision.map((item) => (
           <MissionVisionCard
             key={item.title}
@@ -53,24 +50,27 @@ const AboutUs = () => {
 
       {/* Agile Process Section */}
       <div className="py-12">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center px-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-start px-4">
           <div className="flex-1">
-            <h2 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
+            <h2 className="text-4xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
               We Follow Agile Methodology
             </h2>
-            <p className="mb-4 text-white">
+            <p className="mb-4 text-white text-center md:text-left">
               We follow the Agile methodology to ensure that we continuously
-              improve our development process and deliver high-quality results.
-              This approach helps us stay responsive to feedback, foster
-              innovation, and enhance productivity throughout the project
-              lifecycle.
+              improve our development process...
             </p>
-            <div className="flex flex-col justify-center items-center">
-              {agileSteps.map((step) => (
+
+            <div
+              className="flex flex-col gap-4"
+              onMouseLeave={() => setActiveStep(null)} // 👈 close all when mouse leaves the group
+            >
+              {agileSteps.map((step, index) => (
                 <AgileStepCard
                   key={step.number}
                   number={step.number}
                   title={step.title}
+                  isActive={activeStep === index}
+                  onHover={() => setActiveStep(index)}
                 >
                   {step.description}
                 </AgileStepCard>
@@ -87,7 +87,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Core Values Section */}
+      {/* Core Values */}
       <section className="py-12">
         <h2 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
           Our Core Values

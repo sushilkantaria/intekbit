@@ -112,7 +112,7 @@ const ServicesSection = ({ services }) => {
               {services[serviceKey]?.title}
             </h3>
 
-            <p className="text-gray-300 text-base sm:text-2xl mb-6 sm:mb-12 leading-relaxed">
+            <p className="text-gray-300 text-base sm:text-xl mb-6 sm:mb-12 leading-relaxed">
               {services[serviceKey]?.description}
             </p>
 
@@ -158,7 +158,7 @@ const ServicesSection = ({ services }) => {
           {/* Left side - Scrolling content with connected line */}
           <div className="relative flex-1">
             {/* Continuous vertical line */}
-            <div className="absolute left-0 top-39 bottom-167 w-[4px] bg-gray-600"></div>
+            <div className="absolute left-0 top-44 bottom-146 w-[3.5px] bg-gray-600"></div>
             {serviceKeys.map((serviceKey, index) => (
               <ServiceCard
                 key={serviceKey}
