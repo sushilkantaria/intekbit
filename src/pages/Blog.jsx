@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BlogCard from '../components/blog/BlogCard';
 import { Atom } from 'react-loading-indicators';
+import { Link } from 'react-router-dom';
 
 function LatestBlogCard({ post }) {
   return (
@@ -17,12 +18,15 @@ function LatestBlogCard({ post }) {
         <p className="text-gray-200 mb-6 text-lg">
           {post.description?.replace(/(<([^>]+)>)/gi, '').slice(0, 180)}...
         </p>
-        <a
-          href={`/blog/${post._id}`}
-          className="inline-flex items-center px-6 py-2 rounded-full font-bold text-white bg-gradient-to-r from-cyan-500 to-fuchsia-500 shadow-lg hover:from-fuchsia-500 hover:to-cyan-500 transition-all duration-300 border-2 border-transparent hover:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-        >
-          <span className="drop-shadow">Read More</span>
-        </a>
+        <div className="relative w-fit mt-auto">
+          <Link
+            to={`/blog/${post._id}`}
+            className="peer inline-flex items-center relative px-4 py-2 text-white rounded-3xl transition shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] font-semibold text-center z-10 backdrop-blur-lg backdrop-saturate-150"
+          >
+            <span>Read More</span>
+          </Link>
+          <div className="absolute inset-0 opacity-0 peer-hover:opacity-100 rounded-3xl z-0 pointer-events-none shadow-[-4px_0_8px_4px_rgb(255,0,128),4px_0_8px_4px_rgb(0,98,255)] transition duration-800" />
+        </div>
       </div>
       {/* Image right */}
       <div className="flex-1 flex items-center justify-center p-8">
@@ -78,9 +82,10 @@ function Blog() {
         {loading ? (
           <div className="flex flex-col items-center justify-center w-full py-24">
             <Atom
-              color={['#06b6d4', '#2563eb', '#a21caf', '#f472b6']}
+              color={['#a21caf', '#06b6d4', '#2563eb', '#f472b6']}
               size={64}
               text=""
+              speedPlus={-5}
             />
             <span className="text-lg text-gray-400 mt-6">Loading blogs...</span>
           </div>

@@ -12,12 +12,12 @@ const HeroSection = () => (
       className="z-10 max-w-xl w-full space-y-6 animate-fadeUp flex flex-col items-center md:items-start text-center md:text-left"
       data-aos="fade-zoom-in"
       data-aos-easing="ease-in-back"
-      data-aos-delay="1000"
+      data-aos-delay="500"
       data-aos-offset="0"
     >
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg">
         <Typewriter
-          words={['Welcome to INTEKBIT SOLUTIONS PVT LTD']}
+          words={['WELCOME TO INTEKBIT SOLUTIONS PVT LTD']}
           loop={1}
           cursor={false}
           typeSpeed={70}
