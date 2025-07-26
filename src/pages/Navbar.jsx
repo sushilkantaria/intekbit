@@ -107,6 +107,8 @@ const Navbar = () => {
     setIsMenuOpen(false);
   }, [location]);
 
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+
   return (
     <nav className="w-full fixed top-0 left-0 z-40 bg-transparent">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-2 sm:px-4 md:px-8 py-2 md:py-3 relative">
@@ -218,37 +220,93 @@ const Navbar = () => {
           data-aos="fade-down"
           data-aos-duration="1500"
         >
-          {['/', '/services', '/blog', '/about', '/contact'].map(
-            (path, index) => {
-              let label;
-              if (path === '/') {
-                label = 'Home';
-              } else {
-                const str = path.slice(1).replace('-', ' ');
-                label = str.charAt(0).toUpperCase() + str.slice(1);
-              }
-              return (
-                <li key={index} className="w-full flex justify-center">
-                  <Link
-                    to={path}
-                    className={`block w-full text-center py-2 rounded-lg font-semibold text-base ${
-                      path === '/contact'
-                        ? 'bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-500 text-white shadow-[inset_0_0_16px_4px_rgba(59,130,246,0.5),inset_0_0_32px_8px_rgba(99,102,241,0.3)]'
-                        : 'text-gray-100 hover:text-blue-400'
-                    }`}
-                    onClick={(e) => {
-                      setIsMenuOpen(false);
-                      if (path === '/') {
-                        handleHomeClick(e);
-                      }
-                    }}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              );
-            }
-          )}
+          <li className="w-full flex justify-center">
+            <Link
+              to="/"
+              className="block w-full text-center py-2 rounded-lg font-semibold text-base text-gray-100 hover:text-blue-400"
+              onClick={(e) => {
+                setIsMenuOpen(false);
+                handleHomeClick(e);
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="w-full flex flex-col items-center">
+            <button
+              className=" w-full text-center py-2 rounded-lg font-semibold text-base text-gray-100 hover:text-blue-400 flex items-center justify-center gap-2 focus:outline-none"
+              onClick={() => setIsMobileServicesOpen((v) => !v)}
+              aria-expanded={isMobileServicesOpen}
+              aria-controls="mobile-services-dropdown"
+              type="button"
+            >
+              Services
+              <svg
+                className={`w-4 h-4 transition-transform ${
+                  isMobileServicesOpen ? 'rotate-180' : ''
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            {isMobileServicesOpen && (
+              <ul
+                id="mobile-services-dropdown"
+                className="w-full flex flex-col gap-1 mt-1 bg-black/80 rounded-lg shadow-lg p-2"
+              >
+                {servicesList.map((service) => (
+                  <li key={service.path} className="w-full">
+                    <Link
+                      to={service.path}
+                      className="flex items-center gap-2 px-3 py-2 rounded-md text-gray-100 hover:text-blue-400 text-left"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        setIsMobileServicesOpen(false);
+                      }}
+                    >
+                      <span className="text-xl">{service.icon}</span>
+                      <span>{service.label}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+          <li className="w-full flex justify-center">
+            <Link
+              to="/blog"
+              className="block w-full text-center py-2 rounded-lg font-semibold text-base text-gray-100 hover:text-blue-400"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
+            </Link>
+          </li>
+          <li className="w-full flex justify-center">
+            <Link
+              to="/about"
+              className="block w-full text-center py-2 rounded-lg font-semibold text-base text-gray-100 hover:text-blue-400"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+          </li>
+          <li className="w-full flex justify-center">
+            <Link
+              to="/contact"
+              className="block w-full text-center py-2 rounded-lg font-semibold text-base "
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact Us
+            </Link>
+          </li>
         </ul>
       )}
     </nav>

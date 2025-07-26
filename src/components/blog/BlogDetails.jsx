@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Atom } from 'react-loading-indicators';
 
 function BlogDetails() {
   const { id } = useParams();
@@ -23,7 +24,16 @@ function BlogDetails() {
   }, [id]);
 
   if (!blog) {
-    return <div className="p-10 text-white text-center">Loading blog...</div>;
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen py-24">
+        <Atom
+          color={['#06b6d4', '#2563eb', '#a21caf', '#f472b6']}
+          size={64}
+          text=""
+        />
+        <span className="text-lg text-gray-400 mt-6">Loading blog...</span>
+      </div>
+    );
   }
 
   return (

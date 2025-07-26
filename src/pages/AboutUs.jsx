@@ -81,7 +81,7 @@ const AboutUs = () => {
             <img
               src="/Assets/about-agile.webp"
               alt="Agile Process"
-              className="rounded-lg shadow-lg max-h-80"
+              className="rounded-lg shadow-lg w-100 h-100"
             />
           </div>
         </div>

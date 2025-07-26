@@ -1,7 +1,6 @@
-import React from 'react';
-import { TypingAnimation } from '../magicui/typing-animation';
-import { Link } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
+import { Link } from 'react-router-dom';
+import { Typewriter } from 'react-simple-typewriter';
 
 const HeroSection = () => (
   <section
@@ -16,18 +15,22 @@ const HeroSection = () => (
       data-aos-delay="1000"
       data-aos-offset="0"
     >
-        <TypingAnimation
-          duration={70}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg"
-        >
-          WELCOME TO INTEKBIT SOLUTIONS PVT LTD
-        </TypingAnimation>
-      <TypingAnimation
-        duration={70}
-        className="text-base sm:text-lg md:text-md drop-shadow"
-      >
-        Driven by Technology, Powered by Trust.
-      </TypingAnimation>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg">
+        <Typewriter
+          words={['Welcome to INTEKBIT SOLUTIONS PVT LTD']}
+          loop={1}
+          cursor={false}
+          typeSpeed={70}
+        />
+      </h1>
+      <p className="text-base sm:text-lg md:text-xl drop-shadow">
+        <Typewriter
+          words={['Driven by Technology, Powered by Trust.']}
+          loop={1}
+          cursor={false}
+          typeSpeed={70}
+        />
+      </p>
       <div className="relative w-fit">
         <Link
           to="/services"
