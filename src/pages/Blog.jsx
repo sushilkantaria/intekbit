@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BlogCard from '../components/blog/BlogCard';
+import { Atom } from 'react-loading-indicators';
 
 function LatestBlogCard({ post }) {
   return (
@@ -37,10 +38,11 @@ function LatestBlogCard({ post }) {
 
 function Blog() {
   const [blogPosts, setBlogPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get('https://intekbit-backend.onrender.com/api/blogs') // ✅ your actual backend route
+      .get('https://intekbit-backend.onrender.com/api/blogs')
       .then((res) => {
         if (res.data.success) {
           setBlogPosts(res.data.blogs);
@@ -48,6 +50,9 @@ function Blog() {
       })
       .catch((err) => {
         console.error('Error fetching blogs:', err);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }, []);
 
@@ -61,7 +66,7 @@ function Blog() {
   return (
     <section className="min-h-screen py-16 flex items-center justify-center">
       <div className="max-w-7xl w-full mx-auto flex flex-col items-center">
-        <div className="mb-10 text-center">
+        <div className="my-10 text-center">
           <h1 className="text-5xl font-black mb-4 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
             Our Blog
           </h1>
@@ -70,26 +75,39 @@ function Blog() {
             design. Stay updated with our latest articles.
           </p>
         </div>
-        {/* Latest blog as separate full-width card */}
-        {latestPost && (
-          <div className="w-full mb-12 animate-fadeIn">
-            <LatestBlogCard post={latestPost} />
+        {loading ? (
+          <div className="flex flex-col items-center justify-center w-full py-24">
+            <Atom
+              color={['#06b6d4', '#2563eb', '#a21caf', '#f472b6']}
+              size={64}
+              text=""
+            />
+            <span className="text-lg text-gray-400 mt-6">Loading blogs...</span>
           </div>
-        )}
-        {/* Other blogs in grid */}
-        <div className="w-full flex justify-center">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 w-full">
-            {restPosts.map((post, idx) => (
-              <div
-                className="animate-fadeIn"
-                style={{ animationDelay: `${idx * 0.1}s` }}
-                key={post._id}
-              >
-                <BlogCard post={post} />
+        ) : (
+          <>
+            {/* Latest blog as separate full-width card */}
+            {latestPost && (
+              <div className="w-full mb-12 animate-fadeIn">
+                <LatestBlogCard post={latestPost} />
               </div>
-            ))}
-          </div>
-        </div>
+            )}
+            {/* Other blogs in grid */}
+            <div className="w-full flex justify-center">
+              <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 w-full">
+                {restPosts.map((post, idx) => (
+                  <div
+                    className="animate-fadeIn"
+                    style={{ animationDelay: `${idx * 0.1}s` }}
+                    key={post._id}
+                  >
+                    <BlogCard post={post} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

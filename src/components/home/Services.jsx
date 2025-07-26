@@ -158,7 +158,7 @@ const ServicesSection = ({ services }) => {
           {/* Left side - Scrolling content with connected line */}
           <div className="relative flex-1">
             {/* Continuous vertical line */}
-            <div className="absolute left-0 top-44 bottom-146 w-[3.5px] bg-gray-600"></div>
+            <div className="absolute left-0 top-40 bottom-146 w-[3.5px] bg-gray-600"></div>
             {serviceKeys.map((serviceKey, index) => (
               <ServiceCard
                 key={serviceKey}
