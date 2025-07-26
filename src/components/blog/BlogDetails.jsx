@@ -27,9 +27,10 @@ function BlogDetails() {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen py-24">
         <Atom
-          color={['#06b6d4', '#2563eb', '#a21caf', '#f472b6']}
+          color={['#a21caf', '#06b6d4', '#2563eb', '#f472b6']}
           size={64}
           text=""
+          speedPlus={-5}
         />
         <span className="text-lg text-gray-400 mt-6">Loading blog...</span>
       </div>

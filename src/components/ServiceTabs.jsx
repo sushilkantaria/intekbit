@@ -38,7 +38,7 @@ const ServiceTabs = ({ servicesData, mainTitle, description, image }) => {
                 className={`px-4 py-2 rounded-2xl transition-all duration-300 cursor-pointer w-full relative z-10 text-white
                     ${
                       idx === activeIndex
-                        ? 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07),-4px_0_8px_2px_rgba(255, 0, 128, 0.452),4px_0_8px_2px_rgba(0, 98, 255, 0.488)]'
+                        ? 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07),-4px_0_8px_2px_rgba(255, 0, 128, 0.452),4px_0_8px_2px_rgba(0, 98, 255, 0.488)] backdrop-blur-lg backdrop-saturate-150'
                         : 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] hover:shadow-[-4px_0px_8px_4px_rgba(255,0,128,0.45),4px_0px_8px_4px_rgba(0,98,255,0.35)]'
                     }
                   `}
@@ -53,29 +53,38 @@ const ServiceTabs = ({ servicesData, mainTitle, description, image }) => {
         </div>
 
         {/* Active Service Details */}
-        <div>
+        <div className="py-8">
           {activeService.sections && (
             <div className="space-y-6">
-              {activeService.sections.map((section, i) => (
-                <div
-                  key={section.sectionTitle || i}
-                  className="flex flex-col md:flex-row gap-6 items-start mb-4"
-                >
-                  {section.img && (
-                    <img
-                      src={section.img}
-                      alt={section.sectionTitle}
-                      className="w-44 h-24 object-cover"
-                    />
-                  )}
-                  <div>
-                    <h3 className="text-lg font-semibold text-blue-600 mb-1">
-                      {section.sectionTitle}
-                    </h3>
-                    <p className="text-white">{section.content}</p>
+              {activeService.sections.map((section, i) => {
+                const isEven = i % 2 === 1;
+                return (
+                  <div key={section.sectionTitle || i} className="mb-4">
+                    <div
+                      className={`w-full shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg backdrop-saturate-150 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-start ${
+                        isEven ? 'md:flex-row-reverse' : ''
+                      }`}
+                    >
+                      {section.img && (
+                        <div className="flex-shrink-0 w-[176px] h-[96px] md:w-[176px] md:h-[96px] rounded-xl overflow-hidden bg-gray-800 flex items-center justify-center">
+                          <img
+                            src={section.img}
+                            alt={section.sectionTitle}
+                            className="w-full h-full object-cover object-center"
+                            style={{ minWidth: 0, minHeight: 0 }}
+                          />
+                        </div>
+                      )}
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-xl font-black mb-2 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
+                          {section.sectionTitle}
+                        </h3>
+                        <p className="text-white">{section.content}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
 
