@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { HiPhone, HiEnvelope, HiMapPin } from 'react-icons/hi2';
 
 const ContactUs = () => {
   const formRef = useRef(null);
@@ -51,17 +52,13 @@ const ContactUs = () => {
               >
                 {glowLayer}
                 <div className="relative z-10 flex items-center gap-2 mb-1">
-                  <img
-                    src={
-                      label === 'Phone'
-                        ? '/Assets/contact-phone.webp'
-                        : label === 'Email'
-                        ? '/Assets/contact-email.webp'
-                        : '/Assets/contact-location.webp'
-                    }
-                    alt={label}
-                    className="h-8 w-8 invert"
-                  />
+                  {label === 'Phone' ? (
+                    <HiPhone className="inline-block mr-2 h-6 w-6 text-green-600 align-middle" />
+                  ) : label === 'Email' ? (
+                    <HiEnvelope className="inline-block mr-2 h-5 w-5 text-cyan-500 align-middle" />
+                  ) : (
+                    <HiMapPin className="mr-2 h-7 w-7 text-red-500 mt-0.5" />
+                  )}
                   <h3 className="font-semibold text-white">{label}</h3>
                 </div>
                 <p className="text-gray-200">

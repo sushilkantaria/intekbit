@@ -16,7 +16,7 @@ function WhyHireUsSection() {
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           data-aos="zoom-in"
-          data-aos-duration="1000"
+          data-aos-duration="500"
           data-aos-offset="200"
           data-aos-delay="300"
         >
@@ -24,7 +24,7 @@ function WhyHireUsSection() {
             <div
               key={item.title}
               data-aos="flip-right"
-              data-aos-duration="800"
+              data-aos-duration="500"
               data-aos-offset="200"
               data-aos-delay={400 + index * 150}
             >

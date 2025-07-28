@@ -100,7 +100,7 @@ const ServicesSection = ({ services }) => {
         <div className="w-full">
           {/* Service number */}
           <div className="flex items-center mb-3 sm:mb-8 relative">
-            <div className="w-6 h-6 rounded-full bg-white mr-6 absolute left-0.5 transform -translate-x-1/2 z-10 border-4 border-black"></div>
+            <div className="w-6 h-6 rounded-full bg-white mr-6 absolute left-0.5 transform -translate-x-1/2 z-10 border-4 border-black" />
             <span className="text-2xl font-bold text-blue-400 ml-6 sm:ml-12">
               {String(index + 1).padStart(2, '0')}
             </span>
@@ -108,7 +108,7 @@ const ServicesSection = ({ services }) => {
 
           {/* Service content */}
           <div className="max-w-lg ml-0 lg:ml-12 pt-4 sm:pt-4 pb-0 sm:pb-4 lg:py-0">
-            <h3 className="text-xl sm:text-3xl font-bold text-white mt-0 sm:mt-0 mb-2 sm:mb-8 leading-tight">
+            <h3 className="text-xl sm:text-3xl font-bold mt-0 sm:mt-0 mb-2 sm:mb-8 leading-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
               {services[serviceKey]?.title}
             </h3>
 
@@ -119,7 +119,7 @@ const ServicesSection = ({ services }) => {
             <div>
               <div className="relative w-fit group">
                 <Link
-                  className="inline-block text-white font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-full transition-all duration-300 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] hover:cursor-pointer"
+                  className="inline-block py-2 sm:py-3 px-6 sm:px-8 rounded-full transition-all duration-300 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] hover:cursor-pointer bg-gradient-to-r from-fuchsia-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent font-semibold"
                   to={`/${services[serviceKey]?.buttonLink
                     ?.replace('.html', '')
                     .toLowerCase()}`}
