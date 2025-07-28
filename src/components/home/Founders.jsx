@@ -1,5 +1,6 @@
 import React from 'react';
 import founders from '../../data/home/founders';
+import { FaLinkedinIn } from 'react-icons/fa6';
 
 const FounderCard = ({ founder }) => (
   <div
@@ -24,11 +25,7 @@ const FounderCard = ({ founder }) => (
       rel="noopener noreferrer"
       className="inline-block mt-2 z-10"
     >
-      <img
-        src="/Assets/footer-LinkedIn.webp"
-        alt="LinkedIn"
-        className="w-6 h-6"
-      />
+      <FaLinkedinIn className="h-6 sm:h-7 w-6 sm:w-7 text-[#0077B5]" />
     </a>
   </div>
 );
@@ -55,7 +52,7 @@ const FoundersSection = () => (
     <div
       className="flex flex-wrap justify-center gap-8"
       data-aos="fade-up"
-      data-aos-duration="1000"
+      data-aos-duration="800"
       data-aos-offset="200"
       data-aos-delay="400"
     >

@@ -87,7 +87,7 @@ function Blog() {
               text=""
               speedPlus={-5}
             />
-            <span className="text-lg text-gray-400 mt-6">Loading blogs...</span>
+            {/* <span className="text-lg text-gray-400 mt-6">Loading blogs...</span> */}
           </div>
         ) : (
           <>

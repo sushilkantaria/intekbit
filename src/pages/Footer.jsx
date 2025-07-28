@@ -1,10 +1,15 @@
-import React from 'react';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from 'react-icons/fa6';
 import { HiEnvelope, HiMapPin, HiPhone } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="text-white pt-12 bg-gradient-to-r from-[#0f2027] via-[#2c5364] to-[#1a2980] rounded-tr-[40px] rounded-tl-[40px]">
+    <footer className="text-white pt-12 bg-[#10172a] rounded-tr-[40px] rounded-tl-[40px]">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-8 flex flex-col gap-10 md:gap-8 lg:gap-0 md:flex-row md:flex-wrap lg:flex-nowrap">
         {/* Logo & tagline */}
         <div className="flex-1 flex flex-col items-start mb-4 md:mb-0 min-w-[180px]">
@@ -43,10 +48,10 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/services"
+                to="/blog"
                 className="hover:text-blue-400 text-xs sm:text-sm md:text-base"
               >
-                Services
+                Blog
               </Link>
             </li>
             <li>
@@ -65,15 +70,15 @@ const Footer = () => {
             Contact Us
           </h3>
           <p className="flex items-center text-gray-300 text-xs sm:text-sm md:text-base mb-1">
-            <HiPhone className="inline-block mr-2 h-5 w-5 text-white align-middle" />
+            <HiPhone className="inline-block mr-2 h-5 w-5 text-green-600 align-middle" />
             <span className="break-all">Phone: +91 88498 36407</span>
           </p>
           <p className="flex items-center text-gray-300 text-xs sm:text-sm md:text-base mb-1">
-            <HiEnvelope className="inline-block mr-2 h-5 w-5 text-white align-middle" />
+            <HiEnvelope className="inline-block mr-2 h-5 w-5 text-cyan-500 align-middle" />
             <span className="break-all">Email: support@intekbit.com</span>
           </p>
           <p className="flex items-start text-gray-300 text-xs sm:text-sm md:text-base">
-            <HiMapPin className="mr-2 h-7 w-7 text-white mt-0.5" />
+            <HiMapPin className="mr-2 h-8 w-8 text-red-500" />
             <span className="break-words">
               S-18/19, Laxmi Darshan Complex, Dabholi Road, Surat-395004
             </span>
@@ -86,39 +91,34 @@ const Footer = () => {
             <a
               href="http://linkedin.com/company/intekbit-solutions"
               aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img
-                src="/Assets/footer-LinkedIn.webp"
-                alt="LinkedIn"
-                className="h-6 sm:h-7 w-6 sm:w-7"
-              />
+              <FaLinkedinIn className="h-6 sm:h-7 w-6 sm:w-7 text-[#0077B5]" />
             </a>
             <a
               href="https://www.instagram.com/intekbit__solutions/"
               aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img
-                src="/Assets/footer-instagram.webp"
-                alt="Instagram"
-                className="h-6 sm:h-7 w-6 sm:w-7"
-              />
+              <FaInstagram className="h-6 sm:h-7 w-6 sm:w-7 text-[#E4405F]" />
             </a>
             <a
               href="https://www.facebook.com/profile.php?id=61573434722653"
               aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img
-                src="/Assets/footer-facebook.webp"
-                alt="Facebook"
-                className="h-6 sm:h-7 w-6 sm:w-7"
-              />
+              <FaFacebookF className="h-6 sm:h-7 w-6 sm:w-7 text-[#1877F3]" />
             </a>
-            <a href="https://x.com/Intekbit" aria-label="Twitter">
-              <img
-                src="/Assets/footer-twitter.webp"
-                alt="Twitter"
-                className="h-6 sm:h-7 w-6 sm:w-7"
-              />
+            <a
+              href="https://x.com/Intekbit"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaXTwitter className="h-6 sm:h-7 w-6 sm:w-7 text-black" />
             </a>
           </div>
         </div>
