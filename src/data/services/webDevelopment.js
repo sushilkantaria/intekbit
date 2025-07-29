@@ -1,62 +1,92 @@
-// Data for Web Development
-const webDevelopmentData = [
-  {
-    title: 'Frontend',
-    sections: [
-      {
-        img: '/Assets/internal-assets/web-react.webp',
-        sectionTitle: 'React.js',
-        content:
-          'A powerful JavaScript library for building fast, interactive, and scalable web applications. With its component-based architecture and Virtual DOM, React enhances performance and reusability. At Intekbit Solutions Pvt. Ltd., we use React.js to develop dynamic and user-friendly web applications that offer seamless experiences.',
-      },
-      {
-        img: '/Assets/internal-assets/web-angular.webp',
-        sectionTitle: 'Angular Development',
-        content:
-          'At INTEKBIT Solutions Pvt. Ltd., we offer Angular development services to build dynamic, high-performance web applications. With a powerful component-based architecture, Angular enables seamless scalability, maintainability, and fast user experiences. Our expertise ensures secure, interactive, and responsive frontends, making it ideal for enterprise-grade applications. Whether you need a complex dashboard, a single-page application, or a feature-rich web platform, INTEKBIT Solutions delivers cutting-edge Angular solutions tailored to your business needs.',
-      },
-      {
-        img: '/Assets/internal-assets/web-html.webp',
-        sectionTitle: 'HTML, CSS, JavaScript',
-        content:
-          'The fundamental building blocks of web development. HTML structures content, CSS styles the UI by leveraging frameworks like Tailwind CSS and Bootstrap , and JavaScript adds interactivity, ensuring an engaging experience. At Intekbit Solutions, we utilize these core technologies to craft pixel-perfect, responsive, and interactive web pages.',
-      },
-    ],
-  },
-  {
-    title: 'Backend',
-    sections: [
-      {
-        img: '/Assets/internal-assets/web-node.webp',
-        sectionTitle: 'Node.js(Express.js, NestJS)',
-        content:
-          'At INTEKBIT Solutions Pvt. Ltd., we provide Node.js Development Services for high-performance, real-time web applications. With Express.js, we build lightweight and efficient APIs, while NestJS offers a modular and scalable architecture for enterprise-grade solutions. Our expertise in Node.js ensures seamless server-side development, enabling fast, secure, and efficient backend services tailored to your business needs.',
-      },
-      {
-        img: '/Assets/internal-assets/web-flask-django.webp',
-        sectionTitle: 'Django and Flask',
-        content:
-          'At INTEKBIT Solutions Pvt. Ltd., we offer expert backend development services using Flask and Django, two powerful Python frameworks. Our Flask solutions are lightweight and flexible, ideal for building scalable web applications, microservices, and RESTful APIs with rapid prototyping. For more complex, data-driven platforms, our Django solutions provide built-in security, authentication, ORM, and an intuitive admin panel, ensuring seamless backend management and scalability. Whether you need a dynamic API or a robust enterprise application, INTEKBIT Solutions delivers tailored backend solutions to drive your business forward.',
-      },
-    ],
-  },
-  {
-    title: 'Database',
-    sections: [
-      {
-        img: '/Assets/internal-assets/web-mongo.webp',
-        sectionTitle: 'MongoDB',
-        content:
-          'A flexible and scalable NoSQL database that stores data in JSON-like documents. Its schema-less structure makes it ideal for handling dynamic and unstructured data. At Intekbit Solutions, we use MongoDB for real-time applications, big data solutions, and cloud-based services.',
-      },
-      {
-        img: '/Assets/internal-assets/web-PostgreSQL-MySQL.webp',
-        sectionTitle: 'PostgreSQL and MySQL',
-        content:
-          'At INTEKBIT Solutions Pvt. Ltd., we offer database management services using MySQL and PostgreSQL, two powerful relational database systems. Our MySQL solutions ensure high performance, security, and ACID compliance, making them ideal for web applications and e-commerce platforms. For more complex, data-intensive projects, our PostgreSQL solutions provide advanced querying, data integrity, and scalability, perfect for enterprise applications. Whether you need a robust, secure database for transactional systems or a scalable solution for large datasets, INTEKBIT Solutions delivers efficient and reliable data management tailored to your business needs.',
-      },
-    ],
-  },
-];
+import heroImage from '../../assets/AIML.webp'; // Placeholder — replace with actual web dev hero image
+import react from '../../assets/A-android.png'; // Use same as Android for now
+import htmlcssjs from '../../assets/A-java.png'; // Placeholder for HTML/CSS/JS
+import wordpress from '../../assets/A-flutter.png'; // Placeholder for WordPress
+import node from '../../assets/A-kotlin.png'; // Placeholder for Node.js
+import express from '../../assets/A-swift.png'; // Placeholder for Express.js
+import angular from '../../assets/A-ios.png'; // Placeholder for Angular
+
+const webDevelopmentData = {
+  heroTitle: 'Web Solutions That Convert & Scale',
+  heroDescription:
+    'From static sites to dynamic web apps, we create performance-focused, user-friendly web solutions that drive business growth. Whether you need a landing page or a custom dashboard—we’ve got you covered.',
+  heroImage,
+
+  industriesTitle: 'Industries That Benefit from our Web Development Services',
+  industriesDescription: 'We’ve developed web solutions across various industries, including:',
+  industries: [
+    'Healthcare Portals',
+    'E-commerce & Retail',
+    'Education & E-learning',
+    'Finance & Banking',
+    'Hospitality & Travel',
+    'Logistics & Supply Chain',
+    'Media & Entertainment',
+  ],
+
+contactCtaDescription:
+  'Looking to launch a fast, responsive, and scalable website that drives results? Whether you need a landing page, an e-commerce store, or a full-stack web app, our expert developers ensure it’s built for performance, security, and long-term growth. We bring deep expertise across modern frameworks and CMS platforms to craft digital experiences that engage and convert.',
+
+  contactCtaText: 'Start Your Web Project',
+
+  reasons: [
+    {
+      title: 'Responsive & Modern UI',
+      desc: 'We build interfaces that look great and work perfectly across all screen sizes and devices.',
+    },
+    {
+      title: 'Scalable & Maintainable Code',
+      desc: 'Our codebase is clean, modular, and ready to scale as your business grows.',
+    },
+    {
+      title: 'SEO & Speed Optimized',
+      desc: 'We ensure your site loads fast and is optimized for search engines right from day one.',
+    },
+  ],
+
+  techStackTitle: 'Web Technologies We Use',
+  techStackDescription:
+    'Our stack includes modern frameworks, backend APIs, and CMS tools to build powerful web apps and dynamic websites.',
+  techs: [
+    { name: 'React JS', icon: react },
+    { name: 'HTML / CSS / JS', icon: htmlcssjs },
+    { name: 'WordPress', icon: wordpress },
+    { name: 'Node.js', icon: node },
+    { name: 'Express.js', icon: express },
+    { name: 'Angular', icon: angular },
+  ],
+
+  faqData: [
+    {
+      question: 'Do you create both frontend and backend?',
+      answer:
+        'Yes, we offer complete end-to-end development—from frontend UI in React, HTML, or WordPress to backend services using Node.js and Express.js.',
+    },
+    {
+      question: 'Can you redesign my existing website?',
+      answer:
+        'Absolutely. We perform UI/UX audits, improve performance, and rebuild your site using modern technologies for better results.',
+    },
+    {
+      question: 'Do you offer SEO-friendly websites?',
+      answer:
+        'Yes, all websites we develop are optimized for performance, mobile-friendliness, and SEO best practices out of the box.',
+    },
+    {
+      question: 'Can I manage content after the site is built?',
+      answer:
+        'Yes, we use CMS platforms like WordPress or create custom admin panels so you can easily manage and update your content.',
+    },
+    {
+      question: 'How long will it take to build my website?',
+      answer:
+        'For simple landing pages, we take about 1–2 weeks. Full-featured websites with backend logic can take 3–5 weeks or more depending on scope.',
+    },
+  ],
+
+  serviceName: 'web development',
+  whyUsTitle: `Why choose Intekbit Solutions as your web development partner`,
+};
 
 export default webDevelopmentData;
+

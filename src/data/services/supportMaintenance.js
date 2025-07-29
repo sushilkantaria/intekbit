@@ -1,95 +1,91 @@
-// Data for Support & Maintenance
-const supportMaintenanceData = [
-  {
-    title: 'Application Support & Maintenance',
-    sections: [
-      {
-        sectionTitle: 'Application Support & Maintenance',
-        content:
-          'We help businesses create IT strategies aligned with their goals, ensuring technology investments deliver maximum value. Our team offers proactive monitoring, issue resolution, and performance enhancements to minimize downtime. We provide regular updates, bug fixes, and optimizations to keep your applications running at peak efficiency.',
-      },
-    ],
-  },
-  {
-    title: 'Software Maintenance',
-    sections: [
-      {
-        sectionTitle: 'Software Maintenance',
-        content:
-          'We implement regular security patches, vulnerability assessments, and real-time threat monitoring to protect your systems from cyber threats. Our team ensures software stability, resolves compatibility issues, and enhances system performance. Through continuous updates and proactive maintenance, we safeguard your software against evolving security risks.',
-      },
-    ],
-  },
-  {
-    title: 'IT Infrastructure Support',
-    sections: [
-      {
-        sectionTitle: 'IT Infrastructure Support',
-        content:
-          'We monitor and manage your servers, networks, and cloud environments to ensure high availability, security, and optimal performance. Our infrastructure experts proactively detect issues, implement fixes, and optimize resources to prevent downtime. By maintaining a stable IT ecosystem, we enhance system reliability and business continuity.',
-      },
-    ],
-  },
-  {
-    title: 'Database Support',
-    sections: [
-      {
-        sectionTitle: 'Database Support',
-        content:
-          'We manage and maintain databases, ensuring data integrity, performance optimization, and secure backups. Our experts conduct routine health checks, optimize queries, and implement security measures to prevent data breaches. With automated backup solutions, we ensure data recovery and business continuity in case of failures.',
-      },
-    ],
-  },
-  {
-    title: 'Cloud Support & Maintenance',
-    sections: [
-      {
-        sectionTitle: 'Cloud Support & Maintenance',
-        content:
-          'We provide continuous monitoring, resource optimization, and cost management for cloud-based applications and services. Our team ensures seamless cloud operations by automating scaling, optimizing workloads, and maintaining security compliance. By leveraging cloud efficiency, we help businesses improve agility and reduce operational costs.',
-      },
-    ],
-  },
-  {
-    title: 'System Upgrades & Migration',
-    sections: [
-      {
-        sectionTitle: 'System Upgrades & Migration',
-        content:
-          'We handle system upgrades, migrations, and technology transitions with minimal disruption to your business operations. Our process includes risk assessment, compatibility testing, and smooth implementation to ensure a hassle-free transition. With strategic planning and execution, we help businesses adopt modern technologies efficiently.',
-      },
-    ],
-  },
-  {
-    title: 'Performance Monitoring & Optimization',
-    sections: [
-      {
-        sectionTitle: 'Performance Monitoring & Optimization',
-        content:
-          'We track system performance, identify bottlenecks, and implement improvements to maintain efficiency and reliability. Our optimization strategies focus on fine-tuning system processes, enhancing load balancing, and reducing response times. By continuously monitoring key metrics, we ensure peak system performance and user satisfaction.',
-      },
-    ],
-  },
-  {
-    title: 'Disaster Recovery & Backup Solutions',
-    sections: [
-      {
-        sectionTitle: 'Disaster Recovery & Backup Solutions',
-        content:
-          'We set up automated backups and disaster recovery plans to ensure your data is safe and can be restored quickly in case of unexpected events. Our team implements failover solutions, risk assessments, and real-time monitoring to prevent data loss. By ensuring rapid recovery, we help businesses maintain operational continuity during disruptions.',
-      },
-    ],
-  },
-  {
-    title: 'IT Support & Maintenance Services',
-    sections: [
-      {
-        sectionTitle: 'IT Support & Maintenance Services',
-        content:
-          'We offer ongoing IT support, monitoring, and management services to ensure your systems run smoothly and securely. Our dedicated support team provides troubleshooting, system updates, and preventive maintenance to minimize technical disruptions. With round-the-clock assistance, we keep your IT environment stable and efficient.',
-      },
-    ],
-  },
-];
+import heroImage from '../../assets/AIML.webp'; // Placeholder — update with actual support/maintenance image
+import aws from '../../assets/A-android.png';       // AWS CloudWatch
+import postman from '../../assets/A-java.png';      // Postman
+import jenkins from '../../assets/A-flutter.png';   // Jenkins
+import git from '../../assets/A-kotlin.png';        // Git
+import docker from '../../assets/A-swift.png';      // Docker
+import sentry from '../../assets/A-ios.png';        // Sentry
+
+const supportMaintenanceData = {
+  heroTitle: 'Keep Your Software Running Smoothly, Always',
+  heroDescription:
+    'Our job doesn’t end at deployment. We monitor, update, and improve your applications continuously to ensure they stay fast, secure, and bug-free. Whether it’s a website or cloud app—we keep it running at its best.',
+  heroImage,
+
+  industriesTitle: 'Industries That Benefit from our Support and Maintenance service',
+  industriesDescription:
+    'We offer support and maintenance services for a wide range of sectors, such as:',
+  industries: [
+    'Healthcare & Hospitals',
+    'Banking & Finance',
+    'E-commerce Platforms',
+    'EdTech & Universities',
+    'IT & SaaS Startups',
+    'Transport & Logistics',
+    'Government Portals',
+  ],
+
+  contactCtaDescription:
+    'Need ongoing support for your digital products? Our team ensures timely updates, real-time monitoring, and reliable maintenance so you can focus on growth.',
+  contactCtaText: 'Get Continuous Support',
+
+  reasons: [
+    {
+      title: '24/7 Monitoring & Alerts',
+      desc: 'We set up systems to monitor app health, performance, and downtime—so issues are resolved before users even notice.',
+    },
+    {
+      title: 'Regular Updates & Bug Fixes',
+      desc: 'Our maintenance team keeps your codebase updated, patches vulnerabilities, and fixes bugs quickly to prevent business disruption.',
+    },
+    {
+      title: 'Scalable Support Plans',
+      desc: 'Choose from flexible support models based on your budget, hours required, and service levels—ideal for startups or enterprises.',
+    },
+  ],
+
+  techStackTitle: 'Tools & Platforms We Use',
+  techStackDescription:
+    'We rely on powerful tools to deliver continuous integration, real-time monitoring, and efficient issue resolution.',
+  techs: [
+    { name: 'AWS CloudWatch', icon: aws },
+    { name: 'Postman', icon: postman },
+    { name: 'Jenkins', icon: jenkins },
+    { name: 'Git', icon: git },
+    { name: 'Docker', icon: docker },
+    { name: 'Sentry', icon: sentry },
+  ],
+
+  faqData: [
+    {
+      question: 'What kind of support services do you offer?',
+      answer:
+        'We offer everything from performance monitoring and bug fixing to version updates, server support, backups, and security checks—tailored to your business needs.',
+    },
+    {
+      question: 'Can I request support only when needed?',
+      answer:
+        'Yes, we offer both ongoing monthly maintenance plans and on-demand support for urgent issues or updates when you need them.',
+    },
+    {
+      question: 'How do you monitor issues in real-time?',
+      answer:
+        'We use tools like AWS CloudWatch and Sentry to keep an eye on server uptime, error logs, and usage spikes—so we can act instantly if something goes wrong.',
+    },
+    {
+      question: 'Is there a minimum contract duration?',
+      answer:
+        'No strict contracts—we’re flexible. You can start with short-term support or opt for long-term service-level agreements based on your requirements.',
+    },
+    {
+      question: 'Will I get reports of what’s being maintained?',
+      answer:
+        'Yes, we send regular reports that include what updates were made, any issues resolved, and upcoming recommendations to improve your system.',
+    },
+  ],
+
+  serviceName: 'support and maintenance',
+  whyUsTitle: 'Why choose Intekbit Solutions as your support and maintenance partner',
+};
 
 export default supportMaintenanceData;

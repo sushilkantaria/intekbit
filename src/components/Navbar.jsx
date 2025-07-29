@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import ServicesDropdownGrid from '../components/navbar/ServicesDropdownGrid';
+import ServicesDropdownGrid from './navbar/ServicesDropdownGrid';
 import servicesList from '../data/servicesList';
 
 const Navbar = () => {

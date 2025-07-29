@@ -1,105 +1,93 @@
-// Data for IT Consulting
-const itConsultingData = [
-  {
-    title: 'Technology Strategy & Planning',
-    sections: [
-      {
-        sectionTitle: 'Technology Strategy & Planning',
-        content:
-          'We help businesses create IT strategies aligned with their goals, ensuring technology investments deliver maximum value. Our experts analyze current systems, identify areas for improvement, and provide strategic guidance to enhance efficiency and innovation. With a tailored approach, we help organizations future-proof their IT infrastructure and drive sustainable growth.',
-      },
-    ],
-  },
-  {
-    title: 'IT Infrastructure Consulting',
-    sections: [
-      {
-        sectionTitle: 'IT Infrastructure Consulting',
-        content:
-          'We assess and optimize your IT infrastructure for improved performance, security, and scalability, whether on-premises, cloud-based, or hybrid environments. Our approach includes system audits, resource allocation improvements, and security enhancements to ensure reliability. By leveraging best practices, we help businesses achieve seamless operations and cost-effective IT management.',
-      },
-    ],
-  },
-  {
-    title: 'Cloud Consulting',
-    sections: [
-      {
-        sectionTitle: 'Cloud Consulting',
-        content:
-          'Our cloud experts guide businesses in selecting the right cloud platforms, planning migrations, and optimizing cloud resources for cost and performance efficiency. We ensure a smooth transition with minimal downtime while enhancing flexibility and scalability. From cloud strategy to implementation, we help businesses leverage cloud technology to maximize efficiency and innovation.',
-      },
-    ],
-  },
-  {
-    title: 'Cybersecurity Consulting',
-    sections: [
-      {
-        sectionTitle: 'Cybersecurity Consulting',
-        content:
-          'We identify vulnerabilities, develop security strategies, and implement robust solutions to protect your data and systems from cyber threats. Our cybersecurity services include risk assessments, threat mitigation, and compliance enforcement to safeguard sensitive information. By integrating advanced security measures, we help businesses maintain data integrity and operational continuity.',
-      },
-    ],
-  },
-  {
-    title: 'Software Consulting',
-    sections: [
-      {
-        sectionTitle: 'Software Consulting',
-        content:
-          'We analyze your current software solutions, recommend improvements, and guide you through custom software development or system integration processes. Our goal is to enhance compatibility, eliminate inefficiencies, and ensure smooth data exchange between systems. By aligning technology with business goals, we improve workflow automation and overall productivity.',
-      },
-    ],
-  },
-  {
-    title: 'Data Analytics & Business Intelligence',
-    sections: [
-      {
-        sectionTitle: 'Data Analytics & Business Intelligence',
-        content:
-          'We help organizations harness the power of data, providing insights for better decision-making through advanced analytics and reporting tools. By integrating AI-driven analytics, predictive modeling, and real-time dashboards, we enable businesses to uncover trends and optimize strategies. Our data solutions transform raw data into meaningful insights that drive competitive advantage.',
-      },
-    ],
-  },
-  {
-    title: 'IT Project Management',
-    sections: [
-      {
-        sectionTitle: 'IT Project Management',
-        content:
-          'Our project managers oversee IT projects from start to finish, ensuring timely delivery, budget control, and alignment with business objectives. We follow structured methodologies to manage risks, streamline workflows, and maintain clear communication throughout the project lifecycle. With a focus on efficiency, we ensure successful project execution with measurable results.',
-      },
-    ],
-  },
-  {
-    title: 'Digital Transformation Consulting',
-    sections: [
-      {
-        sectionTitle: 'Digital Transformation Consulting',
-        content:
-          'We support businesses in adopting modern technologies, automating processes, and enhancing digital capabilities to stay competitive. Our solutions include process reengineering, AI integration, and emerging technology adoption to drive innovation. By transforming digital operations, we help businesses enhance efficiency, improve customer experiences, and scale effectively.',
-      },
-    ],
-  },
-  {
-    title: 'DevOps & Automation Consulting',
-    sections: [
-      {
-        sectionTitle: 'DevOps & Automation Consulting',
-        content:
-          'We assist in implementing DevOps practices, automating workflows, and improving software development efficiency. Our approach integrates continuous integration, deployment automation, and infrastructure monitoring to enhance collaboration and speed up releases. By streamlining development processes, we help businesses achieve faster, more reliable software delivery.',
-      },
-    ],
-  },
-  {
-    title: 'IT Support & Maintenance Services',
-    sections: [
-      {
-        sectionTitle: 'IT Support & Maintenance Services',
-        content:
-          'We offer ongoing IT support, monitoring, and management services to ensure your systems run smoothly and securely. Our proactive approach includes system updates, issue resolution, and performance optimization to minimize downtime. With round-the-clock support, we ensure businesses maintain operational efficiency and security at all times.',
-      },
-    ],
-  },
-];
+import heroImage from '../../assets/AIML.webp'; // Use same hero image for now
+import devops from '../../assets/A-android.png'; // Placeholder for DevOps
+import jenkins from '../../assets/A-java.png'; // Placeholder for Jenkins
+import docker from '../../assets/A-flutter.png'; // Placeholder for Docker
+import github from '../../assets/A-kotlin.png'; // Placeholder for GitHub
+import django from '../../assets/A-swift.png'; // Placeholder for Django
+import javascript from '../../assets/A-ios.png'; // Placeholder for JavaScript
+
+const itConsultingData = {
+  heroTitle: 'Expert Guidance for Smarter IT Decisions',
+  heroDescription:
+    'Our IT consulting services help you make the right technical decisions—whether you’re scaling, migrating, automating, or securing your systems. We bring years of cross-industry experience to guide you with confidence and clarity.',
+
+  heroImage,
+
+  industriesTitle: 'Industries That Benefit from our IT Consulting service',
+  industriesDescription: 'We’ve empowered IT strategies across sectors like:',
+
+  industries: [
+    'Banking and Financial Services',
+    'Healthcare and Pharma',
+    'Manufacturing and Industrial Automation',
+    'Education and EdTech',
+    'E-commerce and Retail',
+    'Logistics and Transportation',
+    'Startups and Tech Firms',
+  ],
+
+  contactCtaDescription:
+    'IT Consulting isn’t just about advice—it’s about solving real problems with clear technical direction. We evaluate your business goals, audit your infrastructure, and help you plan scalable, secure, and future-ready IT systems. From cloud strategy to digital transformation, we guide you every step of the way.',
+  contactCtaText: 'Talk to an IT Consultant',
+
+  reasons: [
+    {
+      title: 'Business-Aligned IT Strategies',
+      desc: 'We tailor every recommendation to your business goals—ensuring IT investments lead to real-world outcomes.',
+    },
+    {
+      title: 'Vendor-Neutral Advice',
+      desc: 'We’re not tied to any vendor or platform. Our guidance is unbiased and focused solely on what works best for your needs.',
+    },
+    {
+      title: 'Implementation Support',
+      desc: 'We don’t stop at strategy. We also help you implement, hire the right teams, and transition smoothly to new systems.',
+    },
+  ],
+
+  techStackTitle: 'Tech Expertise We Bring',
+  techStackDescription:
+    'Our consultants are experts in modern tools, platforms, and methodologies that align with today’s enterprise demands.',
+
+  techs: [
+    { name: 'DevOps', icon: devops },
+    { name: 'Jenkins', icon: jenkins },
+    { name: 'Docker', icon: docker },
+    { name: 'GitHub', icon: github },
+    { name: 'Django', icon: django },
+    { name: 'JavaScript', icon: javascript },
+  ],
+
+  faqData: [
+    {
+      question: 'What does your IT consulting service include?',
+      answer:
+        'We analyze your business goals and current tech stack, identify gaps or inefficiencies, and provide actionable plans for system upgrades, cloud transitions, security, or new tech adoption.',
+    },
+    {
+      question: 'Do you also help with implementation?',
+      answer:
+        'Yes. While our core is strategy and architecture, we often work alongside your tech team or ours to help execute the recommendations and ensure a successful rollout.',
+    },
+    {
+      question: 'Is this service only for large enterprises?',
+      answer:
+        'Not at all. We work with startups, SMEs, and enterprises alike—tailoring consulting scope and plans based on your business size and phase.',
+    },
+    {
+      question: 'How do you ensure recommendations are unbiased?',
+      answer:
+        'We’re completely vendor-neutral and base our advice on what’s right for your project. Our team evaluates multiple solutions and tools before making recommendations.',
+    },
+    {
+      question: 'What’s the first step to get started?',
+      answer:
+        'We usually begin with a short discovery call or workshop to understand your challenges. Then we present a customized roadmap with goals, timeline, and estimated effort.',
+    },
+  ],
+
+  serviceName: 'IT consulting',
+  whyUsTitle: `Why choose Intekbit Solutions as your IT consulting partner`,
+};
 
 export default itConsultingData;
