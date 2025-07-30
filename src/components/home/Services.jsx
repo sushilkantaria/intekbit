@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 // Service images mapping
 const serviceImages = {
   web: '/Assets/web.gif',
-  ai: '/Assets/Asset.gif',
+  ai: '/Assets/ai.gif',
   mobile: '/Assets/home-appdevelopment.webp',
   cloud_services: '/Assets/internal-cloud-services.webp',
   uiux_design: '/Assets/home-dataservices.webp',
@@ -172,9 +172,9 @@ const ServicesSection = ({ services }) => {
           <div className="flex-1 lg:sticky lg:top-20 lg:h-screen flex items-center justify-center">
             <div className="w-full max-w-md">
               {/* Main image container */}
-              <div className="p-4">
+              <div className="">
                 <div
-                  className="w-100 h-100 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container"
+                  className="w-110 h-110 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container"
                   key={activeServiceIndex}
                 >
                   {serviceKeys[activeServiceIndex] === 'uiux_design' ? (

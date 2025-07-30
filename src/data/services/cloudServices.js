@@ -14,7 +14,8 @@ const cloudServicesData = {
   heroImage,
 
   industriesTitle: 'Industries That Benefit from our cloud computing service',
-  industriesDescription: 'Here are just a few industries where our cloud solutions are transforming operations:',
+  industriesDescription:
+    'Here are just a few industries where our cloud solutions are transforming operations:',
   industries: [
     'Banking & Fintech',
     'Healthcare & Biotech',

@@ -13,7 +13,8 @@ const webDevelopmentData = {
   heroImage,
 
   industriesTitle: 'Industries That Benefit from our Web Development Services',
-  industriesDescription: 'We’ve developed web solutions across various industries, including:',
+  industriesDescription:
+    'We’ve developed web solutions across various industries, including:',
   industries: [
     'Healthcare Portals',
     'E-commerce & Retail',
@@ -24,8 +25,8 @@ const webDevelopmentData = {
     'Media & Entertainment',
   ],
 
-contactCtaDescription:
-  'Looking to launch a fast, responsive, and scalable website that drives results? Whether you need a landing page, an e-commerce store, or a full-stack web app, our expert developers ensure it’s built for performance, security, and long-term growth. We bring deep expertise across modern frameworks and CMS platforms to craft digital experiences that engage and convert.',
+  contactCtaDescription:
+    'Looking to launch a fast, responsive, and scalable website that drives results? Whether you need a landing page, an e-commerce store, or a full-stack web app, our expert developers ensure it’s built for performance, security, and long-term growth. We bring deep expertise across modern frameworks and CMS platforms to craft digital experiences that engage and convert.',
 
   contactCtaText: 'Start Your Web Project',
 
@@ -89,4 +90,3 @@ contactCtaDescription:
 };
 
 export default webDevelopmentData;
-

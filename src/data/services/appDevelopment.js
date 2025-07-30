@@ -14,7 +14,8 @@ const appDevelopmentData = {
   heroImage,
 
   industriesTitle: 'Industries Transformed by Our Mobile Apps',
-  industriesDescription: 'We’ve delivered impactful mobile experiences for sectors like:',
+  industriesDescription:
+    'We’ve delivered impactful mobile experiences for sectors like:',
   industries: [
     'Healthcare & Wellness',
     'Fintech & Banking',

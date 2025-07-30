@@ -1,10 +1,10 @@
 import heroImage from '../../assets/AIML.webp'; // Placeholder — update with actual support/maintenance image
-import aws from '../../assets/A-android.png';       // AWS CloudWatch
-import postman from '../../assets/A-java.png';      // Postman
-import jenkins from '../../assets/A-flutter.png';   // Jenkins
-import git from '../../assets/A-kotlin.png';        // Git
-import docker from '../../assets/A-swift.png';      // Docker
-import sentry from '../../assets/A-ios.png';        // Sentry
+import aws from '../../assets/A-android.png'; // AWS CloudWatch
+import postman from '../../assets/A-java.png'; // Postman
+import jenkins from '../../assets/A-flutter.png'; // Jenkins
+import git from '../../assets/A-kotlin.png'; // Git
+import docker from '../../assets/A-swift.png'; // Docker
+import sentry from '../../assets/A-ios.png'; // Sentry
 
 const supportMaintenanceData = {
   heroTitle: 'Keep Your Software Running Smoothly, Always',
@@ -12,7 +12,8 @@ const supportMaintenanceData = {
     'Our job doesn’t end at deployment. We monitor, update, and improve your applications continuously to ensure they stay fast, secure, and bug-free. Whether it’s a website or cloud app—we keep it running at its best.',
   heroImage,
 
-  industriesTitle: 'Industries That Benefit from our Support and Maintenance service',
+  industriesTitle:
+    'Industries That Benefit from our Support and Maintenance service',
   industriesDescription:
     'We offer support and maintenance services for a wide range of sectors, such as:',
   industries: [
@@ -85,7 +86,8 @@ const supportMaintenanceData = {
   ],
 
   serviceName: 'support and maintenance',
-  whyUsTitle: 'Why choose Intekbit Solutions as your support and maintenance partner',
+  whyUsTitle:
+    'Why choose Intekbit Solutions as your support and maintenance partner',
 };
 
 export default supportMaintenanceData;

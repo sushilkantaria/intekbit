@@ -1,10 +1,10 @@
 import heroImage from '../../assets/AIML.webp'; // Use placeholder for now
-import figma from '../../assets/A-android.png';       // Placeholder for Figma
-import adobeXD from '../../assets/A-java.png';        // Placeholder for Adobe XD
+import figma from '../../assets/A-android.png'; // Placeholder for Figma
+import adobeXD from '../../assets/A-java.png'; // Placeholder for Adobe XD
 import illustrator from '../../assets/A-flutter.png'; // Placeholder for Illustrator
-import photoshop from '../../assets/A-kotlin.png';    // Placeholder for Photoshop
-import canva from '../../assets/A-swift.png';         // Placeholder for Canva
-import sketch from '../../assets/A-ios.png';          // Placeholder for Sketch
+import photoshop from '../../assets/A-kotlin.png'; // Placeholder for Photoshop
+import canva from '../../assets/A-swift.png'; // Placeholder for Canva
+import sketch from '../../assets/A-ios.png'; // Placeholder for Sketch
 
 const graphicDesigningData = {
   heroTitle: 'Designs That Speak Louder Than Words',
@@ -59,7 +59,6 @@ const graphicDesigningData = {
     { name: 'Sketch', icon: sketch },
   ],
 
-  
   faqData: [
     {
       question: 'What types of designs do you offer?',
