@@ -10,7 +10,7 @@ export default function UiUx() {
       />
 
       {/* Animated Border for UX */}
-      <div className="absolute top-10 left-5 h-26 w-26 overflow-hidden">
+      <div className="absolute top-12 left-7 h-26 w-26 overflow-hidden">
         <span className="absolute top-0 left-0 w-full h-full border-2 border-[#00aaff] rounded-lg box-border animate-draw-border pointer-events-none" />
         <img
           src="/Assets/ui-ux-assets/ux audit.png"
@@ -20,7 +20,7 @@ export default function UiUx() {
       </div>
 
       {/* Animated Border for UI */}
-      <div className="absolute bottom-27 left-5 h-26 w-26 overflow-hidden">
+      <div className="absolute bottom-31 left-7 h-26 w-26 overflow-hidden">
         <span className="absolute top-0 left-0 w-full h-full border-2 border-[#00aaff] rounded-lg box-border animate-draw-border pointer-events-none" />
         <img
           src="/Assets/ui-ux-assets/ui concept.png"
@@ -30,13 +30,13 @@ export default function UiUx() {
       </div>
 
       {/* Pulsing Stack */}
-      <div className="absolute bottom-28 right-12 flex flex-col gap-2 animate-pulse-stack">
+      <div className="absolute bottom-30 right-12 flex flex-col gap-2 animate-pulse-stack">
         {[...Array(3)].map((_, i) => (
           <img
             key={i}
             src="/Assets/ui-ux-assets/three cards of right side.png"
             alt="Stacked"
-            className="w-[80px] rounded-xl"
+            className="w-[100px] rounded-xl"
           />
         ))}
       </div>

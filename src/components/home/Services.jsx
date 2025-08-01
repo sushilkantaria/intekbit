@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import UiUx from '../UiUx';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
+import RotatingIcons from '../rotating';
 
 // Service images mapping
 const serviceImages = {
@@ -179,6 +180,8 @@ const ServicesSection = ({ services }) => {
                 >
                   {serviceKeys[activeServiceIndex] === 'uiux_design' ? (
                     <UiUx />
+                  ) : serviceKeys[activeServiceIndex] === 'web' ? (
+                    <RotatingIcons />
                   ) : (
                     <img
                       src={
