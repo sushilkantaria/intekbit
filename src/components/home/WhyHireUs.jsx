@@ -1,5 +1,4 @@
 import whyHireUsData from '../../data/home/whyHireUs';
-import './whyhireus.css';
 
 const WhyHireUsSection = () => {
   return (
