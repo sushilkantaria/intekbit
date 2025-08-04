@@ -1,18 +1,15 @@
-// src/content/cloudComputingService.js
-import heroImage from '../../assets/cloud.png'; // Replace with actual cloud computing hero image
+import heroImage from '../../assets/cloudservicebg.mp4'; // Use video as hero background
 import aws from '../../assets/A-android.png'; // Placeholder for AWS
 import azure from '../../assets/A-java.png'; // Placeholder for Azure
 import gcloud from '../../assets/A-flutter.png'; // Placeholder for Google Cloud
 import hadoop from '../../assets/A-kotlin.png'; // Placeholder for Hadoop
 import kubernet from '../../assets/A-swift.png'; // Placeholder for Kubernetes
 import cloudflare from '../../assets/A-ios.png'; // Placeholder for Cloudflare
-
 const cloudServicesData = {
   heroTitle: 'Reliable Cloud Infrastructure for the Future',
   heroDescription:
     'We help businesses migrate, manage, and scale through secure cloud solutions. Whether it’s AWS, Azure, or hybrid—our solutions are flexible, fast, and tailored to your business’s unique infrastructure needs.',
   heroImage,
-
   industriesTitle: 'Industries That Benefit from our cloud computing service',
   industriesDescription:
     'Here are just a few industries where our cloud solutions are transforming operations:',
@@ -25,9 +22,7 @@ const cloudServicesData = {
     'Logistics & Transportation',
     'Manufacturing & Automation',
   ],
-
   contactCtaText: 'Launch with Cloud Confidence',
-
   reasons: [
     {
       title: 'Seamless Migration & Management',
@@ -42,7 +37,6 @@ const cloudServicesData = {
       desc: 'Our solutions are tailored to optimize performance while reducing your monthly cloud bills.',
     },
   ],
-
   techStackTitle: 'Cloud Platforms & Tools We Work With',
   techStackDescription:
     'We combine industry-leading platforms and orchestration tools to build scalable and fault-tolerant cloud infrastructure.',
@@ -54,10 +48,8 @@ const cloudServicesData = {
     { name: 'Kubernetes', icon: kubernet },
     { name: 'Cloudflare', icon: cloudflare },
   ],
-
   contactCtaDescription:
     'Cloud isn’t just about hosting—it’s about agility, security, and business continuity. We help you set up scalable infrastructure, integrate tools, and manage everything from migration to post-deployment monitoring. Our cloud experts ensure you get flexibility without compromising control or performance.',
-
   faqData: [
     {
       question: 'Do you provide cloud migration services?',
@@ -85,9 +77,7 @@ const cloudServicesData = {
         'Definitely. We audit your current setup, right-size instances, and eliminate unused services to optimize cloud costs.',
     },
   ],
-
   serviceName: 'cloud computing',
   whyUsTitle: `Why choose Intekbit Solutions as your cloud computing partner`,
 };
-
 export default cloudServicesData;

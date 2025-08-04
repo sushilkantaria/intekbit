@@ -23,7 +23,7 @@ const TechnologySection = ({
   const containerKey = `${activeTechnology}-${technologies[activeTechnology]?.length}`;
 
   return (
-    <div className="pb-16">
+    <div className="pb-16 bg-black">
       <section
         id="technology"
         data-aos="fade-right"

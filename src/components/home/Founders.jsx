@@ -31,7 +31,7 @@ const FounderCard = ({ founder }) => (
 );
 
 const FoundersSection = () => (
-  <section className="py-16 overflow-hidden" id="founders">
+  <section className="py-16 bg-black overflow-hidden" id="founders">
     <h2
       className="text-5xl font-black text-center mb-4 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg"
       data-aos="fade-up"

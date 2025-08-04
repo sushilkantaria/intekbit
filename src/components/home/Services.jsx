@@ -137,7 +137,7 @@ const ServicesSection = ({ services }) => {
   };
 
   return (
-    <section className="pt-16 overflow-visible" id="services">
+    <section className="pt-16 bg-black overflow-visible" id="services">
       <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
         <div

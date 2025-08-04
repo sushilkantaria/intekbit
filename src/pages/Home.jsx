@@ -29,18 +29,18 @@ const Home = () => {
     <div>
       <Hero />
       <About activeTab={activeTab} switchContent={switchContent} />
+      <WhyHireUs />
       <Services services={services} />
-      <Technology
-        technologies={technologies}
-        activeTechnology={activeTechnology}
-        switchTechnology={switchTechnology}
-      />
       <Process
         processInfo={processInfo}
         processSteps={processSteps}
         handleProcessStepHover={handleProcessStepHover}
       />
-      <WhyHireUs />
+      <Technology
+        technologies={technologies}
+        activeTechnology={activeTechnology}
+        switchTechnology={switchTechnology}
+      />
       <Founders />
       <LetsConnect />
     </div>
