@@ -1,27 +1,33 @@
+import {
+  FaSearch,
+  FaDraftingCompass,
+  FaCogs,
+  FaLifeRing,
+} from 'react-icons/fa';
 const whyHireUsData = [
   {
-    icon: '🌟',
+    icon: FaSearch,
     title: 'Expert Team',
     description:
       'Skilled professionals with diverse expertise to address challenges.',
   },
   {
-    icon: '🚀',
+    icon: FaDraftingCompass,
     title: 'Innovative Solutions',
     description:
       'Cutting-edge approaches that keep you ahead of the competition.',
   },
   {
-    icon: '🤝',
-    title: 'Client Partnership',
+    icon: FaLifeRing,
+    title: 'Reliable & Secure',
     description:
-      'We work WITH you, not FOR you, creating lasting relationships.',
+      'Robust solutions built with security and dependability at the core.',
   },
   {
-    icon: '⚙️',
-    title: 'Technical Excellence',
+    icon: FaCogs,
+    title: 'Client-Centric Approach',
     description:
-      'Superior development practices for high-quality deliverables.',
+      'Your needs are our priority, and we tailor services around your vision.',
   },
 ];
 

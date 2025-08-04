@@ -1,30 +1,31 @@
-import React from 'react';
+import whyHireUsData from '../../data/home/whyHireUs';
 import './whyhireus.css';
-import { FaSearch, FaDraftingCompass, FaCogs, FaChartLine, FaLifeRing } from 'react-icons/fa';
-
-const steps = [
-  { icon: <FaSearch />, title: 'Consultation', description: 'Understanding your goals and aligning our strategy.' },
-  { icon: <FaDraftingCompass />, title: 'Planning & Design', description: 'Structuring technical blueprint and action plan.' },
-  { icon: <FaCogs />, title: 'Development', description: 'Bringing your product to life with robust engineering.' },
-  { icon: <FaChartLine />, title: 'Optimization', description: 'Testing, improving, and launching for success.' },
-  // { icon: <FaLifeRing />, title: 'Support', description: 'We stay with you to ensure everything runs smoothly.' },
-];
 
 const WhyHireUsSection = () => {
   return (
-    <section className="whyhire-section">
-      <h2 className="whyhire-heading">
-        <span className="highlight">Easy and Streamlined</span> <br />
+    <section className="py-20 px-5 bg-[#f9fafb] text-center">
+      <h2 className="text-4xl mb-16 font-bold leading-snug">
+        <span className="bg-gradient-to-r from-[#7f00ff] to-[#e100ff] bg-clip-text text-transparent">
+          Easy and Streamlined
+        </span>{' '}
+        <br />
         Collaboration Process
       </h2>
 
-      <div className="whyhire-wrapper">
-        {steps.map((step, index) => (
-          <div className="whyhire-card" key={index}>
-            <div className="whyhire-icon">{step.icon}</div>
+      <div className="flex justify-center flex-wrap gap-10 max-w-[1200px] mx-auto">
+        {whyHireUsData.map((step, index) => (
+          <div
+            className="flex-1 min-w-[250px] max-w-[250px] p-8 bg-white rounded-xl shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2"
+            key={index}
+          >
+            <div className="text-4xl text-[#7f00ff] mb-5">
+              {step.icon && <step.icon />}
+            </div>
             <div>
-              <h3>0{index + 1}. {step.title}</h3>
-              <p>{step.description}</p>
+              <h3 className="text-lg mb-2 text-gray-800 font-semibold">
+                {step.title}
+              </h3>
+              <p className="text-base text-gray-600">{step.description}</p>
             </div>
           </div>
         ))}

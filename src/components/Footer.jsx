@@ -118,7 +118,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaXTwitter className="h-6 sm:h-7 w-6 sm:w-7 text-black" />
+              <FaXTwitter className="h-6 sm:h-7 w-6 sm:w-7 text-white" />
             </a>
           </div>
         </div>

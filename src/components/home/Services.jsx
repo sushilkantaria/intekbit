@@ -9,7 +9,7 @@ const serviceImages = {
   web: '/Assets/web.gif',
   ai: '/Assets/ai.gif',
   mobile: '/Assets/home-appdevelopment.webp',
-  cloud_services: '/Assets/internal-cloud-services.webp',
+  cloud_services: '/Assets/cloud-service.gif',
   uiux_design: '/Assets/home-dataservices.webp',
   software: '/Assets/home-softwaredevelopment.webp',
 };

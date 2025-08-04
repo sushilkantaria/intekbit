@@ -2,7 +2,7 @@ import React from 'react';
 import aboutData from '../../data/home/about';
 
 const AboutSection = ({ activeTab, switchContent }) => (
-  <section className="py-16 bg-white text-black" id="about">
+  <section className="py-16 bg-[#f9fafb] text-black" id="about">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 px-4">
       {/* Left Section */}
       <div
@@ -11,7 +11,7 @@ const AboutSection = ({ activeTab, switchContent }) => (
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        <h2 className="text-2xl font-bold mb-8">
+        <h2 className="text-4xl font-bold mb-8">
           Everything You Need to Know About Intekbit Solutions
         </h2>
         <div className="flex gap-4 mb-8">
@@ -19,7 +19,7 @@ const AboutSection = ({ activeTab, switchContent }) => (
             <div key={tab} className="relative group">
               <button
                 onClick={() => switchContent(tab)}
-                className={`px-4 py-2 rounded-2xl transition-all duration-300 cursor-pointer w-full relative z-10 text-white
+                className={`px-4 py-2 rounded-2xl transition-all duration-300 cursor-pointer w-full relative z-10
                   ${
                     tab === activeTab
                       ? 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07),-4px_0_8px_2px_rgba(255, 0, 128, 0.452),4px_0_8px_2px_rgb(0,98,255)]'
