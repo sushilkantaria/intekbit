@@ -49,7 +49,7 @@ const AboutUs = () => {
       </section>
 
       {/* Agile Process Section */}
-      <div className="py-12">
+      <div className="py-12 bg-black">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-start px-4">
           <div className="flex-1">
             <h2 className="text-4xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
@@ -88,7 +88,7 @@ const AboutUs = () => {
       </div>
 
       {/* Core Values */}
-      <section className="py-12">
+      <section className="py-12 bg-white">
         <h2 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
           Our Core Values
         </h2>

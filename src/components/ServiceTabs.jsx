@@ -63,17 +63,17 @@ const ServiceTabs = ({ servicesData }) => {
           <h1 className="text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-4 leading-snug">
             {industriesTitle}
           </h1>
-          <p className="text-gray-400 mb-2 text-lg">{industriesDescription}</p>
-          <ul className="space-y-5">
+          <p className="text-gray-400 mb-4 text-lg">{industriesDescription}</p>
+          <ul className="space-y-8">
             {industries &&
               industries.map((item, index) => (
-                <li key={index} className="flex items-center text-xl">
-                  <HiCheckCircle className="w-5 h-5 mr-3 rounded-full p-1 bg-green-100 text-green-500" />
+                <li key={index} className="flex items-center text-2xl">
+                  <HiCheckCircle className="w-8 h-8 mr-3 rounded-full bg-gray-700 text-green-500" />
                   {item}
                 </li>
               ))}
           </ul>
-          <p className="mt-2 text-gray-300 text-base leading-relaxed">
+          <p className="mt-4 text-gray-300 text-base leading-relaxed">
             {contactCtaDescription}
           </p>
         </section>
