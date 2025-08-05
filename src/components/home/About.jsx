@@ -2,7 +2,7 @@ import React from 'react';
 import aboutData from '../../data/home/about';
 
 const AboutSection = ({ activeTab, switchContent }) => (
-  <section className="py-16 bg-[#f9fafb] text-black" id="about">
+  <section className="py-16 bg-gray-200 text-black" id="about">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 px-4">
       {/* Left Section */}
       <div

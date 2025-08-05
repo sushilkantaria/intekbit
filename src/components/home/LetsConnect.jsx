@@ -35,10 +35,10 @@ import { HiArrowLongRight } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 
 const LetsConnectSection = () => (
-  <section className="bg-[#f9fafb] w-full py-16">
+  <section className="bg-gray-200 w-full py-16">
     {/* 🔁 Replaced my-16 with py-16 here */}
     <section
-      className="py-10 overflow-hidden shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] max-w-7xl mx-auto rounded-3xl backdrop-blur-md"
+      className="py-10 overflow-hidden bg-gradient-to-br from-[#a259ff] via-[#f24e1e] to-[#ff7262] shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] max-w-7xl mx-auto rounded-3xl"
       id="lets-connect"
     >
       <div className="max-w-2xl mx-auto text-center">

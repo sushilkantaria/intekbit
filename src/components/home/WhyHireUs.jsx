@@ -2,7 +2,7 @@ import whyHireUsData from '../../data/home/whyHireUs';
 
 const WhyHireUsSection = () => {
   return (
-    <section className="py-20 px-5 bg-[#f9fafb] text-center">
+    <section className="py-20 px-5 bg-gray-200 text-center">
       <h2 className="text-4xl mb-16 font-bold leading-snug">
         <span className="bg-gradient-to-r from-[#7f00ff] to-[#e100ff] bg-clip-text text-transparent">
           Easy and Streamlined

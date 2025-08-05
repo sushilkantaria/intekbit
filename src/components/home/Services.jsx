@@ -8,7 +8,7 @@ import RotatingIcons from '../rotating';
 const serviceImages = {
   web: '/Assets/web.gif',
   ai: '/Assets/ai.gif',
-  mobile: '/Assets/home-appdevelopment.webp',
+  mobile: '/Assets/mobile_app.png',
   cloud_services: '/Assets/cloud-service.gif',
   uiux_design: '/Assets/home-dataservices.webp',
   software: '/Assets/home-softwaredevelopment.webp',
@@ -101,7 +101,7 @@ const ServicesSection = ({ services }) => {
         <div className="w-full">
           {/* Service number */}
           <div className="flex items-center mb-3 sm:mb-8 relative">
-            <div className="w-6 h-6 rounded-full bg-white mr-6 absolute left-0.5 transform -translate-x-1/2 z-10 border-4 border-black" />
+            <div className="w-6 h-6 rounded-full bg-gray-300 mr-6 absolute left-0.5 transform -translate-x-1/2 z-10 border-4 border-gray-500" />
             <span className="text-2xl font-bold text-blue-400 ml-6 sm:ml-12">
               {String(index + 1).padStart(2, '0')}
             </span>
@@ -175,7 +175,7 @@ const ServicesSection = ({ services }) => {
               {/* Main image container */}
               <div className="">
                 <div
-                  className="w-110 h-110 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container"
+                  className="w-110 h-110 rounded-2xl overflow-hidden"
                   key={activeServiceIndex}
                 >
                   {serviceKeys[activeServiceIndex] === 'uiux_design' ? (

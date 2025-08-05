@@ -88,7 +88,7 @@ const AboutUs = () => {
       </div>
 
       {/* Core Values */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-gray-200">
         <h2 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
           Our Core Values
         </h2>

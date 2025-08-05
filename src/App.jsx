@@ -31,7 +31,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import BlogDetails from './components/blog/BlogDetails';
-import ParticleBackground from './components/ui/ParticleBackground';
+// import ParticleBackground from './components/ui/ParticleBackground';
 
 function AppWrapper() {
   const location = useLocation();
@@ -48,7 +48,7 @@ function AppWrapper() {
 
   return (
     <div className="min-h-screen w-full flex flex-col">
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
 
       <Navbar />
       <ScrollToTop />

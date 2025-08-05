@@ -1,6 +1,7 @@
 import { HiCheckCircle, HiSquares2X2, HiMinus, HiPlus } from 'react-icons/hi2';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ParticleBackground from './ui/ParticleBackground';
 const ServiceTabs = ({ servicesData }) => {
   const navigate = useNavigate();
   const [faqOpenIndex, setFaqOpenIndex] = useState(null);
@@ -26,7 +27,8 @@ const ServiceTabs = ({ servicesData }) => {
   return (
     <div>
       {/* HERO SECTION */}
-      <section className="min-h-screen px-12 flex items-center justify-between relative overflow-hidden">
+      <ParticleBackground />
+      <section className="min-h-screen max-w-7xl mx-auto px-12 flex items-center justify-between relative overflow-hidden">
         {/* Video background if heroImage is mp4 */}
         {heroImage && heroImage.endsWith('.mp4') && (
           <video
@@ -57,13 +59,13 @@ const ServiceTabs = ({ servicesData }) => {
           </div>
         )}
       </section>
-      <div className="max-w-6xl mx-auto mt-20">
+      <div className="bg-gray-300">
         {/* INDUSTRIES SECTION */}
-        <section className="text-white py-2 -mt-5">
+        <section className="max-w-6xl mx-auto py-16 text-gray-800">
           <h1 className="text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-4 leading-snug">
             {industriesTitle}
           </h1>
-          <p className="text-gray-400 mb-4 text-lg">{industriesDescription}</p>
+          <p className="text-gray-900 mb-4 text-lg">{industriesDescription}</p>
           <ul className="space-y-8">
             {industries &&
               industries.map((item, index) => (
@@ -73,12 +75,14 @@ const ServiceTabs = ({ servicesData }) => {
                 </li>
               ))}
           </ul>
-          <p className="mt-4 text-gray-300 text-base leading-relaxed">
+          <p className="mt-4 text-gray-900 text-base leading-relaxed">
             {contactCtaDescription}
           </p>
         </section>
-        {/* WHY US SECTION */}
-        <section className="text-white py-16">
+      </div>
+      {/* WHY US SECTION */}
+      <div className='bg-gray-800'>
+        <section className="max-w-6xl mx-auto py-20 text-white">
           <h2 className="text-4xl font-semibold mb-10 leading-snug">
             Why{' '}
             <span className="bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
@@ -143,7 +147,7 @@ const ServiceTabs = ({ servicesData }) => {
           </div>
         </section>
         {/* CONTACT CTA SECTION */}
-        <section className=" text-white text-center px-8 my-12">
+        <section className="max-w-6xl mx-auto py-20 text-white text-center px-8">
           <p className="text-2xl leading-loose text-gray-100">
             {contactCtaDescription}
           </p>
@@ -154,17 +158,19 @@ const ServiceTabs = ({ servicesData }) => {
             {contactCtaText}
           </button>
         </section>
-        {/* FAQ SECTION */}
-        <section className="text-white py-8">
+      </div>
+      {/* FAQ SECTION */}
+      <div className="bg-gray-300">
+        <section className="max-w-6xl mx-auto text-black py-8">
           <h2 className="text-2xl bg-gradient-to-b from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-10 text-left lowercase">
             Frequently asked questions (FAQs)
           </h2>
-          <div className="border-t border-gray-700">
+          <div className="border-t border-gray-900">
             {faqData &&
               faqData.map((item, index) => (
                 <div
                   key={index}
-                  className={`border-b border-gray-700 py-4 transition-all duration-300 ${
+                  className={`border-b border-gray-900 py-4 transition-all duration-300 ${
                     faqOpenIndex === index ? 'bg-opacity-10' : ''
                   }`}
                 >
@@ -175,14 +181,14 @@ const ServiceTabs = ({ servicesData }) => {
                     <span>{item.question}</span>
                     <div className="w-7 h-7 rounded-full shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] flex items-center justify-center">
                       {faqOpenIndex === index ? (
-                        <HiMinus className="w-4 h-4 text-white" />
+                        <HiMinus className="w-4 h-4 text-gray-800" />
                       ) : (
-                        <HiPlus className="w-4 h-4 text-white" />
+                        <HiPlus className="w-4 h-4 text-gray-800" />
                       )}
                     </div>
                   </div>
                   {faqOpenIndex === index && (
-                    <div className="mt-3 text-gray-400 text-base leading-relaxed pr-2">
+                    <div className="mt-3 text-gray-700 text-base leading-relaxed pr-2">
                       {item.answer}
                     </div>
                   )}

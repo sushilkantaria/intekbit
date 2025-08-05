@@ -17,7 +17,7 @@ const RotatingIcons = () => {
   const iconRefs = useRef([]);
   // Fine-tuned to match the dotted line in bg.png
   const center = 150;
-  const radius = 125; // Increased radius for a bigger round
+  const radius = 130; // Increased radius for a bigger round
 
   useEffect(() => {
     let angle = 0;

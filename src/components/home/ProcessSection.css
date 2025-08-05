@@ -1,8 +1,7 @@
-
 /* General styling */
 .unico-style-process {
   padding: 80px 20px;
-  background: #f9fafb;
+  background: #e5e7eb;
   text-align: center;
 }
 
@@ -39,11 +38,26 @@
   transition: all 0.6s ease;
 }
 
-.process-step:nth-child(1) { top: 20%; left: 10%; }
-.process-step:nth-child(2) { top: 70%; left: 28%; }
-.process-step:nth-child(3) { top: 90%; left: 55%; }
-.process-step:nth-child(4) { top: 70%; left: 82%; }
-.process-step:nth-child(5) { top: 20%; left: 100%; }
+.process-step:nth-child(1) {
+  top: 20%;
+  left: 10%;
+}
+.process-step:nth-child(2) {
+  top: 70%;
+  left: 28%;
+}
+.process-step:nth-child(3) {
+  top: 90%;
+  left: 55%;
+}
+.process-step:nth-child(4) {
+  top: 70%;
+  left: 82%;
+}
+.process-step:nth-child(5) {
+  top: 20%;
+  left: 100%;
+}
 
 /* Show on scroll with delay */
 .process-step.visible {
@@ -51,11 +65,21 @@
   transform: translate(-50%, -50%) translateY(0);
 }
 
-.process-step.visible:nth-child(1) { transition-delay: 0.2s; }
-.process-step.visible:nth-child(2) { transition-delay: 0.4s; }
-.process-step.visible:nth-child(3) { transition-delay: 0.6s; }
-.process-step.visible:nth-child(4) { transition-delay: 0.8s; }
-.process-step.visible:nth-child(5) { transition-delay: 1.2s; }
+.process-step.visible:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.process-step.visible:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.process-step.visible:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.process-step.visible:nth-child(4) {
+  transition-delay: 0.8s;
+}
+.process-step.visible:nth-child(5) {
+  transition-delay: 1.2s;
+}
 
 /* Plane icon with default style */
 .process-step .plane-icon {
@@ -68,11 +92,21 @@
 }
 
 /* Individual hover pointing to center */
-.process-step:nth-child(1):hover .plane-icon { transform: rotate(-30deg) scale(1.2); }
-.process-step:nth-child(2):hover .plane-icon { transform: rotate(-45deg) scale(1.2); }
-.process-step:nth-child(3):hover .plane-icon { transform: rotate(-60deg) scale(1.2); }
-.process-step:nth-child(4):hover .plane-icon { transform: rotate(-40deg) scale(1.2); }
-.process-step:nth-child(5):hover .plane-icon { transform: rotate(-80deg) scale(1.2); }
+.process-step:nth-child(1):hover .plane-icon {
+  transform: rotate(-30deg) scale(1.2);
+}
+.process-step:nth-child(2):hover .plane-icon {
+  transform: rotate(-45deg) scale(1.2);
+}
+.process-step:nth-child(3):hover .plane-icon {
+  transform: rotate(-60deg) scale(1.2);
+}
+.process-step:nth-child(4):hover .plane-icon {
+  transform: rotate(-40deg) scale(1.2);
+}
+.process-step:nth-child(5):hover .plane-icon {
+  transform: rotate(-80deg) scale(1.2);
+}
 
 /* Titles and desc */
 .step-title {
