@@ -7,7 +7,7 @@ import RotatingIcons from '../rotating';
 // Service images mapping
 const serviceImages = {
   ai: '/Assets/homeServices/ai.gif',
-  mobile: '/Assets/homeServices/mobile_app.png',
+  mobile: '/Assets/homeServices/mobileApp.gif',
   cloud_services: '/Assets/homeServices/cloudService.gif',
   software: '/Assets/homeServices/softwareDevelopment.gif',
 };
@@ -261,7 +261,9 @@ const ServicesSection = ({ services }) => {
                   <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container">
                     {serviceKey === 'uiux_design' ? (
                       <UiUx />
-                    ) : (
+                    ) : serviceKeys[activeServiceIndex] === 'web' ? (
+                    <RotatingIcons />
+                  ) : (
                       <img
                         src={serviceImages[serviceKey] || '/Assets/web.gif'}
                         alt={services[serviceKey]?.title || 'Service'}

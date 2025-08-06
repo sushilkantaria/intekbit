@@ -25,10 +25,14 @@ const ServiceTabs = ({ servicesData }) => {
     contactCtaDescription,
   } = servicesData;
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* HERO SECTION */}
       <ParticleBackground />
-      <section className="min-h-screen max-w-7xl mx-auto px-12 flex items-center justify-between relative overflow-hidden" data-aos="fade-down" data-aos-duration="1000">
+      <section
+        className="min-h-screen max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden gap-8 md:gap-0"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+      >
         {/* Video background if heroImage is mp4 */}
         {heroImage && heroImage.endsWith('.mp4') && (
           <video
@@ -40,73 +44,88 @@ const ServiceTabs = ({ servicesData }) => {
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
         )}
-        <div className="flex-1 max-w-3xl relative z-10">
-          <h1 className="text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-bold leading-[1.3] mb-6">
+        <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left">
+          <h1 className="text-3xl md:text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-bold leading-[1.3] mb-4 md:mb-6">
             {heroTitle}
           </h1>
-          <p className="text-[#BBBABA] text-[1.1rem] leading-[1.6] text-left">
+          <p className="text-[#BBBABA] text-base md:text-[1.1rem] leading-[1.6] text-center md:text-left">
             {heroDescription}
           </p>
         </div>
         {/* Only show image if not mp4 */}
         {heroImage && !heroImage.endsWith('.mp4') && (
-          <div className="flex-1 flex justify-center p-4 max-w-md relative z-10">
+          <div className="flex-1 flex justify-center items-center p-2 md:p-4 w-full max-w-xs md:max-w-md relative z-10 mx-auto md:mx-0">
             <img
               src={heroImage}
               alt="Service Visual"
-              className="max-w-full h-auto object-contain"
+              className="w-full h-auto object-contain rounded-xl shadow-lg"
             />
           </div>
         )}
       </section>
       <div className="bg-gray-200">
         {/* INDUSTRIES SECTION */}
-        <section className="max-w-6xl mx-auto py-16 text-gray-800" data-aos="fade-up" data-aos-duration="1000">
-          <h1 className="text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-4 leading-snug">
+        <section
+          className="max-w-6xl mx-auto py-10 md:py-16 text-gray-800 px-4 md:px-8"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h1 className="text-2xl md:text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-2 md:mb-4 leading-snug text-center md:text-left">
             {industriesTitle}
           </h1>
-          <p className="text-gray-900 mb-4 text-lg">{industriesDescription}</p>
-          <ul className="space-y-8">
+          <p className="text-gray-900 mb-2 md:mb-4 text-base md:text-lg text-center md:text-left">
+            {industriesDescription}
+          </p>
+          <ul className="space-y-6 md:space-y-8">
             {industries &&
               industries.map((item, index) => (
-                <li key={index} className="flex items-center text-2xl" data-aos="zoom-in" data-aos-delay={100 * index}>
+                <li
+                  key={index}
+                  className="flex items-center text-lg md:text-2xl"
+                  data-aos="zoom-in"
+                  data-aos-delay={100 * index}
+                >
                   <HiCheckCircle className="w-8 h-8 mr-3 rounded-full bg-gray-700 text-green-500" />
                   {item}
                 </li>
               ))}
           </ul>
-          <p className="mt-4 text-gray-900 text-base leading-relaxed">
+          <p className="mt-2 md:mt-4 text-gray-900 text-sm md:text-base leading-relaxed text-center md:text-left">
             {contactCtaDescription}
           </p>
         </section>
       </div>
       {/* WHY US SECTION */}
-      <div className='bg-black'>
-        <section className="max-w-6xl mx-auto py-20 text-white" data-aos="fade-right" data-aos-duration="1000">
-          <h2 className="text-4xl font-semibold mb-10 leading-snug">
+      <div className="bg-black">
+        <section
+          className="max-w-6xl mx-auto py-10 md:py-20 text-white px-4 md:px-8"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          <h2 className="text-2xl md:text-4xl font-semibold mb-6 md:mb-10 leading-snug text-center md:text-left">
             Why{' '}
             <span className="bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
               choose Intekbit Solutions
             </span>{' '}
             as your web development partner
           </h2>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 md:gap-8">
             {reasons &&
               reasons.map((item, index) => (
                 <div
-                  className="flex items-start gap-6 rounded-xl px-8 py-6 bg-gradient-to-br from-[#181F2A] to-[#232A3A] via-[#2D1A3A] border border-[#232A3A] shadow-[0_2px_12px_0_rgba(30,58,138,0.10)] transition-transform duration-300 hover:scale-[1.01]"
+                  className="flex flex-col md:flex-row items-start gap-4 md:gap-6 rounded-xl px-4 md:px-8 py-4 md:py-6 bg-gradient-to-br from-[#181F2A] to-[#232A3A] via-[#2D1A3A] border border-[#232A3A] shadow-[0_2px_12px_0_rgba(30,58,138,0.10)] transition-transform duration-300 hover:scale-[1.01]"
                   key={index}
                   data-aos="zoom-in"
                   data-aos-delay={100 * index}
                 >
-                  <div className="my-auto mr-4">
-                    <HiSquares2X2 className="w-10 h-10 text-gray-300" />
+                  <div className="my-auto mb-2 md:mb-0 md:mr-4 flex justify-center md:justify-start">
+                    <HiSquares2X2 className="w-8 md:w-10 h-8 md:h-10 text-gray-300" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-3 text-gray-100">
+                    <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-gray-100 text-center md:text-left">
                       {item.title}
                     </h3>
-                    <p className="text-gray-300 text-base leading-relaxed">
+                    <p className="text-gray-300 text-sm md:text-base leading-relaxed text-center md:text-left">
                       {item.desc}
                     </p>
                   </div>
@@ -114,35 +133,39 @@ const ServiceTabs = ({ servicesData }) => {
               ))}
           </div>
           <button
-            className="mt-12 px-8 py-3 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg backdrop-saturate-150 text-white text-base rounded-3xl hover:bg-red-600 transition-colors duration-300"
+            className="mt-8 md:mt-12 px-6 md:px-8 py-2 md:py-3 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg backdrop-saturate-150 text-white text-sm md:text-base rounded-3xl hover:bg-red-600 transition-colors duration-300"
             onClick={() => navigate('/contact')}
           >
             {contactCtaText}
           </button>
         </section>
         {/* TECH STACK SECTION */}
-        <section className="text-white max-w-7xl mx-auto py-4" data-aos="fade-left" data-aos-duration="1000">
-          <h2 className="text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-4 text-center">
+        <section
+          className="text-white max-w-7xl mx-auto py-4 px-4 md:px-8"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <h2 className="text-2xl md:text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-2 md:mb-4 text-center">
             {techStackTitle}
           </h2>
-          <p className="mb-5 text-gray-400 text-base leading-relaxed text-center">
+          <p className="mb-3 md:mb-5 text-gray-400 text-sm md:text-base leading-relaxed text-center">
             {techStackDescription}
           </p>
-          <div className="grid grid-cols-3 gap-12 max-w-3xl mx-auto justify-items-center mt-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-12 max-w-3xl mx-auto justify-items-center mt-4">
             {techs &&
               techs.map((tech, index) => (
                 <div
                   key={index}
-                  className="w-full max-w-xs h-36 p-2 px-6 border border-white/10 rounded-tl-2xl rounded-br-2xl flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 relative shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg backdrop-saturate-150"
+                  className="w-full max-w-xs h-28 md:h-36 p-2 px-4 md:px-6 border border-white/10 rounded-tl-2xl rounded-br-2xl flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 relative shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg backdrop-saturate-150"
                   data-aos="zoom-in"
                   data-aos-delay={100 * index}
                 >
                   <img
                     src={tech.icon}
                     alt={tech.name}
-                    className="w-16 h-24 object-contain mb-1"
+                    className="w-12 md:w-16 h-16 md:h-24 object-contain mb-1"
                   />
-                  <div className="text-sm text-gray-300 text-center relative pt-6 w-full">
+                  <div className="text-xs md:text-sm text-gray-300 text-center relative pt-4 md:pt-6 w-full">
                     <span className="absolute top-0 left-1/10 w-4/5 h-px bg-red-500"></span>
                     {tech.name}
                   </div>
@@ -151,12 +174,16 @@ const ServiceTabs = ({ servicesData }) => {
           </div>
         </section>
         {/* CONTACT CTA SECTION */}
-        <section className="max-w-6xl mx-auto py-20 text-white text-center px-8" data-aos="fade-up" data-aos-duration="1000">
-          <p className="text-2xl leading-loose text-gray-100">
+        <section
+          className="max-w-6xl mx-auto py-10 md:py-20 text-white text-center px-4 md:px-8"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <p className="text-lg md:text-2xl leading-loose text-gray-100">
             {contactCtaDescription}
           </p>
           <button
-            className="shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] text-white text-base px-8 py-3 mt-4 rounded-3xl backdrop-blur-lg backdrop-saturate-150 hover:bg-red-600 transition-colors duration-300"
+            className="shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] text-white text-xs md:text-base px-4 md:px-8 py-2 md:py-3 mt-2 md:mt-4 rounded-3xl backdrop-blur-lg backdrop-saturate-150 hover:bg-red-600 transition-colors duration-300"
             onClick={() => navigate('/contact')}
           >
             {contactCtaText}
@@ -165,8 +192,12 @@ const ServiceTabs = ({ servicesData }) => {
       </div>
       {/* FAQ SECTION */}
       <div className="bg-gray-200">
-        <section className="max-w-6xl mx-auto text-black py-8" data-aos="fade-up" data-aos-duration="1000">
-          <h2 className="text-2xl bg-gradient-to-b from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-10 text-left lowercase">
+        <section
+          className="max-w-6xl mx-auto text-black py-8 md:py-8 px-4 md:px-8"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h2 className="text-lg md:text-2xl bg-gradient-to-b from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-6 md:mb-10 text-left lowercase">
             Frequently asked questions (FAQs)
           </h2>
           <div className="border-t border-gray-900">
@@ -174,18 +205,16 @@ const ServiceTabs = ({ servicesData }) => {
               faqData.map((item, index) => (
                 <div
                   key={index}
-                  className={`border-b border-gray-900 py-4 transition-all duration-300 ${
+                  className={`border-b border-gray-900 py-3 md:py-4 transition-all duration-300 ${
                     faqOpenIndex === index ? 'bg-opacity-10' : ''
                   }`}
-                  data-aos="zoom-in"
-                  data-aos-delay={100 * index}
                 >
                   <div
-                    className="flex justify-between items-center cursor-pointer text-base font-medium"
+                    className="flex justify-between items-center md:items-center cursor-pointer text-sm md:text-base font-medium gap-2 md:gap-0"
                     onClick={() => toggleFaq(index)}
                   >
                     <span>{item.question}</span>
-                    <div className="w-7 h-7 rounded-full shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] flex items-center justify-center">
+                    <div className="w-6 md:w-7 h-6 md:h-7 rounded-full shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] flex items-center justify-center">
                       {faqOpenIndex === index ? (
                         <HiMinus className="w-4 h-4 text-gray-800" />
                       ) : (
@@ -194,7 +223,7 @@ const ServiceTabs = ({ servicesData }) => {
                     </div>
                   </div>
                   {faqOpenIndex === index && (
-                    <div className="mt-3 text-gray-700 text-base leading-relaxed pr-2">
+                    <div className="mt-2 md:mt-3 text-gray-700 text-xs md:text-base leading-relaxed pr-0 md:pr-2">
                       {item.answer}
                     </div>
                   )}
