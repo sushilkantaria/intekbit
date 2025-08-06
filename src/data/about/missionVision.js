@@ -1,14 +1,14 @@
 // Mission and Vision data
 const missionVision = [
   {
-    image: '/Assets/about-mission.webp',
+    image: '/Assets/about-mission2.jpg',
     alt: 'Mission',
     title: 'Our Mission',
     description:
       'At Intekbit Solutions Pvt. Ltd., we simplify challenges with smart, AI-powered solutions while staying by your side every step of the way. Our goal is to deeply understand your needs, deliver meaningful results, and create lasting partnerships.',
   },
   {
-    image: '/Assets/about-vision.webp',
+    image: '/Assets/about-vision2.webp',
     alt: 'Vision',
     title: 'Our Vision',
     description:

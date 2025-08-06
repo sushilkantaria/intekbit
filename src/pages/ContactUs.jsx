@@ -18,7 +18,7 @@ const ContactUs = () => {
 
   const glowStyle = {
     boxShadow:
-      '0 2px 12px 0 rgba(30,58,138,0.18),0 1px 8px 0 rgba(136,19,55,0.13),0 1px 6px 0 rgba(202,138,4,0.10),0 1px 4px 0 rgba(6,78,59,0.10),inset 0 2px 16px 0 rgba(255,255,255,0.13),inset 0 0 12px 2px rgba(255,255,255,0.10),inset 0 0 0 1px rgba(255,255,255,0.07)',
+      '',
   };
 
   const glowLayer = (
@@ -39,7 +39,7 @@ const ContactUs = () => {
           </h1>
         </div>
 
-        <div className="max-w-6xl mx-auto flex flex-col rounded-lg md:flex-row gap-10 mb-12 py-12 px-8 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg">
+        <div className="max-w-7xl mx-auto flex flex-col rounded-lg md:flex-row gap-18 mb-12 py-20 px-20 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg">
           <div className="flex-1 space-y-6">
             <h2 className="text-2xl font-bold mb-4 text-white">
               Get In Touch With Us
@@ -48,7 +48,7 @@ const ContactUs = () => {
               {['Phone', 'Email', 'Address'].map((label) => (
                 <div
                   key={label}
-                  className={`group shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] rounded-lg p-4 flex flex-col items-center relative backdrop-blur-lg backdrop-saturate-150   ${
+                  className={`group bg-black shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.05)] rounded-lg p-4 flex flex-col items-center relative backdrop-blur-lg backdrop-saturate-150   ${
                     label === 'Address' ? 'col-span-1 sm:col-span-2' : ''
                   }`}
                   // style={glowStyle}
