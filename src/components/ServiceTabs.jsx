@@ -59,7 +59,7 @@ const ServiceTabs = ({ servicesData }) => {
           </div>
         )}
       </section>
-      <div className="bg-gray-300">
+      <div className="bg-gray-200">
         {/* INDUSTRIES SECTION */}
         <section className="max-w-6xl mx-auto py-16 text-gray-800">
           <h1 className="text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-4 leading-snug">
@@ -81,7 +81,7 @@ const ServiceTabs = ({ servicesData }) => {
         </section>
       </div>
       {/* WHY US SECTION */}
-      <div className='bg-gray-800'>
+      <div className='bg-black'>
         <section className="max-w-6xl mx-auto py-20 text-white">
           <h2 className="text-4xl font-semibold mb-10 leading-snug">
             Why{' '}
@@ -160,7 +160,7 @@ const ServiceTabs = ({ servicesData }) => {
         </section>
       </div>
       {/* FAQ SECTION */}
-      <div className="bg-gray-300">
+      <div className="bg-gray-200">
         <section className="max-w-6xl mx-auto text-black py-8">
           <h2 className="text-2xl bg-gradient-to-b from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-10 text-left lowercase">
             Frequently asked questions (FAQs)

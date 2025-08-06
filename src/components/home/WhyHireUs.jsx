@@ -2,8 +2,13 @@ import whyHireUsData from '../../data/home/whyHireUs';
 
 const WhyHireUsSection = () => {
   return (
-    <section className="py-20 px-5 bg-gray-200 text-center">
-      <h2 className="text-4xl mb-16 font-bold leading-snug">
+    <section className="pb-16 px-5 bg-gray-200 text-center">
+      <h2
+        className="text-4xl mb-16 font-bold leading-snug 
+      "
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <span className="bg-gradient-to-r from-[#7f00ff] to-[#e100ff] bg-clip-text text-transparent">
           Easy and Streamlined
         </span>{' '}
@@ -16,6 +21,9 @@ const WhyHireUsSection = () => {
           <div
             className="flex-1 min-w-[250px] max-w-[250px] p-8 bg-white rounded-xl shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2"
             key={index}
+            data-aos="zoom-in"
+            data-aos-delay={100 * index}
+            data-aos-duration="800"
           >
             <div className="text-4xl text-[#7f00ff] mb-5">
               {step.icon && <step.icon />}

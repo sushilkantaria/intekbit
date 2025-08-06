@@ -96,7 +96,7 @@ const ParticleBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed -z-20 pointer-events-none blur-[1.5px] bg-black"
+      className="fixed -top-1 -left-1 -z-20 pointer-events-none blur-[1.5px] bg-black"
     />
   );
 };

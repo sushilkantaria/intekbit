@@ -35,11 +35,19 @@ const ProcessSection = () => {
 
   return (
     <section className="unico-style-process" ref={sectionRef}>
-      <h2 className="section-heading">
+      <h2
+        className="section-heading"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <span className="highlight">Our Process</span>
       </h2>
 
-      <div className="description-center">
+      <div
+        className="description-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <h3>{activeStep ? activeStep.title : 'This is our process'}</h3>
         <p>
           {activeStep
@@ -48,7 +56,7 @@ const ProcessSection = () => {
         </p>
       </div>
 
-      <div className="arc-container">
+      <div className="arc-container" >
         {processSteps.map((step, index) => (
           <div
             className={`process-step ${visibleSteps[index] ? 'visible' : ''}`}
