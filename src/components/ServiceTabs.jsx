@@ -28,7 +28,7 @@ const ServiceTabs = ({ servicesData }) => {
     <div>
       {/* HERO SECTION */}
       <ParticleBackground />
-      <section className="min-h-screen max-w-7xl mx-auto px-12 flex items-center justify-between relative overflow-hidden">
+      <section className="min-h-screen max-w-7xl mx-auto px-12 flex items-center justify-between relative overflow-hidden" data-aos="fade-down" data-aos-duration="1000">
         {/* Video background if heroImage is mp4 */}
         {heroImage && heroImage.endsWith('.mp4') && (
           <video
@@ -61,7 +61,7 @@ const ServiceTabs = ({ servicesData }) => {
       </section>
       <div className="bg-gray-200">
         {/* INDUSTRIES SECTION */}
-        <section className="max-w-6xl mx-auto py-16 text-gray-800">
+        <section className="max-w-6xl mx-auto py-16 text-gray-800" data-aos="fade-up" data-aos-duration="1000">
           <h1 className="text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-4 leading-snug">
             {industriesTitle}
           </h1>
@@ -69,7 +69,7 @@ const ServiceTabs = ({ servicesData }) => {
           <ul className="space-y-8">
             {industries &&
               industries.map((item, index) => (
-                <li key={index} className="flex items-center text-2xl">
+                <li key={index} className="flex items-center text-2xl" data-aos="zoom-in" data-aos-delay={100 * index}>
                   <HiCheckCircle className="w-8 h-8 mr-3 rounded-full bg-gray-700 text-green-500" />
                   {item}
                 </li>
@@ -82,7 +82,7 @@ const ServiceTabs = ({ servicesData }) => {
       </div>
       {/* WHY US SECTION */}
       <div className='bg-black'>
-        <section className="max-w-6xl mx-auto py-20 text-white">
+        <section className="max-w-6xl mx-auto py-20 text-white" data-aos="fade-right" data-aos-duration="1000">
           <h2 className="text-4xl font-semibold mb-10 leading-snug">
             Why{' '}
             <span className="bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
@@ -96,6 +96,8 @@ const ServiceTabs = ({ servicesData }) => {
                 <div
                   className="flex items-start gap-6 rounded-xl px-8 py-6 bg-gradient-to-br from-[#181F2A] to-[#232A3A] via-[#2D1A3A] border border-[#232A3A] shadow-[0_2px_12px_0_rgba(30,58,138,0.10)] transition-transform duration-300 hover:scale-[1.01]"
                   key={index}
+                  data-aos="zoom-in"
+                  data-aos-delay={100 * index}
                 >
                   <div className="my-auto mr-4">
                     <HiSquares2X2 className="w-10 h-10 text-gray-300" />
@@ -119,7 +121,7 @@ const ServiceTabs = ({ servicesData }) => {
           </button>
         </section>
         {/* TECH STACK SECTION */}
-        <section className="text-white max-w-7xl mx-auto py-4">
+        <section className="text-white max-w-7xl mx-auto py-4" data-aos="fade-left" data-aos-duration="1000">
           <h2 className="text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-4 text-center">
             {techStackTitle}
           </h2>
@@ -132,6 +134,8 @@ const ServiceTabs = ({ servicesData }) => {
                 <div
                   key={index}
                   className="w-full max-w-xs h-36 p-2 px-6 border border-white/10 rounded-tl-2xl rounded-br-2xl flex flex-col items-center transition-transform duration-300 hover:-translate-y-1 relative shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg backdrop-saturate-150"
+                  data-aos="zoom-in"
+                  data-aos-delay={100 * index}
                 >
                   <img
                     src={tech.icon}
@@ -147,7 +151,7 @@ const ServiceTabs = ({ servicesData }) => {
           </div>
         </section>
         {/* CONTACT CTA SECTION */}
-        <section className="max-w-6xl mx-auto py-20 text-white text-center px-8">
+        <section className="max-w-6xl mx-auto py-20 text-white text-center px-8" data-aos="fade-up" data-aos-duration="1000">
           <p className="text-2xl leading-loose text-gray-100">
             {contactCtaDescription}
           </p>
@@ -161,7 +165,7 @@ const ServiceTabs = ({ servicesData }) => {
       </div>
       {/* FAQ SECTION */}
       <div className="bg-gray-200">
-        <section className="max-w-6xl mx-auto text-black py-8">
+        <section className="max-w-6xl mx-auto text-black py-8" data-aos="fade-up" data-aos-duration="1000">
           <h2 className="text-2xl bg-gradient-to-b from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-10 text-left lowercase">
             Frequently asked questions (FAQs)
           </h2>
@@ -173,6 +177,8 @@ const ServiceTabs = ({ servicesData }) => {
                   className={`border-b border-gray-900 py-4 transition-all duration-300 ${
                     faqOpenIndex === index ? 'bg-opacity-10' : ''
                   }`}
+                  data-aos="zoom-in"
+                  data-aos-delay={100 * index}
                 >
                   <div
                     className="flex justify-between items-center cursor-pointer text-base font-medium"

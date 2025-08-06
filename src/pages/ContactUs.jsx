@@ -16,11 +16,6 @@ const ContactUs = () => {
     formRef.current.reset();
   };
 
-  const glowStyle = {
-    boxShadow:
-      '',
-  };
-
   const glowLayer = (
     <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0 shadow-[-8px_0_16px_4px_rgb(255,0,128),8px_0_16px_4px_rgb(0,98,255)]" />
   );
@@ -51,7 +46,6 @@ const ContactUs = () => {
                   className={`group bg-black shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.05)] rounded-lg p-4 flex flex-col items-center relative backdrop-blur-lg backdrop-saturate-150   ${
                     label === 'Address' ? 'col-span-1 sm:col-span-2' : ''
                   }`}
-                  // style={glowStyle}
                 >
                   {glowLayer}
                   <div className="relative z-10 flex items-center gap-2 mb-1">
@@ -89,11 +83,7 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div
-            className="flex-1 rounded-lg shadow p-8 relative group backdrop-blur-lg backdrop-saturate-150"
-            style={glowStyle}
-          >
-            {glowLayer}
+          <div className="flex-1 rounded-lg shadow p-8 relative group backdrop-blur-lg backdrop-saturate-150">
             <div className="relative z-10">
               <h2 className="text-2xl font-bold mb-2 text-white">
                 Send Us Your Requirements
@@ -146,7 +136,7 @@ const ContactUs = () => {
                     name="message"
                     placeholder="Your Message"
                     required
-                    className="w-full text-white border border-gray-600 rounded-3xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full text-white border border-gray-600 rounded-3xl px-3 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   ></textarea>
                 </div>
                 <div className="relative">

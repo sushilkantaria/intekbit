@@ -19,7 +19,7 @@ const WhyHireUsSection = () => {
       <div className="flex justify-center flex-wrap gap-10 max-w-[1200px] mx-auto">
         {whyHireUsData.map((step, index) => (
           <div
-            className="flex-1 min-w-[250px] max-w-[250px] p-8 bg-white rounded-xl shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2"
+            className="flex-1 min-w-[250px] max-w-[250px] p-8 bg-gray-200 rounded-xl shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2"
             key={index}
             data-aos="zoom-in"
             data-aos-delay={100 * index}

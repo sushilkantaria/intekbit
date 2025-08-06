@@ -6,12 +6,10 @@ import RotatingIcons from '../rotating';
 
 // Service images mapping
 const serviceImages = {
-  web: '/Assets/web.gif',
-  ai: '/Assets/ai.gif',
-  mobile: '/Assets/mobile_app.png',
-  cloud_services: '/Assets/cloud-service.gif',
-  uiux_design: '/Assets/home-dataservices.webp',
-  software: '/Assets/home-softwaredevelopment.webp',
+  ai: '/Assets/homeServices/ai.gif',
+  mobile: '/Assets/homeServices/mobile_app.png',
+  cloud_services: '/Assets/homeServices/cloudService.gif',
+  software: '/Assets/homeServices/softwareDevelopment.gif',
 };
 
 const ServicesSection = ({ services }) => {
