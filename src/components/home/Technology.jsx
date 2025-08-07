@@ -74,7 +74,7 @@ const TechnologySection = ({
                 alt={tech.name}
                 className="w-18 h-18 sm:w-14 sm:h-14 mb-2"
               />
-              <p className="text-blue-700 font-medium text-center text-xs sm:text-lg">
+              <p className="text-gray-200 font-medium text-center text-xs sm:text-lg">
                 {tech.name}
               </p>
             </div>

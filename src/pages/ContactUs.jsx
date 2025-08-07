@@ -29,7 +29,7 @@ const ContactUs = () => {
         }`}
       >
         <div className="relative h-64 flex items-center justify-center">
-          <h1 className="relative z-10 text-4xl font-bold text-white">
+          <h1 className="relative z-10 text-4xl font-bold bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
             Contact Us
           </h1>
         </div>

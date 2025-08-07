@@ -9,11 +9,9 @@ const WhyHireUsSection = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <span className="bg-gradient-to-r from-[#7f00ff] to-[#e100ff] bg-clip-text text-transparent">
-          Easy and Streamlined
-        </span>{' '}
-        <br />
-        Collaboration Process
+        <span className="text-5xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
+          Why Hire Us
+        </span>
       </h2>
 
       <div className="flex justify-center flex-wrap gap-10 max-w-[1200px] mx-auto">
