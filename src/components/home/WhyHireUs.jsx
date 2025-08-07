@@ -23,7 +23,7 @@ const WhyHireUsSection = () => {
             data-aos-delay={100 * index}
             data-aos-duration="800"
           >
-            <div className="text-4xl text-[#7f00ff] mb-5">
+            <div className="text-4xl text-fuchsia-600 mb-5">
               {step.icon && <step.icon />}
             </div>
             <div>

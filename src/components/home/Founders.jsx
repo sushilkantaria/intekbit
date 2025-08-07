@@ -9,7 +9,7 @@ const FounderCard = ({ founder }) => (
     }
   >
     {/* Glow effect */}
-    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-800 pointer-events-none z-0 shadow-[0_0_12px_4px_rgb(255,0,128),0_0_16px_6px_rgb(0,98,255),0_0_20px_8px_rgb(76,0,255)]" />
+    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-800 pointer-events-none z-0 shadow-[0_0_8px_3px_rgb(255,0,128),0_0_12px_3px_rgb(0,98,255),0_0_12px_6px_rgb(76,0,255)]" />
     <img
       src={founder.image}
       alt={founder.name}
@@ -50,7 +50,7 @@ const FoundersSection = () => (
       Driven by Technology, Powered by Trust.
     </p>
     <div
-      className="flex flex-wrap justify-center gap-8"
+      className="flex flex-wrap justify-center gap-12"
       data-aos="fade-up"
       data-aos-duration="800"
       data-aos-offset="200"

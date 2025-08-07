@@ -17,7 +17,7 @@ const ContactUs = () => {
   };
 
   const glowLayer = (
-    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-0 shadow-[-8px_0_16px_4px_rgb(255,0,128),8px_0_16px_4px_rgb(0,98,255)]" />
+    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-60 transition duration-300 pointer-events-none z-0 shadow-[-4px_0_8px_2px_rgb(255,0,128),4px_0_8px_2px_rgb(0,98,255)]" />
   );
 
   return (

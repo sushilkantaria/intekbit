@@ -41,46 +41,35 @@ const AboutUs = () => {
           </p>
         </div>
       </section>
+{/* Nxt.Gen Healthcare Section */}
+<section
+  className="bg-white py-16 px-4"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    {/* Left Side Heading */}
+    <div>
+      <h2 className="text-4xl md:text-5xl font-bold text-black leading-snug">
+        Delivering <span className="text-black">Nxt.Gen</span> <br />
+        Healthcare
+      </h2>
+    </div>
 
-      {/* Impact Summary Section */}
-      <section
-        className="bg-gray-200 py-16 px-4"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-black text-xl md:text-2xl font-medium leading-relaxed">
-            We partner with businesses to design, build, and scale digital
-            products that deliver lasting impact. We combine the speed of visual
-            development, depth of traditional engineering, and power of AI to
-            deliver modern, maintainable products, from rapid MVPs to
-            enterprise-grade systems.
-          </p>
-        </div>
+    {/* Right Side Description */}
+    <div>
+      <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
+        As a trusted digital transformation partner for over two decades, we
+        deliver Nxt.Gen solutions across the patient care continuum. Our
+        future-forward solutions address industry challenges, integrate digital
+        transformation into business strategy, ensure regulatory compliance,
+        drive continuous improvement, and prioritize extraordinary patient
+        experiences and high-impact outcomes.
+      </p>
+    </div>
+  </div>
+</section>
 
-        <div className="max-w-6xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-          <div data-aos="zoom-in" data-aos-delay="100">
-            <h3 className="text-2xl font-bold text-black">11+</h3>
-            <p className="text-sm text-gray-700">Years of Experience</p>
-          </div>
-          <div data-aos="zoom-in" data-aos-delay="200">
-            <h3 className="text-2xl font-bold text-black">300+</h3>
-            <p className="text-sm text-gray-700">Product Delivered</p>
-          </div>
-          <div data-aos="zoom-in" data-aos-delay="300">
-            <h3 className="text-2xl font-bold text-black">50+</h3>
-            <p className="text-sm text-gray-700">NoCode Products Delivered</p>
-          </div>
-          <div data-aos="zoom-in" data-aos-delay="400">
-            <h3 className="text-2xl font-bold text-black">90+</h3>
-            <p className="text-sm text-gray-700">Team Members</p>
-          </div>
-          <div data-aos="zoom-in" data-aos-delay="500">
-            <h3 className="text-2xl font-bold text-black">200+</h3>
-            <p className="text-sm text-gray-700">Happy Customers</p>
-          </div>
-        </div>
-      </section>
 
       <section className="py-12 bg-black flex flex-col gap-10 max-w-8xl mx-auto px-4">
         <div data-aos="fade-right" data-aos-duration="1000">
@@ -147,7 +136,7 @@ const AboutUs = () => {
           <h2 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
             Our Core Values
           </h2>
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10">
             {coreValues.map((value) => (
               <CoreValueCard
                 key={value.title}

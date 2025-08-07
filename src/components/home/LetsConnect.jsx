@@ -38,7 +38,7 @@ const LetsConnectSection = () => (
   <section className="bg-gray-200 w-full py-16">
     {/* 🔁 Replaced my-16 with py-16 here */}
     <section
-      className="py-10 overflow-hidden bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] max-w-7xl mx-auto rounded-3xl"
+      className="py-10 overflow-hidden "
       id="lets-connect"
       data-aos="fade-up"
       data-aos-duration="1000"
