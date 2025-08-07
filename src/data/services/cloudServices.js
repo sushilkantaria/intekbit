@@ -1,4 +1,5 @@
-import heroImage from '../../assets/cloudservicebg.mp4'; // Use video as hero background
+// import heroImage from '../../assets/cloudservicebg.mp4'; // Use video as hero background
+import heroImage from '../../assets/for-cloud-computing.gif'; // Placeholder for AWS
 import aws from '../../assets/A-android.png'; // Placeholder for AWS
 import azure from '../../assets/A-java.png'; // Placeholder for Azure
 import gcloud from '../../assets/A-flutter.png'; // Placeholder for Google Cloud

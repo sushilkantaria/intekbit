@@ -4,7 +4,7 @@ import sketch from '../../assets/A-flutter.png';
 import invision from '../../assets/A-kotlin.png';
 import htmlCss from '../../assets/A-swift.png';
 import usability from '../../assets/A-ios.png';
-import heroImage from '../../assets/AIML.webp';
+import heroImage from '../../assets/for-ui-ux.gif';
 
 const uiuxData = {
   heroTitle: 'Designs That Look Good and Work Better',
@@ -18,7 +18,7 @@ const uiuxData = {
     'E-commerce & Retail',
     'Healthcare & Wellness',
     'EdTech & Learning',
-    'FinTech & Banking',
+    'FinTech & Banking', 
     'Travel & Hospitality',
     'B2B SaaS Platforms',
     'Entertainment & Media',

@@ -1,4 +1,4 @@
-import heroImage from '../../assets/AIML.webp';
+import heroImage from '../../assets/for-data-services.gif';
 import apache from '../../assets/A-android.png';
 import powerbi from '../../assets/A-java.png';
 import postgresql from '../../assets/A-flutter.png';
@@ -17,7 +17,7 @@ const dataServicesData = {
     'We’ve helped organizations from multiple domains harness their data effectively, including:',
   industries: [
     'Finance & Insurance',
-    'Healthcare & Pharma',
+    'Healthcare & Pharma', 
     'Retail & E-commerce',
     'Logistics & Supply Chain',
     'Government & Public Sector',

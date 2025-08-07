@@ -1,4 +1,4 @@
-import heroImage from '../../assets/AIML.webp'; // Placeholder — replace with actual web dev hero image
+import heroImage from '../../assets/for-web-dev-1.gif';
 import react from '../../assets/A-android.png'; // Use same as Android for now
 import htmlcssjs from '../../assets/A-java.png'; // Placeholder for HTML/CSS/JS
 import wordpress from '../../assets/A-flutter.png'; // Placeholder for WordPress
@@ -17,7 +17,7 @@ const webDevelopmentData = {
     'We’ve developed web solutions across various industries, including:',
   industries: [
     'Healthcare Portals',
-    'E-commerce & Retail',
+    'E-commerce & Retail', 
     'Education & E-learning',
     'Finance & Banking',
     'Hospitality & Travel',

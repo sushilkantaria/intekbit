@@ -1,4 +1,4 @@
-import heroImage from '../../assets/AIML.webp'; // Placeholder — update with actual support/maintenance image
+import heroImage from '../../assets/for-support-maintenance.gif'; // Placeholder — update with actual support/maintenance image
 import aws from '../../assets/A-android.png'; // AWS CloudWatch
 import postman from '../../assets/A-java.png'; // Postman
 import jenkins from '../../assets/A-flutter.png'; // Jenkins
@@ -20,7 +20,7 @@ const supportMaintenanceData = {
     'Healthcare & Hospitals',
     'Banking & Finance',
     'E-commerce Platforms',
-    'EdTech & Universities',
+    'EdTech & Universities', 
     'IT & SaaS Startups',
     'Transport & Logistics',
     'Government Portals',

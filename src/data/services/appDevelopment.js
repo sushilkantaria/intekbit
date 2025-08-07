@@ -1,10 +1,10 @@
-import heroImage from '../../assets/A-android.png';
+import heroImage from '../../assets/for-app-dev.gif';
 import Android from '../../assets/A-android.png';
 import java from '../../assets/A-java.png';
 import flutter from '../../assets/A-flutter.png';
 // import firebase from '../../assets/A-firebase.webp';
 import kotlin from '../../assets/A-kotlin.png';
-import swift from '../../assets/A-swift.png';
+import swift from '../../assets/A-swift.png'; 
 import ios from '../../assets/A-ios.png';
 
 const appDevelopmentData = {
@@ -12,7 +12,7 @@ const appDevelopmentData = {
   heroDescription:
     'From Android to iOS, we build mobile applications that delight users and drive business growth. Our apps are built to perform and scale with your goals.',
   heroImage,
-
+ 
   industriesTitle: 'Industries Transformed by Our Mobile Apps',
   industriesDescription:
     'We’ve delivered impactful mobile experiences for sectors like:',

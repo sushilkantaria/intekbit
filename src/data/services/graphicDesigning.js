@@ -1,4 +1,4 @@
-import heroImage from '../../assets/AIML.webp'; // Use placeholder for now
+import heroImage from '../../assets/for-graphic-designing.gif'; // Use placeholder for now
 import figma from '../../assets/A-android.png'; // Placeholder for Figma
 import adobeXD from '../../assets/A-java.png'; // Placeholder for Adobe XD
 import illustrator from '../../assets/A-flutter.png'; // Placeholder for Illustrator
@@ -19,7 +19,7 @@ const graphicDesigningData = {
   industries: [
     'Retail & E-commerce',
     'Media & Advertising',
-    'Education & E-learning',
+    'Education & E-learning', 
     'Technology & Startups',
     'Hospitality & Food',
     'Healthcare & Wellness',

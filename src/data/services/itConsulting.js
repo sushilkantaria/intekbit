@@ -1,4 +1,4 @@
-import heroImage from '../../assets/AIML.webp'; // Use same hero image for now
+import heroImage from '../../assets/for-it-consulting.gif'; // Use same hero image for now
 import devops from '../../assets/A-android.png'; // Placeholder for DevOps
 import jenkins from '../../assets/A-java.png'; // Placeholder for Jenkins
 import docker from '../../assets/A-flutter.png'; // Placeholder for Docker
@@ -14,7 +14,7 @@ const itConsultingData = {
   heroImage,
 
   industriesTitle: 'Industries That Benefit from our IT Consulting service',
-  industriesDescription: 'We’ve empowered IT strategies across sectors like:',
+  industriesDescription: 'We’ve empowered IT strategies across sectors like:', 
 
   industries: [
     'Banking and Financial Services',

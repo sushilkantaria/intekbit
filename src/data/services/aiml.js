@@ -1,5 +1,5 @@
 // src/content/aiMlService.js
-import heroImage from '../../assets/aimlservicebg.mp4'; // AI hero image
+import heroImage from '../../assets/for-ai-ml-2.gif'; // AI hero image
 
 // Reused icons from mobile app techs for now (same file names, different labels)
 import python from '../../assets/A-android.png'; // use temporarily for Python
@@ -89,3 +89,4 @@ const aimlData = {
 };
 
 export default aimlData;
+
