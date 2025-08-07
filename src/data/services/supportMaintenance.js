@@ -21,7 +21,7 @@ const supportMaintenanceData = {
     'Banking & Finance',
     'E-commerce Platforms',
     'EdTech & Universities', 
-    'IT & SaaS Startups',
+    'IT & SaaS Startups', 
     'Transport & Logistics',
     'Government Portals',
   ],

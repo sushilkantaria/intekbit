@@ -7,7 +7,7 @@ import express from '../../assets/A-swift.png'; // Placeholder for Express.js
 import angular from '../../assets/A-ios.png'; // Placeholder for Angular
 
 const webDevelopmentData = {
-  heroTitle: 'Web Solutions That Convert & Scale',
+  heroTitle: 'Web Solutions That Convert & Scale', 
   heroDescription:
     'From static sites to dynamic web apps, we create performance-focused, user-friendly web solutions that drive business growth. Whether you need a landing page or a custom dashboard—we’ve got you covered.',
   heroImage,

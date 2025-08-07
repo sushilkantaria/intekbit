@@ -17,7 +17,7 @@ const softwareDevelopmentData = {
   industriesDescription: 'We’ve created bespoke solutions for:',
 
   industries: [
-    'Enterprise Resource Planning (ERP)',
+    'Enterprise Resource Planning (ERP)', 
     'Healthcare Automation',
     'Retail Inventory Systems',
     'Finance & Insurance', 

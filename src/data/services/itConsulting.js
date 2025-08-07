@@ -18,7 +18,7 @@ const itConsultingData = {
 
   industries: [
     'Banking and Financial Services',
-    'Healthcare and Pharma',
+    'Healthcare and Pharma', 
     'Manufacturing and Industrial Automation',
     'Education and EdTech',
     'E-commerce and Retail',

@@ -18,7 +18,7 @@ const uiuxData = {
     'E-commerce & Retail',
     'Healthcare & Wellness',
     'EdTech & Learning',
-    'FinTech & Banking', 
+    'FinTech & Banking',
     'Travel & Hospitality',
     'B2B SaaS Platforms',
     'Entertainment & Media',

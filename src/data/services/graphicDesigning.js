@@ -17,7 +17,7 @@ const graphicDesigningData = {
   industriesDescription: 'Our creatives have helped brands across:',
 
   industries: [
-    'Retail & E-commerce',
+    'Retail & E-commerce', 
     'Media & Advertising',
     'Education & E-learning', 
     'Technology & Startups',
