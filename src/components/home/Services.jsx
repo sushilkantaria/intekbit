@@ -242,7 +242,7 @@ const ServicesSection = ({ services }) => {
                           >
                             {tech}
                           </span>
-                        )
+                        ) 
                       );
                     })()}
               </div>

@@ -44,11 +44,11 @@ const LetsConnectSection = () => (
       data-aos-duration="1000"
     >
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-4xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
+        <h2 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
           Let's Create Big Stories Together!
         </h2>
         <p className="mb-6 text-black">
-          Share your project details to build your path toward success.
+          Share your project idea with us to build the path towards success.
         </p>
         <div className="relative w-fit mx-auto">
           <Link

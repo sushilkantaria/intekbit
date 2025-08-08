@@ -31,7 +31,7 @@ const TechnologySection = ({
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-8 text-center leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
-          Our Technology
+          Technologies we use
         </h2>
 
         {/* Buttons */}

@@ -26,13 +26,14 @@ const aimlData = {
   ],
 
   contactCtaDescription:
-    'Want to bring AI into your business? We’ll help you plan, build, and scale AI that delivers results.',
+    'Want to bring AI into your business? We’ll guide you every step of the way — from planning the right strategy to building powerful solutions and scaling them for growth. Our goal is to create AI that not only works but delivers real, measurable results for your business.',
+    
   contactCtaText: 'Build with AI',
 
   reasons: [
     {
       title: 'Real-world AI expertise',
-      desc: 'From NLP to computer vision and predictive analytics, we’ve solved complex business problems with practical AI.',
+      desc: 'From NLP to computer vision and predictive analytics, we can solve complex business problems with practical AI.',
     },
     {
       title: 'Custom-trained models',

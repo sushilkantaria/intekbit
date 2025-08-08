@@ -25,7 +25,9 @@ const appDevelopmentData = {
   ],
 
   contactCtaDescription:
-    'Need a high-performing mobile app for your business idea? Let’s bring it to life with intuitive UI, secure architecture, and seamless performance.',
+    'Need a high-performing mobile app for your business idea? We turn concepts into powerful, user-friendly apps with intuitive design, secure architecture, and flawless performance. From planning to launch, we focus on creating mobile experiences that engage users, work seamlessly, and help your business grow.',
+
+    
   contactCtaText: 'Launch Your Mobile App',
 
   reasons: [

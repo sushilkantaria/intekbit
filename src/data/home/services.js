@@ -9,7 +9,7 @@ const services = {
   ai: {
     title: 'AI & ML Solutions',
     description:
-      'Our AI and ML solutions enable businesses to harness the power of data to make smarter decisions and automate complex processes. We develop custom models and algorithms for a wide range of applications, from predictive analytics and natural language processing to image recognition and automation.',
+      'Our AI and ML services help businesses use data to work smarter and faster. We create custom models and algorithms for many needs — from predicting trends and understanding language to recognizing images and automating tasks — making complex work simple and efficient.',
     technologies: [
       'TensorFlow',
       'PyTorch',

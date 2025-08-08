@@ -27,7 +27,8 @@ const supportMaintenanceData = {
   ],
 
   contactCtaDescription:
-    'Need ongoing support for your digital products? Our team ensures timely updates, real-time monitoring, and reliable maintenance so you can focus on growth.',
+    'Need ongoing support for your digital products? Our team ensures timely updates, real-time monitoring and reliable maintenance so you can focus on growth. We work behind the scenes to keep your systems secure, optimized, and running smoothly. With our dedicated support you can stay worry-free and concentrate on achieving your business goals.',
+    
   contactCtaText: 'Get Continuous Support',
 
   reasons: [

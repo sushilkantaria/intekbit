@@ -143,7 +143,7 @@ const ProcessSection = () => {
         <h3>
           {expandedStepIndex !== null
             ? processSteps[expandedStepIndex].title
-            : 'This is our process'}
+            : 'Process We Follow'}
         </h3>
         <p>
           {expandedStepIndex !== null

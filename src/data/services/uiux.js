@@ -24,7 +24,8 @@ const uiuxData = {
     'Entertainment & Media',
   ],
   contactCtaDescription:
-    'Need a design that not only looks modern but also boosts engagement? Our team creates intuitive user journeys, wireframes, and high-fidelity mockups tailored to your goals.',
+    'Need a design that not only looks modern but also boosts engagement? We craft intuitive user journeys, wireframes, and high-fidelity mockups tailored to your goals. We focus on blending aesthetics with usability, ensuring every interaction feels seamless and engaging. From concept to final design, we create digital experiences.',
+    
   contactCtaText: 'Request a Design Consultation',
   reasons: [
     {

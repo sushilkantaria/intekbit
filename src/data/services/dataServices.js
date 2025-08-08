@@ -26,7 +26,9 @@ const dataServicesData = {
   ],
 
   contactCtaDescription:
-    'Want to unlock your business data’s full potential? Our team is ready to help you set up data pipelines, visualize insights, and implement custom dashboards that bring clarity and impact.',
+    'Want to unlock your data’s full potential? Our team is ready to help you set up data pipelines, visualize insights and implement custom dashboards that bring clarity and impact. We design solutions that turn raw numbers into actionable strategies which helps in faster decision making.',
+
+
   contactCtaText: 'Start Your Data Journey',
 
   reasons: [
