@@ -75,13 +75,10 @@ function Blog() {
       <section className="min-h-[50vh] py-16 flex items-center justify-center text-center px-4">
         <div className="max-w-4xl">
           <h1 className="text-5xl font-black mb-4 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
-            Our Blog
+            Our Blogs
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Insights, trends, and tips from the world of IT, AI, cloud, and
-            design. Stay updated with our latest articles. Insights, trends, and
-            tips from the world of IT, AI, cloud, and design. Stay updated with
-            our latest articles.
+            Insights, trends, and tips from the world of IT, AI, cloud and design. Stay updated with our latest articles. Insights, trends and tips from the world of IT, AI, cloud and design. Stay updated with our latest articles.
           </p>
         </div>
       </section>
