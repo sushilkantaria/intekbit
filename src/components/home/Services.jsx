@@ -6,7 +6,9 @@ import RotatingIcons from '../rotating';
 
 // Service images mapping
 const serviceImages = {
+  web: '/Assets/homeServices/web.gif',
   ai: '/Assets/homeServices/ai.gif',
+  uiux_design: '/Assets/homeServices/uiux.gif',
   mobile: '/Assets/homeServices/mobileApp.gif',
   cloud_services: '/Assets/homeServices/cloudService.gif',
   software: '/Assets/homeServices/softwareDevelopment.gif',
@@ -176,11 +178,11 @@ const ServicesSection = ({ services }) => {
                   className="w-110 h-110 rounded-2xl overflow-hidden"
                   key={activeServiceIndex}
                 >
-                  {serviceKeys[activeServiceIndex] === 'uiux_design' ? (
+                  {/* {serviceKeys[activeServiceIndex] === 'uiux_design' ? (
                     <UiUx />
                   ) : serviceKeys[activeServiceIndex] === 'web' ? (
                     <RotatingIcons />
-                  ) : (
+                  ) : ( */}
                     <img
                       src={
                         serviceImages[serviceKeys[activeServiceIndex]] ||
@@ -199,7 +201,7 @@ const ServicesSection = ({ services }) => {
                         e.target.src = '/Assets/web.gif';
                       }}
                     />
-                  )}
+                  {/* )} */}
                 </div>
               </div>
               {/* Tech stack pills */}
@@ -259,11 +261,11 @@ const ServicesSection = ({ services }) => {
               <div className="w-full max-w-md mx-auto mt-8">
                 <div className="p-4">
                   <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container">
-                    {serviceKey === 'uiux_design' ? (
+                    {/* {serviceKey === 'uiux_design' ? (
                       <UiUx />
                     ) : serviceKeys[activeServiceIndex] === 'web' ? (
                     <RotatingIcons />
-                  ) : (
+                  ) : ( */}
                       <img
                         src={serviceImages[serviceKey] || '/Assets/web.gif'}
                         alt={services[serviceKey]?.title || 'Service'}
@@ -272,7 +274,7 @@ const ServicesSection = ({ services }) => {
                           e.target.src = '/Assets/web.gif';
                         }}
                       />
-                    )}
+                    {/* )} */}
                   </div>
                 </div>
                 {/* Tech stack pills */}

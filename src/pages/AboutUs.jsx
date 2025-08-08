@@ -43,7 +43,7 @@ const AboutUs = () => {
       </section>
 {/* Nxt.Gen Healthcare Section */}
 <section
-  className="bg-white py-16 px-4"
+  className="bg-gray-200 py-16 px-4"
   data-aos="fade-up"
   data-aos-duration="1000"
 >

@@ -7,8 +7,9 @@ import ParticleBackground from '../components/ui/ParticleBackground';
 
 function LatestBlogCard({ post }) {
   return (
-    <div className="w-full flex flex-col lg:flex-row items-center justify-between bg-gradient-to-r from-black via-[#1a1b2f] to-[#5f27cd]
- rounded-3xl shadow-2xl overflow-hidden animate-fadeIn">
+    <div
+      className="w-full flex flex-col lg:flex-row items-center justify-between bg-gradient-to-r from-black via-[#1a1b2f] to-[#5f27cd] rounded-3xl shadow-2xl overflow-hidden animate-fadeIn"
+    >
       <div className="flex-1 p-8 flex flex-col items-start justify-center">
         <span className="text-xs font-semibold mb-2 bg-gradient-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent drop-shadow">
           {new Date(post.createdAt).toLocaleDateString()}
@@ -78,9 +79,9 @@ function Blog() {
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Insights, trends, and tips from the world of IT, AI, cloud, and
-            design. Stay updated with our latest articles.
-            Insights, trends, and tips from the world of IT, AI, cloud, and
-            design. Stay updated with our latest articles. 
+            design. Stay updated with our latest articles. Insights, trends, and
+            tips from the world of IT, AI, cloud, and design. Stay updated with
+            our latest articles.
           </p>
         </div>
       </section>
@@ -111,7 +112,7 @@ function Blog() {
 
           {/* Blog Grid Section with white background */}
           {restPosts.length > 0 && (
-            <section className="py-20 px-6 mt-10 bg-white text-black">
+            <section className="py-20 px-6 mt-10 bg-gray-200 text-black">
               <div className="max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold mb-10 text-center bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent">
                   Featured Article
