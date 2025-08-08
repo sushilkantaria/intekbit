@@ -46,7 +46,7 @@ const HeroSection = () => (
       </div>
 
       {/* Spline on the Right (hidden on mobile) */}
-      <div className="hidden md:block absolute -right-20 top-0 h-full w-full md:w-[50vw] lg:w-[750px] xl:w-[950px] pointer-events-none">
+      <div className="hidden md:block absolute -right-50 top-0 h-full w-full md:w-[92vw] lg:w-[850px] xl:w-[950px] pointer-events-none">
         <Spline
           // scene="https://prod.spline.design/aX1iYSIpcRaBb-wN/scene.splinecode"
           scene="https://prod.spline.design/w5CZb7xD8c2pWC9i/scene.splinecode"
@@ -57,7 +57,7 @@ const HeroSection = () => (
 
       {/* Black image always visible, but responsive size/position */}
       <img
-        className="absolute hidden -right-16 md:block bottom-4 z-10 h-11 w-36"
+        className="absolute hidden -right-35 md:block bottom-4 z-10 h-11 w-36"
         src="./Assets/black.png"
         alt=""
       />
