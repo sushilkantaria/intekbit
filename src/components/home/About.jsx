@@ -2,7 +2,7 @@ import React from 'react';
 import aboutData from '../../data/home/about';
 
 const AboutSection = ({ activeTab, switchContent }) => (
-  <section className="py-16 bg-gray-200 text-black" id="about">
+  <section className="py-16 overflow-x-hidden bg-gray-200 text-black" id="about">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 px-4">
       {/* Left Section */}
       <div
@@ -11,7 +11,7 @@ const AboutSection = ({ activeTab, switchContent }) => (
         data-aos-offset="300"
         data-aos-easing="ease-in-sine"
       >
-        <h2 className="text-4xl font-bold mb-8">
+        <h2 className="text-2xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-6">
           Everything You Need to Know About Intekbit Solutions
         </h2>
         <div className="flex gap-6 mb-10 mt-10">
@@ -37,13 +37,13 @@ const AboutSection = ({ activeTab, switchContent }) => (
         </div>
         <div>
           {activeTab === 'mission' && (
-            <p data-aos="zoom-in" className="italic">{aboutData.mission}</p>
+            <p data-aos="zoom-in" className="italic sm:text-[13px] lg:text-[15px]">{aboutData.mission}</p>
           )}
           {activeTab === 'vision' && (
-            <p data-aos="zoom-in" className="italic">{aboutData.vision}</p>
+            <p data-aos="zoom-in" className="italic sm:text-[13px] lg:text-[15px]">{aboutData.vision}</p>
           )}
           {activeTab === 'values' && (
-            <ul className="list-disc pl-5 italic" data-aos="zoom-in">
+            <ul className="list-disc pl-5 italic sm:text-[13px] lg:text-[15px]" data-aos="zoom-in">
               {aboutData.values.map((val) => (
                 <li key={val}>{val}</li>
               ))}
@@ -69,7 +69,7 @@ const AboutSection = ({ activeTab, switchContent }) => (
         data-aos-easing="ease-in-sine"
       >
         {aboutData.aboutParagraphs.map((para, idx) => (
-          <p key={idx}>{para}</p>
+          <p className=' lg:text-[18px] md:text-[15px] xxl:text-[18px]' key={idx}>{para}</p>
         ))}
       </div>
     </div>

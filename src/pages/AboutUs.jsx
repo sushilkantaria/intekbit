@@ -6,6 +6,7 @@ import CoreValueCard from '../components/about/CoreValueCard';
 import missionVision from '../data/about/missionVision';
 import agileSteps from '../data/about/agileSteps';
 import coreValues from '../data/about/coreValues';
+import ParticleBackground from '../components/ui/ParticleBackground';
 
 const AboutUs = () => {
   const [animate, setAnimate] = useState(false);
@@ -16,6 +17,7 @@ const AboutUs = () => {
   }, []);
 
   return (
+    
     <div
       className={`min-h-screen mt-14 transition-all duration-1000 ease-out ${
         animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
