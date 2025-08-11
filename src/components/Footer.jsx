@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex-1 flex flex-col items-start mb-4 md:mb-0 min-w-[180px]">
           <Link to="/">
             <img
-              src="/Assets/white-logo.png"
+              src="/Assets/footer-logo.webp"
               className="h-10 sm:h-15 w-auto mb-2"
               alt="Intekbit Logo"
             />
