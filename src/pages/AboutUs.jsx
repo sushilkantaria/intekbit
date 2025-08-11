@@ -54,19 +54,14 @@ const AboutUs = () => {
     <div>
       <h2 className="text-4xl md:text-5xl font-bold text-black leading-snug">
         Delivering <span className="text-black">Nxt.Gen</span> <br />
-        Healthcare
+        Technology Solutions.
       </h2>
     </div>
 
     {/* Right Side Description */}
     <div>
       <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
-        As a trusted digital transformation partner for over two decades, we
-        deliver Nxt.Gen solutions across the patient care continuum. Our
-        future-forward solutions address industry challenges, integrate digital
-        transformation into business strategy, ensure regulatory compliance,
-        drive continuous improvement, and prioritize extraordinary patient
-        experiences and high-impact outcomes.
+        As a trusted IT solutions partner, we provide end-to-end services in web development, mobile app development, UI/UX design, graphic design, AI & ML, and data solutions. Our future-ready approach tackles business challenges, blends innovation with technology, ensures security and reliability, boosts productivity, and delivers exceptional user experiences that drive real results.
       </p>
     </div>
   </div>
