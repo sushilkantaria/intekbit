@@ -19,7 +19,7 @@ const AboutSection = ({ activeTab, switchContent }) => (
             <div key={tab} className="relative group">
               <button
                 onClick={() => switchContent(tab)}
-                className={`px-4 py-2 bg-gray-100 rounded-0 transition-all duration-300 cursor-pointer w-full relative z-10
+                className={`px-4 py-2 bg-gray-100 rounded-3xl transition-all duration-300 cursor-pointer w-full relative z-10
                   ${
                     tab === activeTab
                       ? 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07),-4px_0_8px_2px_rgba(255, 0, 128, 0.452),4px_0_8px_2px_rgb(0,98,255)]'
@@ -30,7 +30,7 @@ const AboutSection = ({ activeTab, switchContent }) => (
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </button>
               {tab === activeTab && (
-                <div className="absolute inset-0 rounded-0 opacity-70 transition duration-800 pointer-events-none z-0 shadow-[-2px_0_4px_1px_rgb(255,0,128),2px_0_4px_1px_rgb(0,98,255)]" />
+                <div className="absolute inset-0 rounded-3xl opacity-70 transition duration-800 pointer-events-none z-0 shadow-[-2px_0_4px_1px_rgb(255,0,128),2px_0_4px_1px_rgb(0,98,255)]" />
               )}
             </div>
           ))}

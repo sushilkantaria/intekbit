@@ -129,7 +129,7 @@ const ProcessSection = () => {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <span className="text-5xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
+        <span className="text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
           Our Process
         </span>
       </h2>

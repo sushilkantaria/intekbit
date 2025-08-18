@@ -9,6 +9,9 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen((open) => !open);
 
+  // Desktop Services dropdown state
+  const [isDesktopServicesOpen, setIsDesktopServicesOpen] = useState(false);
+
   // Handle home link click to scroll to top when already on home page
   const handleHomeClick = (e) => {
     if (location.pathname === '/') {
@@ -19,6 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setIsMenuOpen(false);
+    setIsDesktopServicesOpen(false);
   }, [location]);
 
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
@@ -56,14 +60,19 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="relative group">
+            <li className="relative">
               <button
-                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-blue-500 bg-clip-text text-transparent hover:text-gray-600 transition-colors focus:outline-none flex items-center gap-1"
+                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-blue-500 bg-clip-text text-transparent transition-colors focus:outline-none flex items-center gap-1"
                 type="button"
+                onClick={() => setIsDesktopServicesOpen((v) => !v)}
+                aria-expanded={isDesktopServicesOpen}
+                aria-controls="desktop-services-dropdown"
               >
                 Services
                 <svg
-                  className="w-4 h-4"
+                  className={`w-4 h-4 text-fuchsia-400 transition-transform ${
+                    isDesktopServicesOpen ? 'rotate-180' : ''
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -76,9 +85,14 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
-              <ul className="absolute left-0  top-full mt-2 min-w-[180px] rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity z-50 ">
-                <ServicesDropdownGrid />
-              </ul>
+              {isDesktopServicesOpen && (
+                <ul
+                  id="desktop-services-dropdown"
+                  className="absolute left-0 top-full mt-2 min-w-[180px] rounded-lg shadow-lg bg-black/80 z-50"
+                >
+                  <ServicesDropdownGrid />
+                </ul>
+              )}
             </li>
             <li>
               <Link
