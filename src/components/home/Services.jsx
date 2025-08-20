@@ -183,24 +183,24 @@ const ServicesSection = ({ services }) => {
                   ) : serviceKeys[activeServiceIndex] === 'web' ? (
                     <RotatingIcons />
                   ) : ( */}
-                    <img
-                      src={
-                        serviceImages[serviceKeys[activeServiceIndex]] ||
-                        '/Assets/web.gif'
-                      }
-                      alt={
-                        services[serviceKeys[activeServiceIndex]]?.title ||
-                        'Service'
-                      }
-                      className="w-full h-full object-cover image-fade"
-                      onError={(e) => {
-                        console.log(
-                          'Image failed to load:',
-                          serviceImages[serviceKeys[activeServiceIndex]]
-                        );
-                        e.target.src = '/Assets/web.gif';
-                      }}
-                    />
+                  <img
+                    src={
+                      serviceImages[serviceKeys[activeServiceIndex]] ||
+                      '/Assets/web.gif'
+                    }
+                    alt={
+                      services[serviceKeys[activeServiceIndex]]?.title ||
+                      'Service'
+                    }
+                    className="w-full h-full object-cover image-fade"
+                    onError={(e) => {
+                      console.log(
+                        'Image failed to load:',
+                        serviceImages[serviceKeys[activeServiceIndex]]
+                      );
+                      e.target.src = '/Assets/web.gif';
+                    }}
+                  />
                   {/* )} */}
                 </div>
               </div>
@@ -242,7 +242,7 @@ const ServicesSection = ({ services }) => {
                           >
                             {tech}
                           </span>
-                        ) 
+                        )
                       );
                     })()}
               </div>
@@ -259,26 +259,21 @@ const ServicesSection = ({ services }) => {
                 onInView={setActiveServiceIndex}
               />
               <div className="w-full max-w-md mx-auto mt-8">
-                <div className="p-4">
-                  <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container">
-                    {/* {serviceKey === 'uiux_design' ? (
-                      <UiUx />
-                    ) : serviceKeys[activeServiceIndex] === 'web' ? (
-                    <RotatingIcons />
-                  ) : ( */}
-                      <img
-                        src={serviceImages[serviceKey] || '/Assets/web.gif'}
-                        alt={services[serviceKey]?.title || 'Service'}
-                        className="w-full h-full object-cover image-fade"
-                        onError={(e) => {
-                          e.target.src = '/Assets/web.gif';
-                        }}
-                      />
-                    {/* )} */}
+                <div className="p-4 flex justify-center items-center">
+                  <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container flex justify-center items-center">
+                    <img
+                      src={serviceImages[serviceKey] || '/Assets/web.gif'}
+                      alt={services[serviceKey]?.title || 'Service'}
+                      className="max-h-64 sm:max-h-80 w-auto h-full object-contain mx-auto image-fade"
+                      style={{ display: 'block', margin: '0 auto' }}
+                      onError={(e) => {
+                        e.target.src = '/Assets/web.gif';
+                      }}
+                    />
                   </div>
                 </div>
                 {/* Tech stack pills */}
-                <div className="flex flex-wrap gap-2 mt-6 justify-center cursor-default">
+                <div className="flex flex-wrap gap-2 my-8 justify-center cursor-default">
                   {services[serviceKey]?.technologies &&
                   services[serviceKey]?.technologies.length > 0
                     ? services[serviceKey]?.technologies

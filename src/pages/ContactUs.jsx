@@ -34,7 +34,7 @@ const ContactUs = () => {
           </h1>
         </div>
 
-        <div className="max-w-7xl mx-auto flex flex-col rounded-lg md:flex-row gap-18 mb-12 py-20 px-20 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg">
+        <div className="max-w-7xl mx-auto flex flex-col rounded-2xl md:flex-row gap-6 md:gap-18 mb-8 md:mb-12 py-6 md:py-20 px-4 md:px-20 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg">
           <div className="flex-1 space-y-6">
             <h2 className="text-2xl font-bold mb-4 text-white">
               Get In Touch With Us
@@ -43,7 +43,7 @@ const ContactUs = () => {
               {['Phone', 'Email', 'Address'].map((label) => (
                 <div
                   key={label}
-                  className={`group bg-black shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.05)] rounded-lg p-4 flex flex-col items-center relative backdrop-blur-lg backdrop-saturate-150   ${
+                  className={`group bg-black shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.05)] rounded-lg p-3 md:p-4 flex flex-col items-center relative backdrop-blur-lg backdrop-saturate-150 w-full max-w-xs mx-auto md:max-w-full   ${
                     label === 'Address' ? 'col-span-1 sm:col-span-2' : ''
                   }`}
                 >
@@ -83,7 +83,7 @@ const ContactUs = () => {
             </div>
           </div>
 
-          <div className="flex-1 rounded-lg shadow p-8 relative group backdrop-blur-lg backdrop-saturate-150">
+          <div className="flex-1 rounded-lg shadow p-4 md:p-8 relative group backdrop-blur-lg backdrop-saturate-150 w-full max-w-md mx-auto md:max-w-full">
             <div className="relative z-10">
               <h2 className="text-2xl font-bold mb-2 text-white">
                 Send Us Your Requirements
@@ -107,7 +107,7 @@ const ContactUs = () => {
                     name="name"
                     placeholder="Name"
                     required
-                    className="w-full text-white border border-gray-600 rounded-3xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full text-white border border-gray-600 rounded-2xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   />
                 </div>
                 <div>
@@ -117,7 +117,7 @@ const ContactUs = () => {
                     name="email"
                     placeholder="Your Email"
                     required
-                    className="w-full text-white border border-gray-600 rounded-3xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full text-white border border-gray-600 rounded-2xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   />
                 </div>
                 <div>
@@ -127,7 +127,7 @@ const ContactUs = () => {
                     name="subject"
                     placeholder="Subject"
                     required
-                    className="w-full text-white border border-gray-600 rounded-3xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full text-white border border-gray-600 rounded-2xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   />
                 </div>
                 <div>
@@ -136,17 +136,17 @@ const ContactUs = () => {
                     name="message"
                     placeholder="Your Message"
                     required
-                    className="w-full text-white border border-gray-600 rounded-3xl px-3 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full text-white border border-gray-600 rounded-2xl px-3 py-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   ></textarea>
                 </div>
                 <div className="relative">
                   <button
                     type="submit"
-                    className="w-full cursor-pointer text-white font-semibold py-2 rounded-3xl transition relative z-10 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] peer"
+                    className="w-full cursor-pointer text-white font-semibold py-2 rounded-2xl transition relative z-10 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] peer"
                   >
                     Send Message
                   </button>
-                  <div className="absolute inset-0 rounded-3xl opacity-0 peer-hover:opacity-100 transition duration-800 pointer-events-none z-0 shadow-[-4px_0_8px_2px_rgb(255,0,128),4px_0_8px_2px_rgb(0,98,255)]" />
+                  <div className="absolute inset-0 rounded-2xl opacity-0 peer-hover:opacity-100 transition duration-800 pointer-events-none z-0 shadow-[-4px_0_8px_2px_rgb(255,0,128),4px_0_8px_2px_rgb(0,98,255)]" />
                 </div>
               </form>
             </div>

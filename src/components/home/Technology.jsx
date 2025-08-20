@@ -36,12 +36,12 @@ const TechnologySection = ({
         </h2>
 
         {/* Buttons */}
-        <div className="flex justify-center space-x-12 gap-4 mb-8 flex-wrap max-w-7xl mx-auto">
+        <div className="flex justify-center space-x-4 sm:space-x-12 gap-2 sm:gap-4 mb-6 sm:mb-8 flex-wrap max-w-7xl mx-auto">
           {buttons.map(({ key, label }) => (
             <div key={key} className="relative group">
               <button
                 onMouseEnter={() => switchTechnology(key)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 cursor-pointer relative z-10 text-white
+                className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 cursor-pointer relative z-10 text-xs sm:text-base text-white
                 ${
                   key === activeTechnology
                     ? 'shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07),-4px_0_8px_2px_rgb(255,0,128),4px_0_8px_2px_rgb(0,98,255)]'
@@ -58,12 +58,12 @@ const TechnologySection = ({
         {/* Tech Cards */}
         <div
           key={containerKey}
-          className="flex flex-wrap justify-center gap-4 sm:gap-6"
+          className="flex flex-wrap justify-center gap-2 sm:gap-6"
         >
           {technologies[activeTechnology]?.map((tech, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-2 sm:p-4 w-24 sm:w-38"
+              className="flex flex-col items-center p-1 sm:p-4 w-16 sm:w-38"
               data-aos="fade-left"
               data-aos-delay={index * 150}
               data-aos-duration="600"
@@ -72,9 +72,9 @@ const TechnologySection = ({
               <img
                 src={tech.icon}
                 alt={tech.name}
-                className="w-18 h-18 sm:w-14 sm:h-14 mb-2"
+                className="w-10 h-10 sm:w-14 sm:h-14 mb-1 sm:mb-2"
               />
-              <p className="text-gray-200 font-medium text-center text-xs sm:text-lg">
+              <p className="text-gray-200 font-medium text-center text-[10px] sm:text-lg">
                 {tech.name}
               </p>
             </div>

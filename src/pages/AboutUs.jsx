@@ -94,7 +94,7 @@ const AboutUs = () => {
         <div className="py-12 bg-gray-200">
           <div
             className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-start px-4"
-            data-aos="fade-left"
+            data-aos="zoom-in"
             data-aos-duration="1000"
           >
             <div className="flex-1">
@@ -136,7 +136,7 @@ const AboutUs = () => {
         {/* Core Values */}
         <section className="py-12 bg-gray-200">
           <div data-aos="fade-up" data-aos-duration="1000">
-            <h2 className="text-5xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
+            <h2 className="text-4xl font-black text-center mb-8 leading-tight bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg">
               Our Core Values
             </h2>
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10">
