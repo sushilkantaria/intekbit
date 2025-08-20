@@ -1,10 +1,10 @@
-import heroImage from '../../assets/for-support-maintenance.gif'; // Placeholder — update with actual support/maintenance image
-import aws from '../../assets/A-android.png'; // AWS CloudWatch
-import postman from '../../assets/A-java.png'; // Postman
-import jenkins from '../../assets/A-flutter.png'; // Jenkins
-import git from '../../assets/A-kotlin.png'; // Git
-import docker from '../../assets/A-swift.png'; // Docker
-import sentry from '../../assets/A-ios.png'; // Sentry
+import heroImage from '/Assets/services-page/for-support-maintenance.gif'; // Placeholder — update with actual support/maintenance image
+import aws from '/Assets/services-technology/A-android.png'; // AWS CloudWatch
+import postman from '/Assets/services-technology/A-java.png'; // Postman
+import jenkins from '/Assets/services-technology/A-flutter.png'; // Jenkins
+import git from '/Assets/services-technology/A-kotlin.png'; // Git
+import docker from '/Assets/services-technology/A-swift.png'; // Docker
+import sentry from '/Assets/services-technology/A-ios.png'; // Sentry
 
 const supportMaintenanceData = {
   heroTitle: 'Keep Your Software Running Smoothly, Always',

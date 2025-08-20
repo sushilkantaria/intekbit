@@ -1,11 +1,11 @@
-import heroImage from '../../assets/for-app-dev.gif';
-import Android from '../../assets/A-android.png';
-import java from '../../assets/A-java.png';
-import flutter from '../../assets/A-flutter.png';
-// import firebase from '../../assets/A-firebase.webp';
-import kotlin from '../../assets/A-kotlin.png';
-import swift from '../../assets/A-swift.png'; 
-import ios from '../../assets/A-ios.png';
+import heroImage from '/Assets/services-page/for-app-dev.gif';
+import Android from '/Assets/services-technology/A-android.png';
+import java from '/Assets/services-technology/A-java.png';
+import flutter from '/Assets/services-technology/A-flutter.png';
+// import firebase from '/Assets/services-technology/A-firebase.webp';
+import kotlin from '/Assets/services-technology/A-kotlin.png';
+import swift from '/Assets/services-technology/A-swift.png'; 
+import ios from '/Assets/services-technology/A-ios.png';
 
 const appDevelopmentData = {
   heroTitle: 'Apps that Engage, Convert and Scale',

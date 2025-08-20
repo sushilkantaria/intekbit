@@ -1,10 +1,10 @@
-import heroImage from '../../assets/for-custom-software.gif'; // Use same hero image for now
-import devops from '../../assets/A-android.png'; // Placeholder for DevOps
-import jenkins from '../../assets/A-java.png'; // Placeholder for Jenkins
-import docker from '../../assets/A-flutter.png'; // Placeholder for Docker
-import github from '../../assets/A-kotlin.png'; // Placeholder for GitHub
-import django from '../../assets/A-swift.png'; // Placeholder for Django
-import javascript from '../../assets/A-ios.png'; // Placeholder for JavaScript
+import heroImage from '/Assets/services-page/for-custom-software.gif'; // Use same hero image for now
+import devops from '/Assets/services-technology/A-android.png'; // Placeholder for DevOps
+import jenkins from '/Assets/services-technology/A-java.png'; // Placeholder for Jenkins
+import docker from '/Assets/services-technology/A-flutter.png'; // Placeholder for Docker
+import github from '/Assets/services-technology/A-kotlin.png'; // Placeholder for GitHub
+import django from '/Assets/services-technology/A-swift.png'; // Placeholder for Django
+import javascript from '/Assets/services-technology/A-ios.png'; // Placeholder for JavaScript
 
 const softwareDevelopmentData = {
   heroTitle: 'Tailored Software for Unique Business Needs',

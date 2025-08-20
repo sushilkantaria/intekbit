@@ -1,10 +1,10 @@
-import heroImage from '../../assets/for-web-dev-1.gif';
-import react from '../../assets/A-android.png'; // Use same as Android for now
-import htmlcssjs from '../../assets/A-java.png'; // Placeholder for HTML/CSS/JS
-import wordpress from '../../assets/A-flutter.png'; // Placeholder for WordPress
-import node from '../../assets/A-kotlin.png'; // Placeholder for Node.js
-import express from '../../assets/A-swift.png'; // Placeholder for Express.js
-import angular from '../../assets/A-ios.png'; // Placeholder for Angular
+import heroImage from "/Assets/services-page/for-web-dev-1.gif";
+import react from '/Assets/services-technology/A-android.png'; // Use same as Android for now
+import htmlcssjs from '/Assets/services-technology/A-java.png'; // Placeholder for HTML/CSS/JS
+import wordpress from '/Assets/services-technology/A-flutter.png'; // Placeholder for WordPress
+import node from '/Assets/services-technology/A-kotlin.png'; // Placeholder for Node.js
+import express from '/Assets/services-technology/A-swift.png'; // Placeholder for Express.js
+import angular from '/Assets/services-technology/A-ios.png'; // Placeholder for Angular
 
 const webDevelopmentData = {
   heroTitle: 'Web Solutions That Convert & Scale', 

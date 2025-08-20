@@ -1,13 +1,13 @@
 // src/content/aiMlService.js
-import heroImage from '../../assets/for-ai-ml-2.gif'; // AI hero image
+import heroImage from '/Assets/services-page/for-ai-ml-2.gif'; // AI hero image
 
 // Reused icons from mobile app techs for now (same file names, different labels)
-import python from '../../assets/A-android.png'; // use temporarily for Python
-import tensor from '../../assets/A-java.png'; // use temporarily for TensorFlow
-import pytorch from '../../assets/A-flutter.png'; // use temporarily for PyTorch
-import openai from '../../assets/A-kotlin.png'; // use temporarily for OpenAI
-import huggingface from '../../assets/A-swift.png'; // use temporarily for HuggingFace
-import scikit from '../../assets/A-ios.png'; // use temporarily for Scikit-learn
+import python from '/Assets/services-technology/A-android.png'; // use temporarily for Python
+import tensor from '/Assets/services-technology/A-java.png'; // use temporarily for TensorFlow
+import pytorch from '/Assets/services-technology/A-flutter.png'; // use temporarily for PyTorch
+import openai from '/Assets/services-technology/A-kotlin.png'; // use temporarily for OpenAI
+import huggingface from '/Assets/services-technology/A-swift.png'; // use temporarily for HuggingFace
+import scikit from '/Assets/services-technology/A-ios.png'; // use temporarily for Scikit-learn
 
 const aimlData = {
   heroTitle: 'AI that Thinks, Learns, and Elevates',

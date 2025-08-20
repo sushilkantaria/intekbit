@@ -1,11 +1,11 @@
 // import heroImage from '../../assets/cloudservicebg.mp4'; // Use video as hero background
-import heroImage from '../../assets/for-cloud-computing.gif'; // Placeholder for AWS
-import aws from '../../assets/A-android.png'; // Placeholder for AWS
-import azure from '../../assets/A-java.png'; // Placeholder for Azure
-import gcloud from '../../assets/A-flutter.png'; // Placeholder for Google Cloud
-import hadoop from '../../assets/A-kotlin.png'; // Placeholder for Hadoop
-import kubernet from '../../assets/A-swift.png'; // Placeholder for Kubernetes
-import cloudflare from '../../assets/A-ios.png'; // Placeholder for Cloudflare
+import heroImage from '/Assets/services-page/for-cloud-computing.gif'; // Placeholder for AWS
+import aws from '/Assets/services-technology/A-android.png'; // Placeholder for AWS
+import azure from '/Assets/services-technology/A-java.png'; // Placeholder for Azure
+import gcloud from '/Assets/services-technology/A-flutter.png'; // Placeholder for Google Cloud
+import hadoop from '/Assets/services-technology/A-kotlin.png'; // Placeholder for Hadoop
+import kubernet from '/Assets/services-technology/A-swift.png'; // Placeholder for Kubernetes
+import cloudflare from '/Assets/services-technology/A-ios.png'; // Placeholder for Cloudflare
 const cloudServicesData = {
   heroTitle: 'Reliable Cloud Infrastructure for the Future',
   heroDescription:

@@ -1,10 +1,10 @@
-import figma from '../../assets/A-android.png';
-import adobeXd from '../../assets/A-java.png';
-import sketch from '../../assets/A-flutter.png';
-import invision from '../../assets/A-kotlin.png';
-import htmlCss from '../../assets/A-swift.png';
-import usability from '../../assets/A-ios.png';
-import heroImage from '../../assets/for-ui-ux.gif';
+import figma from '/Assets/services-technology/A-android.png';
+import adobeXd from '/Assets/services-technology/A-java.png';
+import sketch from '/Assets/services-technology/A-flutter.png';
+import invision from '/Assets/services-technology/A-kotlin.png';
+import htmlCss from '/Assets/services-technology/A-swift.png';
+import usability from '/Assets/services-technology/A-ios.png';
+import heroImage from '/Assets/services-page/for-ui-ux.gif';
 
 const uiuxData = {
   heroTitle: 'Designs That Look Good and Work Better',

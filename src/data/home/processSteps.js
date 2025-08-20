@@ -1,8 +1,8 @@
-import Plane1 from '../../assets/plane1.png';
-import Plane2 from '../../assets/plane2.png';
-import Plane3 from '../../assets/plane3.png';
-import Plane4 from '../../assets/plane4.png';
-import Plane5 from '../../assets/plane5.png';
+import Plane1 from '/Assets/plane1.png';
+import Plane2 from '/Assets/plane2.png';
+import Plane3 from '/Assets/plane3.png';
+import Plane4 from '/Assets/plane4.png';
+import Plane5 from '/Assets/plane5.png';
 
 // const processSteps = [
 //   {
