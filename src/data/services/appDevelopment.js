@@ -1,11 +1,11 @@
 import heroImage from '/Assets/services-page/for-app-dev.gif';
-import Android from '/Assets/services-technology/A-android.png';
+import Native from '/Assets/services-technology/app-native.png';
 import java from '/Assets/services-technology/A-java.png';
 import flutter from '/Assets/services-technology/A-flutter.png';
 // import firebase from '/Assets/services-technology/A-firebase.webp';
 import kotlin from '/Assets/services-technology/A-kotlin.png';
 import swift from '/Assets/services-technology/A-swift.png'; 
-import ios from '/Assets/services-technology/A-ios.png';
+import python from '/Assets/services-technology/A-python.png';
 
 const appDevelopmentData = {
   heroTitle: 'Apps that Engage, Convert and Scale',
@@ -49,12 +49,12 @@ const appDevelopmentData = {
   techStackDescription:
     'We combine performance, usability, and reliability with top frameworks to create impactful mobile experiences.',
   techs: [
-    { name: 'React Native', icon: Android },
+    { name: 'React Native', icon: Native },
     { name: 'Flutter', icon: flutter },
     { name: 'Java', icon: java },
     { name: 'Kotlin', icon: kotlin },
     { name: 'Swift', icon: swift },
-    { name: 'IOS', icon: ios },
+    { name: 'Python', icon: python },
   ],
 
   faqData: [

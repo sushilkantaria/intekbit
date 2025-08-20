@@ -1,10 +1,12 @@
 import heroImage from '/Assets/services-page/for-data-services.gif';
+
+
 import apache from '/Assets/services-technology/A-android.png';
-import powerbi from '/Assets/services-technology/A-java.png';
-import postgresql from '/Assets/services-technology/A-flutter.png';
-import mongodb from '/Assets/services-technology/A-kotlin.png';
-import informatica from '/Assets/services-technology/A-swift.png';
-import aws from '/Assets/services-technology/A-ios.png';
+import powerbi from '/Assets/services-technology/ds-power-bi.png';
+import postgresql from '/Assets/services-technology/ds-postgresql.png';
+import mongodb from '/Assets/services-technology/ds-mongodb.png';
+import informatica from '/Assets/services-technology/ds-informatica.png';
+import aws from '/Assets/services-technology/ds-aws.png';
 
 const dataServicesData = {
   heroTitle: 'Data-Driven Decisions Start Here',

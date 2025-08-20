@@ -1,10 +1,12 @@
 import heroImage from '/Assets/services-page/for-it-consulting.gif'; // Use same hero image for now
-import devops from '/Assets/services-technology/A-android.png'; // Placeholder for DevOps
-import jenkins from '/Assets/services-technology/A-java.png'; // Placeholder for Jenkins
-import docker from '/Assets/services-technology/A-flutter.png'; // Placeholder for Docker
-import github from '/Assets/services-technology/A-kotlin.png'; // Placeholder for GitHub
-import django from '/Assets/services-technology/A-swift.png'; // Placeholder for Django
-import javascript from '/Assets/services-technology/A-ios.png'; // Placeholder for JavaScript
+
+
+import GA from '/Assets/services-technology/ic-GA.png'; // Placeholder for GA
+import LC from '/Assets/services-technology/ic-LA.png'; // Placeholder for LC
+import powerbi from '/Assets/services-technology/ic-power-bi.png'; // Placeholder for power bi
+import AWS from '/Assets/services-technology/ic-aws.png'; // Placeholder for aws
+import Azure from '/Assets/services-technology/ic-azure.webp'; // Placeholder for azure
+import tableau from '/Assets/services-technology/ic-tableau.png'; // Placeholder for tableau
 
 const itConsultingData = {
   heroTitle: 'Expert Guidance for Smarter IT Decisions',
@@ -50,13 +52,14 @@ const itConsultingData = {
     'Our consultants are experts in modern tools, platforms, and methodologies that align with today’s enterprise demands.',
 
   techs: [
-    { name: 'DevOps', icon: devops },
-    { name: 'Jenkins', icon: jenkins },
-    { name: 'Docker', icon: docker },
-    { name: 'GitHub', icon: github },
-    { name: 'Django', icon: django },
-    { name: 'JavaScript', icon: javascript },
+    { name: 'Google Analytics', icon: GA },
+    { name: 'Lucidchart', icon: LC },
+    { name: 'Powerbi', icon: powerbi },
+    { name: ' AWS Well-Architected Tool', icon: AWS },
+    { name: 'Azure advisor', icon: Azure },
+    { name: 'Tableau', icon: tableau },
   ],
+
 
   faqData: [
     {

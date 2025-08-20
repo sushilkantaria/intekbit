@@ -1,9 +1,14 @@
-import figma from '/Assets/services-technology/A-android.png';
-import adobeXd from '/Assets/services-technology/A-java.png';
-import sketch from '/Assets/services-technology/A-flutter.png';
-import invision from '/Assets/services-technology/A-kotlin.png';
-import htmlCss from '/Assets/services-technology/A-swift.png';
-import usability from '/Assets/services-technology/A-ios.png';
+
+
+import figma from '/Assets/services-technology/uiux-figma.png';
+import adobeXd from '/Assets/services-technology/uiux-xd.png';
+import sketch from '/Assets/services-technology/uiux-sketch.png';
+import invision from '/Assets/services-technology/uiux-invision.png';
+import htmlCss from '/Assets/services-technology/uiux-html-css.png';
+import usability from '/Assets/services-technology/uiux-hotjar.png';
+
+
+
 import heroImage from '/Assets/services-page/for-ui-ux.gif';
 
 const uiuxData = {
