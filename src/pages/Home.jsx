@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import About from '../components/home/About';
-import Founders from '../components/home/Founders';
+import Founders from '../components/home/Founders'; 
 import Hero from '../components/home/Hero';
 import LetsConnect from '../components/home/LetsConnect';
 import Process from '../components/home/Process';

@@ -87,7 +87,7 @@ const ProcessSection = () => {
             >
               <img src={step.icon} alt={step.title} className="plane-icon" />
               <div className="step-title">
-                {index + 1}. {step.title}
+                {index + 1}. {step.title} 
               </div>
               <p className="step-desc">{step.description}</p>
 

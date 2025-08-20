@@ -1,7 +1,10 @@
 const aboutData = {
   mission: `At Intekbit Solutions Pvt. Ltd., we simplify challenges with smart, AI-powered solutions while staying by your side every step of the way. Our goal is to deeply understand your needs, deliver meaningful results, and create lasting partnerships.`,
+
   vision: `We envision a world where innovation meets trust, and challenges become stepping stones to success. At Intekbit, we aim to inspire confidence and empower growth with solutions that truly make a difference.`,
+
   values: ['Trust', 'Excellence', 'Collaboration', 'Reliability'],
+  
   aboutParagraphs: [
     `At Intekbit Solutions Pvt. Ltd., we transform problem statements into cutting-edge AI-powered solutions that simplify processes, save time, and embrace the future. By blending creativity with a deep understanding of technology, we craft efficient, tailored systems that redefine modern problem-solving.`,
 
