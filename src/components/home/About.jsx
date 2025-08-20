@@ -69,7 +69,7 @@ const AboutSection = ({ activeTab, switchContent }) => (
         data-aos-easing="ease-in-sine"
       >
         {aboutData.aboutParagraphs.map((para, idx) => (
-          <p className=' lg:text-[18px] md:text-[15px] xxl:text-[18px]' key={idx}>{para}</p>
+          <p className=' lg:text-[17px] md:text-[15px] xxl:text-[17px]' key={idx}>{para}</p>
         ))}
       </div>
     </div>
