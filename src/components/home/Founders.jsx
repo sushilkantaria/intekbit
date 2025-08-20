@@ -1,6 +1,5 @@
-import React from 'react';
-import founders from '../../data/home/founders';
 import { FaLinkedinIn } from 'react-icons/fa6';
+import founders from '../../data/home/founders';
 
 const FounderCard = ({ founder }) => (
   <div

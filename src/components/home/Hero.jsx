@@ -39,9 +39,7 @@ const HeroSection = () => (
       {/* Spline on the Right (hidden on mobile) */}
       <div className="hidden md:block absolute -right-50 top-0 h-full w-full md:w-[92vw] lg:w-[850px] xl:w-[950px] pointer-events-none">
         <Spline
-          // scene="https://prod.spline.design/aX1iYSIpcRaBb-wN/scene.splinecode"
           scene="https://prod.spline.design/w5CZb7xD8c2pWC9i/scene.splinecode"
-          // scene="https://prod.spline.design/TBsKJ22sOonPR-1i/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>

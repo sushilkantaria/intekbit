@@ -2,40 +2,35 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ParticleBackground from './ui/ParticleBackground';
 
-// import { HiArrowRight } from 'react-icons/hi';
 import { HiArrowRight, HiArrowUp } from 'react-icons/hi';
 
-import { HiCheckCircle, HiSquares2X2, HiMinus, HiPlus } from 'react-icons/hi2';
+import { HiSquares2X2 } from 'react-icons/hi2';
 
 import {
-  FaMicroscope,
-  FaChartLine,
-  FaShoppingCart,
-  FaTruck,
-  FaGraduationCap,
-  FaWallet,
-  FaGamepad,
-  FaIndustry,
-  FaHeartbeat,
-  FaPlane,
-  FaChalkboard,
-  FaBroadcastTower,
-  FaHandsHelping,
-  FaBusAlt,
-  FaGlobe,
-  FaUtensils,
-  FaUniversity,
-  FaLaptopCode,
-  FaStore,
-  FaPalette,
-  FaBriefcaseMedical,
-  FaWarehouse,
-  FaCogs,
   FaBoxes,
-  FaLayerGroup,
+  FaBriefcaseMedical,
+  FaBroadcastTower,
+  FaChalkboard,
+  FaChartLine,
   FaCity,
-  FaTools,
+  FaCogs,
+  FaGamepad,
+  FaGlobe,
+  FaGraduationCap,
+  FaHeartbeat,
+  FaIndustry,
   FaLandmark,
+  FaLaptopCode,
+  FaLayerGroup,
+  FaMicroscope,
+  FaPlane,
+  FaShoppingCart,
+  FaStore,
+  FaTools,
+  FaTruck,
+  FaUniversity,
+  FaUtensils,
+  FaWallet,
 } from 'react-icons/fa';
 
 const ServiceTabs = ({ servicesData }) => {
@@ -156,18 +151,6 @@ const ServiceTabs = ({ servicesData }) => {
         data-aos="fade-down"
         data-aos-duration="1000"
       >
-        {/* Video background if heroImage is mp4 */}
-        {/* {heroImage && heroImage.endsWith('.mp4') && (
-          <video
-            src={heroImage}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover z-0"
-          />
-        )} */}
-
         <div className="flex-1 max-w-3xl relative z-10 text-center md:text-left">
           <h1 className="text-3xl md:text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-bold leading-[1.3] mb-4 md:mb-6">
             {heroTitle}
@@ -192,7 +175,7 @@ const ServiceTabs = ({ servicesData }) => {
         {/* INDUSTRIES SECTION */}
 
         <section
-          className="max-w-6xl mx-auto py-10 md:py-16 text-gray-800 px-4 md:px-8"
+          className="max-w-6xl mx-auto py-10 px-4 md:px-8 md:py-16 text-gray-800 "
           data-aos="fade-up"
           data-aos-duration="1000"
         >
@@ -230,7 +213,7 @@ const ServiceTabs = ({ servicesData }) => {
       {/* WHY US SECTION */}
       <div className="bg-black">
         <section
-          className="max-w-6xl mx-auto py-10 md:py-20 text-white px-4 md:px-8"
+          className="max-w-6xl mx-auto py-10 md:py-20 px-4 md:px-8 text-white "
           data-aos="fade-right"
           data-aos-duration="1000"
         >
@@ -241,29 +224,6 @@ const ServiceTabs = ({ servicesData }) => {
             </span>{' '}
             as your tech partner
           </h2>
-          {/* <div className="flex flex-col gap-6 md:gap-8">
-            {reasons &&
-              reasons.map((item, index) => (
-                <div
-                  className="flex flex-col md:flex-row items-start gap-4 md:gap-6 rounded-xl px-4 md:px-8 py-4 md:py-6 bg-gradient-to-br from-[#181F2A] to-[#232A3A] via-[#2D1A3A] border border-[#232A3A] shadow-[0_2px_12px_0_rgba(30,58,138,0.10)] transition-transform duration-300 hover:scale-[1.01]"
-                  key={index}
-                  data-aos="zoom-in"
-                  data-aos-delay={100 * index}
-                >
-                  <div className="my-auto mb-2 md:mb-0 md:mr-4 flex justify-center md:justify-start">
-                    <HiSquares2X2 className="w-8 md:w-10 h-8 md:h-10 text-gray-300" />
-                  </div>
-                  <div>
-                    <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-gray-100 text-center md:text-left">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm md:text-base leading-relaxed text-center md:text-left">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-          </div> */}
 
           <div className="flex flex-col md:flex-row gap-8 items-start">
             {/* Left: Reason cards */}
@@ -304,11 +264,7 @@ const ServiceTabs = ({ servicesData }) => {
           </div>
 
           <button
-            className="mt-8 md:mt-12 px-6 md:px-8 py-2 md:py-3 
-    mx-auto block
-    shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] 
-    backdrop-blur-lg backdrop-saturate-150 text-white text-sm md:text-base 
-    rounded-3xl hover:bg-red-600 transition-colors duration-300"
+            className="mt-8 md:mt-12 px-6 md:px-8 py-2 md:py-3 mx-auto block shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg backdrop-saturate-150 text-white text-sm md:text-base rounded-3xl hover:bg-red-600 transition-colors duration-300"
             onClick={() => navigate('/contact')}
           >
             {contactCtaText}
@@ -318,7 +274,7 @@ const ServiceTabs = ({ servicesData }) => {
         {/* TECH STACK SECTION */}
         <section
           className="text-white max-w-7xl mx-auto py-4 px-4 md:px-8"
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-duration="1000"
         >
           <h2 className="text-2xl md:text-4xl bg-gradient-to-br from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-2 md:mb-4 text-center">
@@ -368,54 +324,9 @@ const ServiceTabs = ({ servicesData }) => {
         </section>
       </div>
 
-      {/* FAQ SECTION */}
-      {/* <div className="bg-gray-200">
-        <section
-          className="max-w-6xl mx-auto text-black py-8 md:py-8 px-4 md:px-8"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-          <h2 className="text-lg md:text-2xl bg-gradient-to-b from-cyan-400 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-lg font-semibold mb-6 md:mb-10 text-left lowercase">
-            Frequently asked questions (FAQs)
-          </h2>
-          <div className="border-t border-gray-900">
-            {faqData &&
-              faqData.map((item, index) => (
-                <div
-                  key={index}
-                  className={`border-b border-gray-900 py-3 md:py-4 transition-all duration-300 ${
-                    faqOpenIndex === index ? 'bg-opacity-10' : ''
-                  }`}
-                >
-                  <div
-                    className="flex justify-between items-center md:items-center cursor-pointer text-sm md:text-base font-medium gap-2 md:gap-0"
-                    onClick={() => toggleFaq(index)}
-                  >
-                    <span>{item.question}</span>
-                    <div className="w-6 md:w-7 h-6 md:h-7 rounded-full shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] flex items-center justify-center">
-                      {faqOpenIndex === index ? (
-                        <HiMinus className="w-4 h-4 text-gray-800" />
-                      ) : (
-                        <HiPlus className="w-4 h-4 text-gray-800" />
-                      )}
-                    </div>
-                  </div>
-                  {faqOpenIndex === index && (
-                    <div className="mt-2 md:mt-3 text-gray-700 text-xs md:text-base leading-relaxed pr-0 md:pr-2">
-                      {item.answer}
-                    </div>
-                  )}
-                </div>
-              ))}
-          </div>
-        </section>
-      </div>
-
-
-       */}
       <div className="bg-gray-200">
         <section
-          className="w-screen py-16 px-4 md:px-8"
+          className="max-w-7xl mx-auto py-16 px-4 md:px-8"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
