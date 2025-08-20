@@ -54,7 +54,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-transparent"
+                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-transparent hover:from-fuchsia-500 hover:to-blue-500 hover:bg-gradient-to-rb"
                 data-aos="fade-down"
                 onClick={handleHomeClick}
               >
@@ -63,7 +63,7 @@ const Navbar = () => {
             </li>
             <li className="relative">
               <button
-                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-transparent transition-colors focus:outline-none flex items-center gap-1 cursor-pointer"
+                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-transparent transition-colors focus:outline-none flex items-center gap-1 cursor-pointer hover:from-fuchsia-500 hover:to-blue-500 hover:bg-gradient-to-rb"
                 type="button"
                 onClick={() => setIsDesktopServicesOpen((v) => !v)}
                 aria-expanded={isDesktopServicesOpen}
@@ -98,7 +98,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/blog"
-                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-transparent hover:text-gray-600 transition-colors"
+                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-transparent transition-colors duration-300 hover:from-fuchsia-500 hover:to-blue-500 hover:bg-gradient-to-rb"
                 data-aos="fade-down"
               >
                 Blog
@@ -107,7 +107,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/about"
-                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-transparent transition-colors duration-300 hover:from-fuchsia-500 hover:to-blue-500 hover:bg-gradient-to-rb hover:bg-clip-text hover:text-transparent"
+                className="font-bold text-sm sm:text-base md:text-xl bg-gradient-to-r from-blue-500 to-fuchsia-500 bg-clip-text text-transparent transition-colors duration-300 hover:from-fuchsia-500 hover:to-blue-500 hover:bg-gradient-to-rb"
                 data-aos="fade-down"
               >
                 About
