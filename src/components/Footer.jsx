@@ -6,11 +6,20 @@ import {
 } from 'react-icons/fa6';
 import { HiEnvelope, HiMapPin, HiPhone } from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1200, // animation duration
+      once: true,
+    });
+  }, []);
   return (
-    <footer className="text-white pt-12 bg-[#141414]">
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-8 flex flex-col gap-10 md:gap-8 lg:gap-0 md:flex-row md:flex-wrap lg:flex-nowrap items-center justify-center md:items-start md:justify-start">
+    <footer className="text-white pt-12 bg-[#141414]" data-aos="fade-up" data-aos-delay="300">
+  <div className="max-w-7xl mx-auto w-full px-4 sm:px-8 flex flex-col gap-10 md:gap-8 lg:gap-0 md:flex-row md:flex-wrap lg:flex-nowrap items-center justify-center md:items-start md:justify-start" data-aos="fade-up" data-aos-delay="500">
         {/* Logo & tagline */}
         <div className="flex-1 flex flex-col items-center text-center mb-6 md:items-start md:text-left md:mb-0 min-w-[180px]">
           <Link to="/">
@@ -180,7 +189,7 @@ const Footer = () => {
       </div>
 
       {/* Policy Links */}
-      <div className="flex flex-col mt-6 sm:flex-row justify-center items-center gap-2 mb-2 text-white text-2xl sm:text-sm">
+      <div className="flex flex-col mt-6 sm:flex-row justify-center items-center gap-2 mb-2 text-white text-sm">
         <Link to="/privacy-policy" className="hover:text-blue-500">
           Privacy Policy
         </Link>

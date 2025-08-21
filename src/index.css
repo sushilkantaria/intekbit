@@ -4,17 +4,7 @@
 /* Previous: font-family: 'IBM Plex Sans', 'Roboto Mono', 'Segoe UI', Arial, sans-serif; */
 /* Previous: font-family: 'Space Grotesk', 'Nunito Sans', 'Segoe UI', Arial, sans-serif; */
 body {
-  /* font-family: 'Space Grotesk', 'Nunito Sans', 'Segoe UI', Arial, sans-serif; */
-    font-family: 'Nunito Sans';
-    font-family: Segoe UI;
-    font-family:  Arial;
-    font-family: sans-serif;
-    font-family: 'Trebuchet MS';
-    font-family: 'Calibri';
-
-
-
-
+  font-family: 'Calibri', 'Nunito Sans', 'Segoe UI', Arial, sans-serif;
 }
 
 /* html, body {
