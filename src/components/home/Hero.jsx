@@ -1,5 +1,4 @@
 import Spline from '@splinetool/react-spline';
-import { Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
 import ParticleBackground from '../ui/ParticleBackground';
 
@@ -45,11 +44,11 @@ const HeroSection = () => (
       </div>
 
       {/* Black image always visible, but responsive size/position */}
-      <img
+      {/* <img
         className="absolute hidden -right-35 md:block bottom-4 z-10 h-11 w-36"
         src="./Assets/black.png"
         alt=""
-      />
+      /> */}
     </section>
   </>
 );
