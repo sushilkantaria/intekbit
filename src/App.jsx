@@ -8,7 +8,7 @@ import './App.css';
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect, Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 
 const ScrollToTop = lazy(() => import('./components/ui/ScrollToTop'));
 const Aiml = lazy(() => import('./components/services/AimlService'));
@@ -61,12 +61,11 @@ function AppWrapper() {
   }, [location]);
 
   return (
-    <div className="min-h-screen w-full flex flex-col">
-      {/* <ParticleBackground /> */}
+    <>
       <Suspense>
         <Navbar />
         <ScrollToTop />
-        <div className="flex-1">
+        <div className="min-h-screen w-full flex flex-col">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
@@ -95,7 +94,7 @@ function AppWrapper() {
         </div>
         <Footer />
       </Suspense>
-    </div>
+    </>
   );
 }
 
