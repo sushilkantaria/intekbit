@@ -1,12 +1,13 @@
 import { Suspense, lazy } from 'react';
 const Spline = lazy(() => import('@splinetool/react-spline'));
-const Typewriter = lazy(() => import('react-simple-typewriter').then(mod => ({ default: mod.Typewriter })));
+const Typewriter = lazy(() =>
+  import('react-simple-typewriter').then((mod) => ({ default: mod.Typewriter }))
+);
 const ParticleBackground = lazy(() => import('../ui/ParticleBackground'));
-
 
 const HeroSection = () => (
   <>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense>
       <ParticleBackground />
     </Suspense>
     <section
@@ -24,7 +25,7 @@ const HeroSection = () => (
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold drop-shadow-lg">
           <Suspense fallback={<span>Loading...</span>}>
             <Typewriter
-              words={["WELCOME TO INTEKBIT SOLUTIONS PVT LTD"]}
+              words={['WELCOME TO INTEKBIT SOLUTIONS PVT LTD']}
               loop={1}
               cursor={false}
               typeSpeed={70}
@@ -34,7 +35,7 @@ const HeroSection = () => (
         <p className="text-sm sm:text-base md:text-lg lg:text-xl drop-shadow">
           <Suspense fallback={<span>Loading...</span>}>
             <Typewriter
-              words={["Driven by Technology, Powered by Trust."]}
+              words={['Driven by Technology, Powered by Trust.']}
               loop={1}
               cursor={false}
               typeSpeed={70}
@@ -56,7 +57,7 @@ const HeroSection = () => (
       {/* Black image always visible, but responsive size/position */}
       {/* <img
         className="absolute hidden -right-35 md:block bottom-4 z-10 h-11 w-36"
-        src="./Assets/black.png"
+        src="./assets/black.png"
         alt=""
       /> */}
     </section>

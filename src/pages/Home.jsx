@@ -14,28 +14,28 @@ import technologies from '../data/home/technologies';
 const Home = () => {
   const [activeTab, setActiveTab] = useState('mission');
   const [activeTechnology, setActiveTechnology] = useState('webdevelopment');
-  const [processInfo, setProcessInfo] = useState({
-    title: 'Our Process',
-    description:
-      "We conduct a thorough examination of your business requirements, including competitive analysis, to formulate a strategic roadmap while defining the design's aesthetic objectives.",
-    icon: '/Assets/home-process-process.gif',
-  });
+  // const [processInfo, setProcessInfo] = useState({
+  //   title: 'Our Process',
+  //   description:
+  //     "We conduct a thorough examination of your business requirements, including competitive analysis, to formulate a strategic roadmap while defining the design's aesthetic objectives.",
+  //   icon: '/assets/home-process-process.gif',
+  // });
 
   const switchContent = (tab) => setActiveTab(tab);
   const switchTechnology = (category) => setActiveTechnology(category);
-  const handleProcessStepHover = (step) => setProcessInfo(step);
+  // const handleProcessStepHover = (step) => setProcessInfo(step);
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <Hero />
         <About activeTab={activeTab} switchContent={switchContent} />
         <WhyHireUs />
         <Services services={services} />
         <Process
-          processInfo={processInfo}
+          // processInfo={processInfo}
           processSteps={processSteps}
-          handleProcessStepHover={handleProcessStepHover}
+          // handleProcessStepHover={handleProcessStepHover}
         />
         <Technology
           technologies={technologies}

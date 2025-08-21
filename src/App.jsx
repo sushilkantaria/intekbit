@@ -12,15 +12,31 @@ import { useEffect, Suspense, lazy } from 'react';
 
 const ScrollToTop = lazy(() => import('./components/ui/ScrollToTop'));
 const Aiml = lazy(() => import('./components/services/AimlService'));
-const AppDevelopment = lazy(() => import('./components/services/AppDevelopmentService'));
-const CloudServices = lazy(() => import('./components/services/CloudServicesService'));
-const DataServices = lazy(() => import('./components/services/DataServicesService'));
-const GraphicDesigning = lazy(() => import('./components/services/GraphicDesigningService'));
-const ItConsulting = lazy(() => import('./components/services/ItConsultingService'));
-const SoftwareDevelopment = lazy(() => import('./components/services/SoftwareDevelopmentService'));
-const SupportMaintenance = lazy(() => import('./components/services/SupportMaintenanceService'));
+const AppDevelopment = lazy(() =>
+  import('./components/services/AppDevelopmentService')
+);
+const CloudServices = lazy(() =>
+  import('./components/services/CloudServicesService')
+);
+const DataServices = lazy(() =>
+  import('./components/services/DataServicesService')
+);
+const GraphicDesigning = lazy(() =>
+  import('./components/services/GraphicDesigningService')
+);
+const ItConsulting = lazy(() =>
+  import('./components/services/ItConsultingService')
+);
+const SoftwareDevelopment = lazy(() =>
+  import('./components/services/SoftwareDevelopmentService')
+);
+const SupportMaintenance = lazy(() =>
+  import('./components/services/SupportMaintenanceService')
+);
 const Uiux = lazy(() => import('./components/services/UiuxService'));
-const WebDevelopment = lazy(() => import('./components/services/WebDevelopmentService'));
+const WebDevelopment = lazy(() =>
+  import('./components/services/WebDevelopmentService')
+);
 const AboutUs = lazy(() => import('./pages/AboutUs'));
 const Blog = lazy(() => import('./pages/Blog'));
 const ContactUs = lazy(() => import('./pages/ContactUs'));
@@ -47,7 +63,7 @@ function AppWrapper() {
   return (
     <div className="min-h-screen w-full flex flex-col">
       {/* <ParticleBackground /> */}
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense>
         <Navbar />
         <ScrollToTop />
         <div className="flex-1">
@@ -60,8 +76,14 @@ function AppWrapper() {
             <Route path="/web-development" element={<WebDevelopment />} />
             <Route path="/uiux-design" element={<Uiux />} />
             <Route path="/terms" element={<TermsAndConditions />} />
-            <Route path="/support-maintenance" element={<SupportMaintenance />} />
-            <Route path="/software-development" element={<SoftwareDevelopment />} />
+            <Route
+              path="/support-maintenance"
+              element={<SupportMaintenance />}
+            />
+            <Route
+              path="/software-development"
+              element={<SoftwareDevelopment />}
+            />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/it-consulting" element={<ItConsulting />} />
             <Route path="/cloud-services" element={<CloudServices />} />
