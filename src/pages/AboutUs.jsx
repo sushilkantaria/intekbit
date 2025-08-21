@@ -125,7 +125,7 @@ const AboutUs = () => {
             </div>
             <div className="flex-1 flex justify-center">
               <img
-                src="/Assets/About-Agile-section/about-agile.webp"
+                src="/assets/About-Agile-section/about-agile.webp"
                 alt="Agile Process"
                 className="rounded-lg shadow-lg w-100 h-100"
               />

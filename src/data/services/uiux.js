@@ -1,15 +1,11 @@
+import figma from '/assets/services-technology/uiux-figma.png';
+import adobeXd from '/assets/services-technology/uiux-xd.png';
+import sketch from '/assets/services-technology/uiux-sketch.png';
+import invision from '/assets/services-technology/uiux-invision.png';
+import htmlCss from '/assets/services-technology/uiux-html-css.png';
+import usability from '/assets/services-technology/uiux-hotjar.png';
 
-
-import figma from '/Assets/services-technology/uiux-figma.png';
-import adobeXd from '/Assets/services-technology/uiux-xd.png';
-import sketch from '/Assets/services-technology/uiux-sketch.png';
-import invision from '/Assets/services-technology/uiux-invision.png';
-import htmlCss from '/Assets/services-technology/uiux-html-css.png';
-import usability from '/Assets/services-technology/uiux-hotjar.png';
-
-
-
-import heroImage from '/Assets/services-page/for-ui-ux.gif';
+import heroImage from '/assets/services-page/for-ui-ux.gif';
 
 const uiuxData = {
   heroTitle: 'Designs That Look Good and Work Better',
@@ -30,7 +26,7 @@ const uiuxData = {
   ],
   contactCtaDescription:
     'Need a design that not only looks modern but also boosts engagement? We craft intuitive user journeys, wireframes, and high-fidelity mockups tailored to your goals. We focus on blending aesthetics with usability, ensuring every interaction feels seamless and engaging. From concept to final design, we create digital experiences.',
-    
+
   contactCtaText: 'Request a Design Consultation',
   reasons: [
     {

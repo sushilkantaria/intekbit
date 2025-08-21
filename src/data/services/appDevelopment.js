@@ -1,20 +1,20 @@
-import heroImage from '/Assets/services-page/for-app-dev.gif';
-import Native from '/Assets/services-technology/app-native.png';
-import java from '/Assets/services-technology/A-java.png';
-import flutter from '/Assets/services-technology/A-flutter.png';
-// import firebase from '/Assets/services-technology/A-firebase.webp';
-import kotlin from '/Assets/services-technology/A-kotlin.png';
-import swift from '/Assets/services-technology/A-swift.png'; 
-import python from '/Assets/services-technology/A-python.png';
+import heroImage from '/assets/services-page/for-app-dev.gif';
+import Native from '/assets/services-technology/app-native.png';
+import java from '/assets/services-technology/A-java.png';
+import flutter from '/assets/services-technology/A-flutter.png';
+// import firebase from '/assets/services-technology/A-firebase.webp';
+import kotlin from '/assets/services-technology/A-kotlin.png';
+import swift from '/assets/services-technology/A-swift.png';
+import python from '/assets/services-technology/A-python.png';
 
 const appDevelopmentData = {
   heroTitle: 'Apps that Engage, Convert and Scale',
   heroDescription:
     'From Android to iOS, we build mobile applications that delight users and drive business growth. Our apps are built to perform and scale with your goals.',
   heroImage,
- 
+
   industriesTitle: 'Industries Transformed by Our Mobile Apps',
-  industriesDescription: 
+  industriesDescription:
     'We’ve delivered impactful mobile experiences for sectors like:',
   industries: [
     'Healthcare & Wellness',
@@ -27,7 +27,6 @@ const appDevelopmentData = {
   contactCtaDescription:
     'Need a high-performing mobile app for your business idea? We turn concepts into powerful, user-friendly apps with intuitive design, secure architecture, and flawless performance. From planning to launch, we focus on creating mobile experiences that engage users, work seamlessly, and help your business grow.',
 
-    
   contactCtaText: 'Launch Your Mobile App',
 
   reasons: [

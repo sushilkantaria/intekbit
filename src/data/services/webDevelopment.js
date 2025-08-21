@@ -1,17 +1,14 @@
-import heroImage from "/Assets/services-page/for-web-dev-1.gif";
+import heroImage from '/assets/services-page/for-web-dev-1.gif';
 
-
-
-
-import react from '/Assets/services-technology/wd-react.png'; // Use same as Android for now
-import htmlcssjs from '/Assets/services-technology/wd-html-css-js.png'; // Placeholder for HTML/CSS/JS
-import wordpress from '/Assets/services-technology/wd-wordpress.png'; // Placeholder for WordPress
-import node from '/Assets/services-technology/wd-node.png'; // Placeholder for Node.js
-import express from '/Assets/services-technology/wd-express.png'; // Placeholder for Express.js
-import angular from '/Assets/services-technology/wd-angular.webp'; // Placeholder for Angular
+import react from '/assets/services-technology/wd-react.png'; // Use same as Android for now
+import htmlcssjs from '/assets/services-technology/wd-html-css-js.png'; // Placeholder for HTML/CSS/JS
+import wordpress from '/assets/services-technology/wd-wordpress.png'; // Placeholder for WordPress
+import node from '/assets/services-technology/wd-node.png'; // Placeholder for Node.js
+import express from '/assets/services-technology/wd-express.png'; // Placeholder for Express.js
+import angular from '/assets/services-technology/wd-angular.webp'; // Placeholder for Angular
 
 const webDevelopmentData = {
-  heroTitle: 'Web Solutions That Convert & Scale', 
+  heroTitle: 'Web Solutions That Convert & Scale',
   heroDescription:
     'From static sites to dynamic web apps, we create performance-focused, user-friendly web solutions that drive business growth. Whether you need a landing page or a custom dashboard—we’ve got you covered.',
   heroImage,
@@ -21,7 +18,7 @@ const webDevelopmentData = {
     'We’ve developed web solutions across various industries, including:',
   industries: [
     'Healthcare Portals',
-    'E-commerce & Retail', 
+    'E-commerce & Retail',
     'Education & E-learning',
     'Finance & Banking',
     'Hospitality & Travel',

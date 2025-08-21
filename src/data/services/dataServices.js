@@ -1,12 +1,11 @@
-import heroImage from '/Assets/services-page/for-data-services.gif';
+import heroImage from '/assets/services-page/for-data-services.gif';
 
-
-import apache from '/Assets/services-technology/A-android.png';
-import powerbi from '/Assets/services-technology/ds-power-bi.png';
-import postgresql from '/Assets/services-technology/ds-postgresql.png';
-import mongodb from '/Assets/services-technology/ds-mongodb.png';
-import informatica from '/Assets/services-technology/ds-informatica.png';
-import aws from '/Assets/services-technology/ds-aws.png';
+import apache from '/assets/services-technology/A-android.png';
+import powerbi from '/assets/services-technology/ds-power-bi.png';
+import postgresql from '/assets/services-technology/ds-postgresql.png';
+import mongodb from '/assets/services-technology/ds-mongodb.png';
+import informatica from '/assets/services-technology/ds-informatica.png';
+import aws from '/assets/services-technology/ds-aws.png';
 
 const dataServicesData = {
   heroTitle: 'Data-Driven Decisions Start Here',
@@ -19,7 +18,7 @@ const dataServicesData = {
     'We’ve helped organizations from multiple domains harness their data effectively, including:',
   industries: [
     'Finance & Insurance',
-    'Healthcare & Pharma', 
+    'Healthcare & Pharma',
     'Retail & E-commerce',
     'Logistics & Supply Chain',
     'Government & Public Sector',
@@ -29,7 +28,6 @@ const dataServicesData = {
 
   contactCtaDescription:
     'Want to unlock your data’s full potential? Our team is ready to help you set up data pipelines, visualize insights and implement custom dashboards that bring clarity and impact. We design solutions that turn raw numbers into actionable strategies which helps in faster decision making.',
-
 
   contactCtaText: 'Start Your Data Journey',
 

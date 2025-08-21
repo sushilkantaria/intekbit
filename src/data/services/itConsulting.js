@@ -1,12 +1,11 @@
-import heroImage from '/Assets/services-page/for-it-consulting.gif'; // Use same hero image for now
+import heroImage from '/assets/services-page/for-it-consulting.gif'; // Use same hero image for now
 
-
-import GA from '/Assets/services-technology/ic-GA.png'; // Placeholder for GA
-import LC from '/Assets/services-technology/ic-LA.png'; // Placeholder for LC
-import powerbi from '/Assets/services-technology/ic-power-bi.png'; // Placeholder for power bi
-import AWS from '/Assets/services-technology/ic-aws.png'; // Placeholder for aws
-import Azure from '/Assets/services-technology/ic-azure.webp'; // Placeholder for azure
-import tableau from '/Assets/services-technology/ic-tableau.png'; // Placeholder for tableau
+import GA from '/assets/services-technology/ic-GA.png'; // Placeholder for GA
+import LC from '/assets/services-technology/ic-LA.png'; // Placeholder for LC
+import powerbi from '/assets/services-technology/ic-power-bi.png'; // Placeholder for power bi
+import AWS from '/assets/services-technology/ic-aws.png'; // Placeholder for aws
+import Azure from '/assets/services-technology/ic-azure.webp'; // Placeholder for azure
+import tableau from '/assets/services-technology/ic-tableau.png'; // Placeholder for tableau
 
 const itConsultingData = {
   heroTitle: 'Expert Guidance for Smarter IT Decisions',
@@ -16,11 +15,11 @@ const itConsultingData = {
   heroImage,
 
   industriesTitle: 'Industries That Benefit from our IT Consulting service',
-  industriesDescription: 'We’ve empowered IT strategies across sectors like:', 
+  industriesDescription: 'We’ve empowered IT strategies across sectors like:',
 
   industries: [
     'Banking and Financial Services',
-    'Healthcare and Pharma', 
+    'Healthcare and Pharma',
     'Manufacturing and Industrial Automation',
     'Education and EdTech',
     'E-commerce and Retail',
@@ -59,7 +58,6 @@ const itConsultingData = {
     { name: 'Azure advisor', icon: Azure },
     { name: 'Tableau', icon: tableau },
   ],
-
 
   faqData: [
     {
