@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import About from '../components/home/About';
-import Founders from '../components/home/Founders'; 
-import Hero from '../components/home/Hero';
-import LetsConnect from '../components/home/LetsConnect';
-import Process from '../components/home/Process';
-import Services from '../components/home/Services';
-import Technology from '../components/home/Technology';
-import WhyHireUs from '../components/home/WhyHireUs';
+import { useState, Suspense, lazy } from 'react';
+const About = lazy(() => import('../components/home/About'));
+const Founders = lazy(() => import('../components/home/Founders'));
+const Hero = lazy(() => import('../components/home/Hero'));
+const LetsConnect = lazy(() => import('../components/home/LetsConnect'));
+const Process = lazy(() => import('../components/home/Process'));
+const Services = lazy(() => import('../components/home/Services'));
+const Technology = lazy(() => import('../components/home/Technology'));
+const WhyHireUs = lazy(() => import('../components/home/WhyHireUs'));
 import processSteps from '../data/home/processSteps';
 import services from '../data/home/services';
 import technologies from '../data/home/technologies';
@@ -27,22 +27,24 @@ const Home = () => {
 
   return (
     <div>
-      <Hero />
-      <About activeTab={activeTab} switchContent={switchContent} />
-      <WhyHireUs />
-      <Services services={services} />
-      <Process
-        processInfo={processInfo}
-        processSteps={processSteps}
-        handleProcessStepHover={handleProcessStepHover}
-      />
-      <Technology
-        technologies={technologies}
-        activeTechnology={activeTechnology}
-        switchTechnology={switchTechnology}
-      />
-      <Founders />
-      <LetsConnect />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Hero />
+        <About activeTab={activeTab} switchContent={switchContent} />
+        <WhyHireUs />
+        <Services services={services} />
+        <Process
+          processInfo={processInfo}
+          processSteps={processSteps}
+          handleProcessStepHover={handleProcessStepHover}
+        />
+        <Technology
+          technologies={technologies}
+          activeTechnology={activeTechnology}
+          switchTechnology={switchTechnology}
+        />
+        <Founders />
+        <LetsConnect />
+      </Suspense>
     </div>
   );
 };
