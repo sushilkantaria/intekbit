@@ -1,4 +1,4 @@
-const heroImage = '/assets/services-page/for-graphic-designing.gif'; // Use placeholder for now
+import heroImage from '/assets/services-page/for-graphic-designing.gif'; // Use placeholder for now
 
 import figma from '/assets/services-technology/gd-figma.png'; // Placeholder for Figma
 import adobeXD from '/assets/services-technology/gd-xd.png'; // Placeholder for Adobe XD

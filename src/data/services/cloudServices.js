@@ -1,5 +1,5 @@
-// const heroImage = '../../assets/cloudservicebg.mp4'; // Use video as hero background
-const heroImage = '/assets/services-page/for-cloud-computing.gif'; // Placeholder for AWS
+// import heroImage from '../../assets/cloudservicebg.mp4'; // Use video as hero background
+import heroImage from '/assets/services-page/for-cloud-computing.gif'; // Placeholder for AWS
 import aws from '/assets/services-technology/cc-aws.png'; // Placeholder for AWS
 import azure from '/assets/services-technology/cc-azure.webp'; // Placeholder for Azure
 import gcloud from '/assets/services-technology/cc-gc.webp'; // Placeholder for Google Cloud

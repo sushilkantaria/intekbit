@@ -1,4 +1,4 @@
-const heroImage = '/assets/services-page/for-app-dev.gif';
+import heroImage from '/assets/services-page/for-app-dev.gif';
 import Native from '/assets/services-technology/app-native.png';
 import java from '/assets/services-technology/A-java.png';
 import flutter from '/assets/services-technology/A-flutter.png';

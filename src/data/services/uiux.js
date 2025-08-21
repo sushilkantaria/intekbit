@@ -5,7 +5,7 @@ import invision from '/assets/services-technology/uiux-invision.png';
 import htmlCss from '/assets/services-technology/uiux-html-css.png';
 import usability from '/assets/services-technology/uiux-hotjar.png';
 
-const heroImage = '/assets/services-page/for-ui-ux.gif';
+import heroImage from '/assets/services-page/for-ui-ux.gif';
 
 const uiuxData = {
   heroTitle: 'Designs That Look Good and Work Better',
