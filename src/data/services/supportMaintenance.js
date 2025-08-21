@@ -1,4 +1,4 @@
-import heroImage from '/assets/services-page/for-support-maintenance.gif'; // Placeholder — update with actual support/maintenance image
+const heroImage = '/assets/services-page/for-support-maintenance.gif'; // Placeholder — update with actual support/maintenance image
 
 import aws from '/assets/services-technology/snm-aws-cloudwatch.png'; // AWS CloudWatch
 import postman from '/assets/services-technology/snm-postman.png'; // Postman

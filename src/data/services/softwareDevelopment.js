@@ -1,4 +1,4 @@
-import heroImage from '/assets/services-page/for-custom-software.gif'; // Use same hero image for now
+const heroImage = '/assets/services-page/for-custom-software.gif'; // Use same hero image for now
 
 import devops from '/assets/services-technology/csd-devops.png'; // Placeholder for DevOps
 import jenkins from '/assets/services-technology/csd-jenkins.png'; // Placeholder for Jenkins

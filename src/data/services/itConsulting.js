@@ -1,4 +1,4 @@
-import heroImage from '/assets/services-page/for-it-consulting.gif'; // Use same hero image for now
+const heroImage = '/assets/services-page/for-it-consulting.gif'; // Use same hero image for now
 
 import GA from '/assets/services-technology/ic-GA.png'; // Placeholder for GA
 import LC from '/assets/services-technology/ic-LA.png'; // Placeholder for LC

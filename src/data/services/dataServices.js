@@ -1,4 +1,4 @@
-import heroImage from '/assets/services-page/for-data-services.gif';
+const heroImage = '/assets/services-page/for-data-services.gif';
 
 import apache from '/assets/services-technology/A-android.png';
 import powerbi from '/assets/services-technology/ds-power-bi.png';

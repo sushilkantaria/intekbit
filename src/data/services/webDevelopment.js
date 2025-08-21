@@ -1,4 +1,4 @@
-import heroImage from '/assets/services-page/for-web-dev-1.gif';
+const heroImage = '/assets/services-page/for-web-dev-1.gif';
 
 import react from '/assets/services-technology/wd-react.png'; // Use same as Android for now
 import htmlcssjs from '/assets/services-technology/wd-html-css-js.png'; // Placeholder for HTML/CSS/JS
