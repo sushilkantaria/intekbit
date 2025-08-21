@@ -1,5 +1,5 @@
 // src/content/aiMlService.js
-import heroImage from '/assets/services-page/for-ai-ml-2.gif'; // AI hero image
+const heroImage = '/assets/services-page/for-ai-ml-2.gif'; // AI hero image
 
 // Reused icons from mobile app techs for now (same file names, different labels)
 import python from '/assets/services-technology/aiml-python.png'; // use temporarily for Python
