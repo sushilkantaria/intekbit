@@ -1,10 +1,33 @@
-import Plane1 from '/assets/home-pg-process-section/plane1.png';
-import Plane2 from '/assets/home-pg-process-section/plane2.png';
-import Plane3 from '/assets/home-pg-process-section/plane3.png';
-import Plane4 from '/assets/home-pg-process-section/plane4.png';
-import Plane5 from '/assets/home-pg-process-section/plane5.png';
+// import Plane1 from '/assets/home-pg-process-section/plane1.png';
+import Plane1 from '/Assets/home-pg-process-section/plane1.png';
+import Plane2 from '/Assets/home-pg-process-section/plane2.png';
+import Plane3 from '/Assets/home-pg-process-section/plane3.png';
+import Plane4 from '/Assets/home-pg-process-section/plane4.png';
+// import Plane5 from '..//..//../public/Assets/home-pg-process-section/plane5.png';
+import Plane5 from '/Assets/home-pg-process-section/plane5.png';
+
 
 const processSteps = [
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   {
     icon: Plane1,
     title: 'Requirement Analysis',

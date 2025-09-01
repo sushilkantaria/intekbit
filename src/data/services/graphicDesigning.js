@@ -1,11 +1,11 @@
-import heroImage from '/assets/services-page/for-graphic-designing.gif'; // Use placeholder for now
+import heroImage from '/Assets/services-page/for-graphic-designing.gif'; // Use placeholder for now
 
-import figma from '/assets/services-technology/gd-figma.png'; // Placeholder for Figma
-import adobeXD from '/assets/services-technology/gd-xd.png'; // Placeholder for Adobe XD
-import illustrator from '/assets/services-technology/gd-illustrator.png'; // Placeholder for Illustrator
-import photoshop from '/assets/services-technology/gd-photoshop.png'; // Placeholder for Photoshop
-import procreate from '/assets/services-technology/gd-procreate.png'; // Placeholder for Canva
-import sketch from '/assets/services-technology/gd-sketch.png'; // Placeholder for Sketch
+import figma from '/Assets/services-technology/gd-figma.png'; // Placeholder for Figma
+import adobeXD from '/Assets/services-technology/gd-xd.png'; // Placeholder for Adobe XD
+import illustrator from '/Assets/services-technology/gd-illustrator.png'; // Placeholder for Illustrator
+import photoshop from '/Assets/services-technology/gd-photoshop.png'; // Placeholder for Photoshop
+import procreate from '/Assets/services-technology/gd-procreate.png'; // Placeholder for Canva
+import sketch from '/Assets/services-technology/gd-sketch.png'; // Placeholder for Sketch
 
 const graphicDesigningData = {
   heroTitle: 'Designs That Speak Louder Than Words',

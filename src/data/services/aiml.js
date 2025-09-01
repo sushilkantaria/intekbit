@@ -1,13 +1,13 @@
 // src/content/aiMlService.js
-import heroImage from '/assets/services-page/for-ai-ml-2.gif'; // AI hero image
+import heroImage from '/Assets/services-page/for-ai-ml-2.gif'; // AI hero image
 
 // Reused icons from mobile app techs for now (same file names, different labels)
-import python from '/assets/services-technology/aiml-python.png'; // use temporarily for Python
-import tensor from '/assets/services-technology/aiml-tenserflow.webp'; // use temporarily for TensorFlow
-import pytorch from '/assets/services-technology/aiml-pytorch.png'; // use temporarily for PyTorch
-import openai from '/assets/services-technology/aiml-openai.webp'; // use temporarily for OpenAI
-import huggingface from '/assets/services-technology/aiml-hugging-face.svg'; // use temporarily for HuggingFace
-import scikit from '/assets/services-technology/aiml-scikit.png'; // use temporarily for Scikit-learn
+import python from '/Assets/services-technology/aiml-python.png'; // use temporarily for Python
+import tensor from '/Assets/services-technology/aiml-tenserflow.webp'; // use temporarily for TensorFlow
+import pytorch from '/Assets/services-technology/aiml-pytorch.png'; // use temporarily for PyTorch
+import openai from '/Assets/services-technology/aiml-openai.webp'; // use temporarily for OpenAI
+import huggingface from '/Assets/services-technology/aiml-hugging-face.svg'; // use temporarily for HuggingFace
+import scikit from '/Assets/services-technology/aiml-scikit.png'; // use temporarily for Scikit-learn
 
 const aimlData = {
   heroTitle: 'AI that Thinks, Learns, and Elevates',

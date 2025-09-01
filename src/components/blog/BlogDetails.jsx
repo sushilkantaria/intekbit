@@ -1,6 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+// import parse from 'html-react-parser';
+import parse from 'html-react-parser';
+import DOMPurify from 'dompurify';
+
 
 import { HiArrowLeft } from 'react-icons/hi2';
 import { useNavigate } from 'react-router-dom';
@@ -49,7 +53,7 @@ function BlogDetails() {
         <div className="max-w-7xl w-full mx-auto rounded-3xl p-8 shadow-[0_2px_12px_0_rgba(30,58,138,0.18),0_1px_8px_0_rgba(136,19,55,0.13),0_1px_6px_0_rgba(202,138,4,0.10),0_1px_4px_0_rgba(6,78,59,0.10),inset_0_2px_16px_0_rgba(255,255,255,0.13),inset_0_0_12px_2px_rgba(255,255,255,0.10),inset_0_0_0_1px_rgba(255,255,255,0.07)] backdrop-blur-lg backdrop-saturate-150">
           <button
             className="mb-6 flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-lg font-semibold focus:outline-none"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate(-1)} 
           >
             <HiArrowLeft className="w-6 h-6" />
             {/* <span>Back</span> */}
@@ -62,9 +66,17 @@ function BlogDetails() {
               <p className="text-sm text-cyan-400 mb-6">
                 {new Date(blog.createdAt).toLocaleDateString()}
               </p>
-              <div className="prose prose-invert max-w-none text-[1.15rem] leading-relaxed text-gray-100 md:text-[1.25rem] md:leading-8 tracking-wide">
+              {/* <div className="prose prose-invert max-w-none text-[1.15rem] leading-relaxed text-gray-100 md:text-[1.25rem] md:leading-8 tracking-wide">
                 {blog.description}
-              </div>
+              </div> */}
+
+              <div className="prose prose-invert max-w-none text-[1.15rem] leading-relaxed text-gray-100 md:text-[1.25rem] md:leading-8 tracking-wide">
+  {parse(blog.description)}
+</div>
+
+<div className="prose prose-invert ...">
+  {parse(DOMPurify.sanitize(blog.description))}
+</div>
             </div>
             <div className="flex-shrink-0 w-full md:w-[400px] md:ml-8">
               <img

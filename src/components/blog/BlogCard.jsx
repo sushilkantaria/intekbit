@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import parse from 'html-react-parser'; // add this at the top
 
 function BlogCard({ post }) {
   return (
@@ -14,7 +15,7 @@ function BlogCard({ post }) {
         />
         <div className="p-4 flex flex-col flex-1">
           <h2 className="text-xl font-bold text-black mb-2 leading-tight">
-            {post.title}
+            {post.title} 
           </h2>
           <span className="text-xs text-blue-400 mb-2 font-semibold">
             {new Date(post.createdAt).toLocaleDateString()}
@@ -23,6 +24,10 @@ function BlogCard({ post }) {
           {/* <p className="text-sm text-gray-700 mb-4">
             {post.description?.replace(/(<([^>]+)>)/gi, '').slice(0, 100)}...
           </p> */}
+
+          <p className="text-sm text-gray-700 mb-4">
+  {parse(post.description?.slice(0, 200) + '...')}
+</p>
         </div>
       </div>
     </Link>

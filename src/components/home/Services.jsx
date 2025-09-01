@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 
 // Service images mapping
 const serviceImages = {
-  web: '/assets/homeServices/web.gif',
-  ai: '/assets/homeServices/ai.gif',
-  uiux_design: '/assets/homeServices/uiux.gif',
-  mobile: '/assets/homeServices/mobileApp.gif',
-  cloud_services: '/assets/homeServices/cloudService.gif',
-  software: '/assets/homeServices/softwareDevelopment.gif',
+  web: '/Assets/homeServices/web.gif',
+  ai: '/Assets/homeServices/ai.gif',
+  uiux_design: '/Assets/homeServices/uiux.gif',
+  mobile: '/Assets/homeServices/mobileApp.gif',
+  cloud_services: '/Assets/homeServices/cloudService.gif',
+  software: '/Assets/homeServices/softwareDevelopment.gif',
 };
 
 const ServicesSection = ({ services }) => {
@@ -179,7 +179,7 @@ const ServicesSection = ({ services }) => {
                   <img
                     src={
                       serviceImages[serviceKeys[activeServiceIndex]] ||
-                      '/assets/web.gif'
+                      '/Assets/web.gif'
                     }
                     alt={
                       services[serviceKeys[activeServiceIndex]]?.title ||
@@ -191,7 +191,7 @@ const ServicesSection = ({ services }) => {
                         'Image failed to load:',
                         serviceImages[serviceKeys[activeServiceIndex]]
                       );
-                      e.target.src = '/assets/web.gif';
+                      e.target.src = '/Assets/web.gif';
                     }}
                   />
                   {/* )} */}
@@ -255,12 +255,12 @@ const ServicesSection = ({ services }) => {
                 <div className="p-4 flex justify-center items-center">
                   <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden mx-auto shadow-2xl image-container flex justify-center items-center">
                     <img
-                      src={serviceImages[serviceKey] || '/assets/web.gif'}
+                      src={serviceImages[serviceKey] || '/Assets/web.gif'}
                       alt={services[serviceKey]?.title || 'Service'}
                       className="max-h-64 sm:max-h-80 w-auto h-full object-contain mx-auto image-fade"
                       style={{ display: 'block', margin: '0 auto' }}
                       onError={(e) => {
-                        e.target.src = '/assets/web.gif';
+                        e.target.src = '/Assets/web.gif';
                       }}
                     />
                   </div>

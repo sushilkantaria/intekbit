@@ -1,7 +1,7 @@
-import img25 from './assets/25.png';
-import img26 from './assets/26.png';
-import img27 from './assets/27.png';
-import mobileAppGif from './assets/mobile-app-development.gif';
+import img25 from './Assets/25.png';
+import img26 from './Assets/26.png';
+import img27 from './Assets/27.png';
+import mobileAppGif from './Assets/mobile-app-development.gif';
 
 const images = [img25, img26, img27];
 

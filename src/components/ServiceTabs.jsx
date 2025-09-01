@@ -254,7 +254,7 @@ const ServiceTabs = ({ servicesData }) => {
             {/* Right: Image with matching height */}
             <div className="flex-1 h-full flex justify-center items-start">
               <img
-                src="/assets/ServiceTabs-pg/working-on-laptop.webp"
+                src="/Assets/ServiceTabs-pg/working-on-laptop.webp"
                 alt="Why Intekbit"
                 className="h-[570px] w-auto max-w-md rounded-xl shadow-xl object-contain"
                 data-aos="fade-left"
